@@ -1,7 +1,7 @@
 {
     $
         // var baseURL = "http://127.0.0.1:5500/packages/stfnbssl.github.io";
-        var baseURL = "https://stfnbssl.github.io/";
+        var baseURL = "https://stfnbssl.github.io";
         var imagesBaseURL = baseURL + "/static/demo/xxx/images";
 
     baseURL "${baseURL}"

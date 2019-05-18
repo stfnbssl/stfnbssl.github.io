@@ -1,6 +1,6 @@
 {
-    "baseURL": "https://stfnbssl.github.io/",
-    "assetsURL": "https://stfnbssl.github.io//assets",
+    "baseURL": "https://stfnbssl.github.io",
+    "assetsURL": "https://stfnbssl.github.io/assets",
     "languageCode": "it-it",
     "Params": {
         "name": "CosieResources",
@@ -10,7 +10,7 @@
         "phone": "+039 360 401202",
         "address": "Vie E.Torricelli 17, 42122 Reggio Emilia, Italy",
         "year": 2019,
-        "avatar": "https://stfnbssl.github.io//static/demo/xxx/images/xxx.jpg"
+        "avatar": "https://stfnbssl.github.io/static/demo/xxx/images/xxx.jpg"
     },
     "Features": {
         "useWebFontLoader": true,
