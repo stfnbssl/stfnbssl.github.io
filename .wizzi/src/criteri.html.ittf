@@ -1,0 +1,52 @@
+html
+    $
+        var page = {
+            id: 'criteri',
+            section: 'demo',
+            title: 'Guide anticipatorie x Cosie',
+            description: 'Visualizzazione sintetica guide anticipatorie dei Pediatri x progetto Cosie',
+            author: site.Params.author,
+        };
+        var color = site.Styles.palette.dark_1
+    
+    layouts/demo(&page)
+
+        $append styles
+            @style 
+                css
+                    < body
+                        background ${color.foreSofter}
+                    . wrapper
+                        padding 30px
+                        background-color ${color.foreSofter}
+                        color ${color.backStrong}
+        
+        . wrapper
+            h1 &nbsp;
+            h1 Criteri per la creazione dei contenuti
+
+            h3 I contenuti sono strutturati per
+            ul
+                li Sezioni relative ai periodi di vita, misurati in settimane.
+                li Messaggi aventi un argomento che si esprime a due voci
+                    h4 il bambino che dice
+                    ul
+                        li una frase breve (un tweet), che fa da introduzione dell'argomento
+                        li seguita da diverse espressioni, dal suo punto di vista
+                    h4 il pediatra che consiglia i genitori dicendo
+                    ul
+                        li una frase breve (un tweet), che da il tono alla risposta
+                        li seguita da diversi consigli e spiegazioni
+                li Ogni messaggio può riportare uno o più tag di classificazione dell'argomento,
+                    \b ad esempio (pianto, allattamento, npl, ecc..). Questi consentiranno di rivedere i messaggi suddivisi per argomento.
+
+            h3 Il bambino
+            ul 
+                li Parla in prima persona.
+                li Usa un linguaggio informale e scherzoso.
+            h3 Il pediatra
+            ul
+                li Usa un linguaggio formale e professionale, ma pur sempre colloquiale.
+                li Consiglia a volte (sempre?) dando del tu ad un genitore (di norma la mamma) o a tutti e due.
+                li Si esprime a volte in termini generali (quando cita studi ...).
+

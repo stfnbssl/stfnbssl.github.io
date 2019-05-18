@@ -1,0 +1,30 @@
+$group
+    $params &page
+    $
+        var baseURL = site.baseURL;
+        var assetsURL = site.assetsURL;
+
+    lang ${ site.LanguageCode ? site.LanguageCode : 'en-US' }
+    
+    head
+    
+        includes/head(&page)
+        $$ styles/main(&page)
+    
+        $hook styles
+
+        link 
+            rel stylesheet
+            href ${assetsURL}/css/guide.css
+    
+    body
+        $if page.bodyClass
+            class ${page.bodyClass}
+        includes/header(&page)
+        
+        $hook
+        
+        includes/footer(&page)
+        includes/scripts(&page)
+        
+        $hook scripts

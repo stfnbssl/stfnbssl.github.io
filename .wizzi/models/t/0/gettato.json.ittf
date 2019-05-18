@@ -1,0 +1,21 @@
+$group
+    {
+        { bam
+            titolo "Evviva! Sono arrivato!"
+            [ items
+                "E so già fare tante cose. In realtà ho già nove mesi."
+                "Appena nato sono capace di ascoltare, di vedere, di sentire gli odori e i sapori."
+                "Ho anche la percezione del contatto della mia pelle con quella della mamma."
+                "Mi piace ascoltare le melodie, soprattutto attraverso la voce della mamma che ho già ascoltato tante volte mentre ero nella pancia."
+                "Mi ricordo dei canti e delle musiche e dei racconti che la mamma ha letto per me quando ero ancora dentro di lei."
+                "Mi piace vedere i volti delle persone, ma devono essere vicini a me."
+                "Amo essere guardato negli occhi e che mi si rivolga la parola."
+                "Conosco molto bene l’odore della mia mamma e mi piace."
+                "Il latte della mamma contiene tutti gli aromi dei cibi che mangia, e io li sento tutti!"
+                "Non riesco a parlare, ma faccio tanti sforzi per imitare, con il mio pianto, il modo di parlare della mamma. Accontentatevi del mio impegno."
+                "Non solo tutti i miei sensi funzionano bene, ma sono anche in grado di dire quando ho fame e quando mi sento ben sazio."
+        { gen
+            titolo "Preparatevi ad accogliere chi potrà arricchirvi"
+            [ items
+                "... TODO ..."
+        tags "sviluppo cognitivo, percezione"

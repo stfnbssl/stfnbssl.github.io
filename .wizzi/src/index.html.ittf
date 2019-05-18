@@ -1,0 +1,39 @@
+html
+    $
+        var page = {
+            id: 'home',
+            section: 'demo',
+            title: 'Guide anticipatorie x Cosie',
+            description: 'Visualizzazione sintetica guide anticipatorie dei Pediatri x progetto Cosie',
+            author: site.Params.author,
+        };
+        var color = site.Styles.palette.dark_1
+        var assetsURL = site.assetsURL;
+    
+    layouts/demo(&page)
+
+        $append styles
+            @style 
+                css
+                    < body
+                        background ${color.foreSofter}
+                    . wrapper
+                        padding 30px 150px
+                        background-color ${color.foreSofter}
+                        color ${color.backStrong}
+        
+        . wrapper
+            h1 &nbsp;
+            h1 Valutazione di impatto App guide anticipatorie
+            p Questa sito non contiene una App.
+            p Viene presentata una anteprima della prima sezione delle
+                \b guide anticipatorie per valutare meglio
+                \b i criteri e le modalità di produzione dei contenuti.
+
+
+            div
+                img
+                    src ${assetsURL}/img/cosie_name_rgb.jpg
+                    width 500px
+                    height 350px
+

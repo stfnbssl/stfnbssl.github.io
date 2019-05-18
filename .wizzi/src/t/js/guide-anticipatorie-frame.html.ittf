@@ -1,0 +1,57 @@
+$group
+
+    var MSG_LIST = "msg-list"
+    var MSG_SINGLE = "msg-single"
+    var currentView = MSG_LIST
+    var currentMsg = null
+
+    var cnt = document.querySelector("#section-container")
+    _ cnt.addEventListener
+        @ "click"
+        =>
+            param e
+            var targetId = getTargetId(e.target)
+            if targetId
+                # _ alert(targetId)
+                _ selectId(targetId)
+
+    var cntNavBack = document.querySelector("#section-container-nav-back")
+    _ cntNavBack.addEventListener
+        @ "click"
+        =>
+            _ showMsgList
+
+    function showMsgList
+        if currentMsg
+            _ document.querySelector("#single-message-" + currentMsg).classList.add('hide')
+        _ document.querySelector("#section-container-nav-back").classList.add('hide')
+        _ document.querySelector("#message-list").classList.remove('hide')
+
+    function showGenMsg
+        param id
+        if currentMsg
+            _ document.querySelector("#single-message-" + currentMsg).classList.add('hide')
+            #
+                _ alert
+                    @ currentMsg + '/' + document.querySelector("#single-message-" + currentMsg).className
+        _ document.querySelector("#message-list").classList.add('hide')
+        _ document.querySelector("#section-container-nav-back").classList.remove('hide')
+        _ document.querySelector("#single-message-" + id).classList.remove('hide')
+        set currentMsg = id
+    
+    function selectId
+        param id
+        if id.substr(0,10) === 'bam-title-'
+            set currentView = MSG_SINGLE
+            set currentMsg = id.substr(10)
+            # _ alert(currentMsg)
+            _ showGenMsg(currentMsg)
+
+    function getTargetId
+        param target
+        if target.id
+            return target.id
+        elif target.parentNode
+            return getTargetId(target.parentNode)
+        else
+            return null        
