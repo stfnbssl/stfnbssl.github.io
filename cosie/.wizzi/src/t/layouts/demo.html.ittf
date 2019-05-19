@@ -44,7 +44,7 @@ $group
             . preview-devices
                 ul 
                     li 
-                        class preview-test preview-devices-active
+                        class preview-test 
                         id preview-test-desktop
                         title Preview the  Smash template in Desktop Mode
                         a 
@@ -60,7 +60,7 @@ $group
                             i 
                                 class icon-tablet
                     li 
-                        class preview-test
+                        class preview-test preview-devices-active
                         id preview-test-mobile
                         title Preview the  Smash template in Mobile Mode
                         a 
