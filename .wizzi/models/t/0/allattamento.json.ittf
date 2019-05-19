@@ -11,13 +11,18 @@ $group
                 "La mamma può mangiare qualsiasi alimento purché la dieta sia sempre variata e ricca di acqua, frutta e verdura."
                 "Il fumo di sigaretta e l'alcol passano nel latte e possono provocare danno al bambino."
                 "Pochi farmaci sono incompatibili con l’allattamento: se devi assumerne parlane con il pediatra o contatta il numero verde 800 nnnnnn -sempre attivo- degli Ospedali xxxx di yyyyyy."
+        images ""
         tags "allattamento, alimentazione"
 
     {
         { bam
-            titolo "... TODO ..."
+            titolo "La pancia della mamma mi scalda mentre mangio"
             [ items
+                "Che lusso il latte sempre pronto"
+                "E che bello dormire soddisfatto sulla pancia"
+                "E quando ho voglia ricomincio"
         { gen
             titolo "Quando possibile mantieni un contatto pelle a pelle con il tuo bambino"
             [ items
+                "Grazie al contatto pelle a pelle il bambino è in grado maggiormente di capire quando ha fame e quando si sente ben sazio"
                 "Se hai problemi contatta le ostetriche di Latte e Coccole."

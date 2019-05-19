@@ -1,7 +1,7 @@
 $group
     {
         { bam
-            titolo "... TODO ..."
+            titolo "Spesso sono affamato"
             [ items
         { gen
             titolo "Vuoi saperne di più?"
@@ -14,9 +14,12 @@ $group
         tags "alimentazione, allattamento"
     {
         { bam
-            titolo "... TODO ..."
+            titolo "E se la mamma non può allattare?"
             [ items
         { gen
-            titolo "... TODO (lasciamo un messaggio per chi non può allattare al seno?) ..."
+            titolo "Allora deve usare un latte artificiale"
             [ items
+                "La quantità va regolata sul peso del bambino"
+                "Deve parlarne con il suo pediatra"
+                "Il latte vaccino non va usato prima dell'anno di età"
         tags "alimentazione, allattamento"
