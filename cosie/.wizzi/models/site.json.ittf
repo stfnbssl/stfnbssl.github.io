@@ -1,0 +1,26 @@
+{
+    $
+        // var baseURL = "http://127.0.0.1:5500/cosie";
+        var baseURL = "https://stfnbssl.github.io/cosie";
+
+    baseURL "${baseURL}"
+    assetsURL "${baseURL}/assets"
+    languageCode "it-it"
+
+    { Params
+        name "CosieResources"
+        description "Risorse varie per progetto Cosie"
+        author "Anna Maria Davoli, Stefano Bassoli"
+        email "stfn.bssl@gmail.com"
+        phone "---"
+        address "---"
+        year 2019
+
+    { Features
+        features()
+    
+    { Styles
+        styles()
+    
+    { Data
+        guide-anticipatorie()

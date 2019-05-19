@@ -1,0 +1,65 @@
+html
+    $
+        var page = {
+            id: 'criteri',
+            section: 'demo',
+            title: 'Guide anticipatorie x Cosie',
+            description: 'Visualizzazione sintetica guide anticipatorie dei Pediatri x progetto Cosie',
+            author: site.Params.author,
+        };
+        var color = site.Styles.palette.dark_1
+    
+    layouts/page(&page)
+
+        $append styles
+            @style 
+                css
+                    < body
+                        background ${color.foreSofter}
+                    . wrapper
+                        padding 20px
+                        $$ width 60%
+                        $$ margin 0 auto
+                        font-size 1.3rem
+                        background-color ${color.foreSofter}
+                        color ${color.backStrong}
+        
+        . wrapper
+            h1 &nbsp;
+            h1 Criteri per la creazione dei contenuti
+
+            h3 I contenuti sono strutturati per
+            ul
+                li Sezioni relative ai periodi di vita, misurati in settimane.
+                li Messaggi aventi un argomento che si esprime a due voci
+                    ul
+                        h4 il bambino che dice
+                        ul
+                            li una frase breve (un tweet), che fa da introduzione dell'argomento
+                            li seguita da diverse espressioni, dal suo punto di vista
+                        h4 il pediatra che consiglia i genitori dicendo
+                        ul
+                            li una frase breve (un tweet), che da il tono alla risposta
+                            li seguita da diversi consigli e spiegazioni
+                li Ogni messaggio può avere una o più immagini collegate che saranno mostrate 
+                    \b alla fine del testo
+                li Ogni messaggio può riportare uno o più tag di classificazione dell'argomento,
+                    \b ad esempio (pianto, allattamento, npl, ecc..). 
+                    \b Questi consentiranno di visualizzare i messaggi suddivisi per argomento.
+
+            h3 Come si esprime il ruolo del genitore?
+            p Ovviamente i dialoghi dei messagi sono tra genitore e pediatra. Ritengo che non sia
+                \b necessario esplicitare la voce del genitore, e che il suo punto di vista possa essere
+                \b sempre espresso con la voce del bambino, ad es "... e se la mamma non può allatare?"
+
+            h3 Il bambino
+            ul 
+                li Parla in prima persona.
+                li Usa un linguaggio informale e scherzoso.
+                li Quando esprime un dubbio o una domanda del genitore sarà un po più formale.
+            h3 Il pediatra
+            ul
+                li Usa un linguaggio formale e professionale, ma pur sempre colloquiale.
+                li Consiglia a volte (sempre?) dando del tu ad un genitore (di norma la mamma) o a tutti e due.
+                li Si esprime a volte in termini generali (quando cita studi ...).
+

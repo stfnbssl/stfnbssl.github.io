@@ -1,0 +1,58 @@
+$group
+    {
+        { bam
+            titolo "Il canto della mamma mi attacca la corrente"
+            [ items
+                "Non so perchè ma quando la mamma canta mi incanta."
+                "E' come se mi prendesse in braccio. Anzi a volte è meglio."
+        { ped
+            titolo "Appena puoi cantagli una canzone o una ninna nanna"
+            [ items
+                "Al tuo bambino piace la tua voce, grazie alla tua voce ti riconosce."
+                "Appena puoi, ricerca un momento di quiete per parlare dolcemente o cantare al tuo bambino."
+                "Al tuo bambino piace sentire la tua voce che canta anche se cantare non è la tua vocazione, non preoccuparti dell’intonazione o del testo."
+                "Cantagli le tue canzoni preferite o la “sua“ canzone, quella solo vostra, molto intima, inventata per lui mentre lo stavate aspettando."
+                "Non serve sapere le parole delle ninna nanne o delle canzoni, basta fare le melodie, stringerlo dolcemente al petto, accarezzandolo e guardandolo negli occhi."
+                "Quando parli o canti al tuo piccolo, riesci a capirlo meglio."
+                "Al tuo bambino piace la voce di entrambi i genitori e ama tantissimo ascoltare quando cantate insieme per lui."
+                "Se ci sono dei fratellini o sorelline potete fargli cantare delle canzoncine, riconoscerà con piacere tutte le voci di famiglia, che lo hanno accompagnato e incuriosito nei mesi trascorsi nella pancia."
+        tags "npm, sviluppo cognitivo, percezione, emozioni"
+    {
+        { bam
+            titolo "Non mi piace essere disturbato dai rumori"
+            [ items
+                "I rumori improvvisi mi fanno paura."
+                "La voce di mamma e papà invece la paura la fanno andar via."
+        { ped
+            titolo "Quando gli parli o canti è importante una buona postura e un ambiente adatto"
+            [ items
+                "Quando lo sistemi per la poppata prova ad interagire con lui, parlandogli dolcemente, mentre gli accarezzi la testolina, sebbene sia impegnato nella poppata potrebbe spalancare gli occhi come se fosse consapevole della tua voce."
+                "I rumori improvvisi potrebbero far sobbalzare il neonato. E’ importante che non ci siano troppi suoni nella stanza che potrebbero disturbarlo."
+                "Puoi cantargli anche se non sei vicino, ci sente benissimo e sentire la tua voce lo rassicurerà."
+                "Quando parli o canti al tuo bambino, sostieni dolcemente il suo capo, avvicinalo al tuo petto, tienilo tutto rannicchiato, quindi prova a guardarlo negli occhi e osserva cosa succede al suo corpo."
+                "Ascolta il tuo corpo quando canti al tuo bambino, anche tu potresti rilassarti."
+        tags "npm, sviluppo cognitivo, percezione"
+    {
+        { bam
+            titolo "Mi piacciono tutte le lingue che parlano mamma e papà"
+            [ items
+                "Le parole per me sono un pò come la musica. Mi piacciono tutte le lingue di chi mi vuole bene."
+                "Le lingue che ascolto in famiglia nel mio primo anno diventeranno tutte la mia lingua madre."
+        { ped
+            titolo "Puoi parlare al tuo bambino nella lingua che conosci meglio"
+            [ items
+                "A lui piace la tua lingua, se conosci molte lingue, usa quella del tuo cuore: la tua lingua madre."
+                "Il neonato non fa confusione se parlate diverse lingue in famiglia, ama ascoltare le voci di tutti colore che si prendono cura di lui e lo amano." 
+        tags "multilinguismo, sviluppo cognitivo, linguaggio"
+    {
+        { bam
+            titolo "Non so ancora parlare ma non ho intenzione di stare zitto"
+            [ items
+                "Mi piace quando la mamma dice quelle cose che mi sembra di riuscire a dire anch'io."
+                "E anche se non riesco a dirle sento che stà parlando propio a me."
+        { ped
+            titolo "Anche le parole incomplete non ancora di senso compiuto possono comunicare molte cose"
+            [ items
+                "Al tuo bambino piace il parlato a cantilena, il così detto “mammese” o baby talk, ricco di coinvolgimento emotivo."
+                "In tutte le lingue del mondo i “grandi” parlano in mammese fino a 2 -3 anni." 
+        tags "mammese, sviluppo cognitivo, percezione"

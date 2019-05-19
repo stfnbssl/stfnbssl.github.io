@@ -1,0 +1,20 @@
+html
+    $
+        var page = {
+            id: 'info-tecniche',
+            section: 'demo',
+            title: 'Guide anticipatorie x Cosie',
+            description: 'Visualizzazione sintetica guide anticipatorie dei Pediatri x progetto Cosie',
+            author: site.Params.author,
+        };
+        var color = site.Styles.palette.dark_1
+    
+    layouts/demo(&page)
+
+        div 
+            id preview
+            iframe 
+                id preview-frame
+                class preview-tablet
+                src ./infotecniche-frame.html
+                frameborder 0

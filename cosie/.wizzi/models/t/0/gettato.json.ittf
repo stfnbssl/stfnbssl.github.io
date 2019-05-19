@@ -1,0 +1,34 @@
+$group
+    {
+        { bam
+            titolo "Evviva! Sono arrivato!"
+            [ items
+                "E so già fare tante cose!"
+                "Ascolto, sento gli odori e i sapori."
+                "Vi vedo anche! Solo se mi venite vicino vicino però." 
+                "Amo essere guardato negli occhi e che mi parliate."
+                "Riconosco molto bene l’odore della mia mamma e mi piace."
+        { ped
+            titolo "I suoi sensi alla nascita sono tutti attivi"
+            [ items
+                "La capacità visiva è buona, ma ridotta a una distanza limitata."
+                "Il bambino riconosce le melodie, soprattutto attraverso la voce della mamma."
+                "Ricorda i suoni, le musiche e i canti che ha ascoltato nella pancia."
+        tags "sviluppo cognitivo, percezione"
+    
+    {
+        { bam
+            titolo "Sono già impegnato a sentire e fare un sacco di cose"
+            [ items
+                "Sento la pelle della mamma contro la mia."
+                "E quanti sapori nel suo latte!"
+                "Chiamo quando ho fame e capisco perfino quando sono sazio."
+                "Non riesco a parlare, ma faccio tanti sforzi per imitare, con il mio pianto, il modo di parlare della mamma. Accontentatevi del mio impegno."
+        { ped
+            titolo "Fidatevi delle sue competenze e cominciate a riconoscerle"
+            [ items
+                "Il latte della mamma contiene tutti gli aromi dei cibi che mangia e il bambino ne percepisce i diversi sapori."
+                "E' inoltre in grado di regolare fame e sazietà."
+                "Il pianto è il suo modo di comunicare stati d'animo e sensazioni."
+
+

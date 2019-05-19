@@ -1,0 +1,25 @@
+$group
+    {
+        { bam
+            titolo "Ma perchè mi mettete il ciuccio in bocca?"
+            [ items
+                "E' vero che, quando sono agitato, il ciuccio mi calma."
+        { ped
+            titolo "E' giusto aiutare il bambino a calmarsi con il ciuccio?"
+            [ items
+                "Numerose ricerche hanno provato che offrire il ciuccio, soprattutto nel primo mese di vita, riduce l’allattamento."
+                "Quindi in questo periodo è più corretto evitare di offrire il ciuccio al neonato per tranquillizzarlo."
+                "Mettete a dormire il vostro bambino sempre a pancia in su: è la posizione più sicura. Insieme all’allattamento e alla protezione dal fumo, aiuta a prevenire la “morte in culla” (SIDS)." 
+                "È importante anche mantenere la temperatura della stanza tra i 18° C e i 20° C, e non coprirlo troppo. Parlatene con il vostro pediatra di fiducia."
+        tags "ciuccio"
+    {
+        { bam
+            titolo "Mi capita che non riesco proprio a chetarmi senza il ciuccio"
+            [ items
+                "Mi irrito con facilità."
+                "Forse ho un carattere difficile, ma il papà e la mamma a volte non li capisco."
+        { ped
+            titolo "La situazione in famiglia è faticosa?"
+            [ items
+                "In questi casi è bene parlare con il pediatra, e cercare insieme come aiutare il neonato a rilassarsi, nel primo mese, senza l’utilizzo del ciuccio."
+        tags "ciuccio, criticità"

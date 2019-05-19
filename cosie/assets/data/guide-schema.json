@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "bam": {
+        "type": "object",
+        "description": "La voce del bambino",
+        "properties": {
+          "titolo": {
+            "description": "La frase breve (tweet) che introduce l'argomento",
+            "type": "string"
+          },
+          "items": {
+            "description": "Elenco (opzionale) di frasi pronunciate dal bambino",
+            "type": "array"
+          }
+        },
+        "required": [
+          "titolo"
+        ]
+      },
+      "ped": {
+        "description": "La voce del pediatra",
+        "type": "object",
+        "properties": {
+          "titolo": {
+            "description": "La frase breve (tweet) che da il tono alla risposta",
+            "type": "string"
+          },
+          "items": {
+            "description": "Elenco (opzionale) di frasi pronunciate dal pediatra",
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "required": [
+          "titolo"
+        ]
+      },
+      "images": {
+        "description": "Elenco (opzionale) di immagini da mostrare dopo il testo",
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "titolo": {
+                "description": "Titolo dell'immagine",
+                "type": "string"
+              },
+              "src": {
+                "description": "Nome del file contenente l'immagine (gif, jpeg, ...)",
+                "type": "string"
+              }
+            },
+            "required": [
+              "titolo",
+              "src"
+            ]
+          }
+        ]
+      },
+      "tags": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "bam",
+      "ped"
+    ]
+  }

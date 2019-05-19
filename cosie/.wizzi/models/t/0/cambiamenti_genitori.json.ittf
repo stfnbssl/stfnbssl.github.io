@@ -1,0 +1,19 @@
+$group
+    {
+        { bam
+            titolo "Eccomi qua in mezzo a voi! <b>Tutti i giorni</b>!"
+            [ items
+                "Ne combineremo delle belle ma ci sarà un bel pò da lavorare ..."
+                "... soprattutto per voi, anche se non mancheranno i pianti anche per me."
+                "Scusate per il disagio, spero sappiate organizzarvi."
+        { ped
+            titolo "I neonati portano dei cambiamenti sia attesi sia inaspettati"
+            [ items
+                "Tu ti aspetti e ricerchi l’amore legato alla tua nuova identità di genitore, ma potresti non aspettarti alcuni sentimenti di stress ed insoddisfazione che intervengono quando le tue responsabilità e le routine cambiano."
+                "Con la presenza di un nuovo bambino, i lavori di casa aumentano: lavare, stirare, cucinare, pulire, fare la spesa diventano impegni sempre più pesanti."
+                "Può essere necessario a questo punto rivedere gli incarichi per trovare una migliore organizzazione e divisione dei compiti."
+                "Le coppie sono più felici quando condividono le cose da fare in casa e le cure del bambino."
+                "E’ dimostrato che le coppie funzionano meglio quando le mansioni domestiche sono divise a metà e quando entrambi i partner condividono e possono alternarsi nelle cure del piccolo."
+                "Cercate di accettare il modo in cui il vostro partner esegue i lavori domestici, anche se non li compie come voi vorreste e supportatelo, riconoscendo il suo impegno, nelle cure per il bambino, anche se all’inizio appare incerto e inesperto."
+                "Condividere i lavori di casa e non preoccuparsi dell’ordine “perfetto” e condividere le cure per il piccolo aiuta a superare gli intensi impegni dei primi mesi da genitore." 
+        tags "aspettative genitori, cambiamenti genitori"

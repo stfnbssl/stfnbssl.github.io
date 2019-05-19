@@ -1,0 +1,16 @@
+$group
+    {
+        { bam
+            titolo "Ragazzi che fame!"
+            [ items
+                "Spesso sono affamato"
+                "Anzi direi quasi ... sempre"
+        { ped
+            titolo "Vuoi saperne di più?"
+            [ items
+                "Il latte della mamma è l’alimento migliore per il neonato."
+                "Attacca il tuo bambino tutte le volte che mostra di averne voglia e finché lo desidera."
+                "All’inizio ci può essere un po’di confusione, ma crescendo i suoi orari si stabilizzano e tutto diventa più facile."
+                "E’ importante che un neonato si attacchi al seno almeno 6-7 volte al giorno."
+                "Ti accorgi che sta mangiando bene se cambi almeno 5 pannolini di pipì nelle 24 ore."
+        tags "alimentazione, allattamento"

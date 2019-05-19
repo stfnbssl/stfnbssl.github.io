@@ -1,0 +1,71 @@
+$group
+    {
+        { bam
+            titolo "Sento qualcosa che non va ... e allora piango"
+            [ items
+                "Scusate ma ancora non riesco a capire."
+                "E se anche capissi ancora non saprei cosa dire."
+                "Allora piango, così il papà o la mamma possono provare ad indovinare, e ad aiutarmi."
+                "Se vedo che ci provano stò già meglio, e sento che ci riescono."
+        { ped
+            titolo "Il pianto del tuo bambino è una comunicazione da ascoltare ed accogliere sempre"
+            [ items
+                "Non è importante capire subito quello di cui il bambino ha bisogno."
+                "Forse non ne siamo in grado e forse nemmeno il bambino sa quello che gli serve."
+                "E’ importante invece il modo con cui proviamo ad offrire la nostra risposta: parlandogli, accarezzandolo, prendendolo in braccio, cullandolo."
+                "Aiuta il rimanere sempre attenti alle sue risposte, sguardi, movimenti del corpo, cambiamenti del ritmo e nel tono dei suoi vocalizzi."
+        tags "pianto"
+    {
+        { bam
+            titolo "Stavo così bene ... e adesso il pancino mi duooooole"
+            [ items
+                "Che sia l'ora della colica?"
+                "Allora piango!"
+        { ped
+            titolo "Capita che il tuo bambino presenti crisi di pianto o atteggiamento irritabile soprattutto nelle ore pomeridiane e serali?"
+            [ items
+                "Forse è una colica ... il nome riporta a un dolore intestinale ma il mal di pancia è probabilmente una conseguenza più che una causa del pianto."
+                "Verosimilmente questi pianti sono espressione di un periodo di normale sviluppo che molti bambini devono attraversare nei primi mesi di vita."
+                "Questi episodi cominciano alcuni giorni dopo la nascita e raggiungono un picco verso la sesta-ottava settimana, per poi risolversi alla fine del terzo –quarto mese."
+                "C’è il bambino che piange 1-2 ore, e quello che piange anche più di 5 ore, mettendo a dura prova la pazienza dei genitori."
+                "Le medicine che vengono proposte per ridurre il pianto hanno in genere una scarsa efficacia."
+        tags "pianto, coliche, farmaci"
+    {
+        { bam
+            titolo "Si! Si! Questa è proprio una colica, lo sento!"
+            [ items
+                "Nessuno mi può aiutare?"
+                "Allora piango ancora di più!"
+        { ped
+            titolo "Che cosa può funzionare per calmare il pianto delle coliche?"
+            [ items
+                "Tenere il bambino vicino a sé, corpo contro corpo, abbracciandolo, lo aiuta a non sentirsi solo."
+                "Tenerlo in braccio, in fascia o in marsupio, anche quando dorme durante il giorno, aiuta a ridurre la durata delle coliche."
+                "Le coliche spesso si manifestano durante il tardo pomeriggio o la sera."
+                "Imparare una canzone dolce, una ninna nanna, e cantarla spesso al bambino, è un’ esperienza piacevole che crea benessere nel genitore e aiuta a tranquillizzare il bambino nei momenti di agitazione."
+                "A volte ha una colica o piange solo perchè è spaventato."
+                "Portare a spasso fuori casa il bambino tutti i giorni è un’esperienza rilassante per il genitore e aiuta il bambino a calmarsi se è irritato o agitato."
+                "Durante la colica può essere molto efficace prendere in braccio il bambino, petto contro petto, e fare una lunga passeggiata: così facendo i bambini si rilassano e iniziano a dormire." 
+        tags "pianto, coliche"
+    {
+        { bam
+            titolo "Che tristezza! Che male! Non so neppure io ..."
+            [ items
+                "Oggi ho solo voglia di piangere."
+                "Ho stancato tutti lo so ma non riesco a smettere."
+        { ped
+            titolo "Il tuo bambino piange tanto e ti rendi conto che non ne puoi più"
+            [ items
+                "Lascialo in un posto sicuro per alcuni minuti e cerca di recuperare il controllo."
+                "Chiedi aiuto chiamando il tuo patner, un famigliare o un amico che ti può supportare."
+                "Attenzione! Non scuoterlo mai per cercare di interrompere il suo pianto: potresti danneggiare in modo grave il suo cervello." 
+        tags "pianto, criticità"
+
+
+
+
+
+
+
+
+

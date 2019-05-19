@@ -1,0 +1,20 @@
+$group
+    {
+        { bam
+            titolo "Mi piace muovermi e guardare un po da tutte le parti"
+            [ items
+                "Faccio movimenti a scatti, irregolari. Sto imparando, non sono Frankestein."
+                "I miei occhi a volte sono scoordinati. Possono sembrarvi strabici, ma si correggeranno (verso i 6 mesi)."
+                "Mi metto le mani in bocca, nessuno è perfetto."
+                "La testa mi si abbassa quando me la sollevate, dovete reggerla."
+        { ped
+            titolo "Cosa puoi fare"
+            [ items
+                "Avvolgilo in una coperta morbida per aiutarlo a sentirsi sicuro."
+                "Tienilo in contatto pelle a pelle."
+                "Cullalo con un movimento ritmico e lento."
+                "Avvolgilo con le tue parole, raccontandogli quello che stai facendo."
+                "Cantagli la ninna nanna per coccolarlo."
+                "Rispondi rapidamente alle sue richieste."
+                "Quando è tranquillo accarezzagli il corpo e la testa con le mani calde."
+        tags "giochi, movimento"
