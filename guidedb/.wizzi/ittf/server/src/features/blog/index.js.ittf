@@ -1,0 +1,24 @@
+module
+    kind es6
+    import 
+        @ PostModelBuilder
+        @ PostModel
+        from './mongo/post'
+    import 
+        @ PostController
+        from './controllers/post'
+    
+    const blogModels
+        { 
+            @ PostModel
+    const blogModelBuilders
+        [ 
+            @ PostModelBuilder
+    const blogControllers
+        [ 
+            @ new PostController()
+    
+    export
+        @ blogModels
+        @ blogModelBuilders
+        @ blogControllers

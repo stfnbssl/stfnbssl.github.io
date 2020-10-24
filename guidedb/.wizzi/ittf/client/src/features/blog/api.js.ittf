@@ -1,0 +1,51 @@
+module
+    kind es6
+
+    import { callApi } from '../../utils/api'
+
+    export
+        function getPostList
+            return
+                _ callApi
+                    @ 'posts'
+                    {
+                        @ method 'get'
+
+    export
+        function createPost
+            param post
+            return
+                _ callApi
+                    @ 'posts'
+                    {
+                        @ method 'post'
+                        @ data post
+
+    export
+        function getPost
+            param id
+            return
+                _ callApi
+                    @ `posts/${id}`
+                    {
+                        @ method 'get'
+
+    export
+        function updatePost
+            param id
+            param post
+            return
+                _ callApi
+                    @ `posts/${id}`
+                    {
+                        @ method 'put'
+                        @ data post
+    
+    export
+        function deletePost
+            param id
+            return
+                _ callApi
+                    @ `posts/${id}`
+                    {
+                        @ method 'delete'

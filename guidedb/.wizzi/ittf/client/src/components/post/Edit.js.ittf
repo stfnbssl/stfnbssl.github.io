@@ -1,0 +1,101 @@
+module
+    kind react
+    import React, { Component } from 'react'
+    import { blogApis } from '../../features/blog'
+
+    export-default
+        react PostEdit
+            ctor 
+                set this.state =
+                    { 
+                        @ title ''
+                        @ content ''
+                        @ author ''
+            
+            did-mount
+                const id = this.props.match.params.id
+                _ blogApis.getPost(id)
+                    ._ then
+                        => 
+                            param response
+                            _ this.setState
+                                { 
+                                    @ title response.post.title
+                                    @ content response.post.content
+                                    @ author response.post.author
+                        ._ catch
+                            =>
+                                param error
+                                log error
+            => onChange
+                param name
+                return 
+                    =>
+                        param e
+                        _ this.setState
+                            { 
+                                @ [name] e.target.value
+            => onSubmit
+                param e
+                _ e.preventDefault
+                const id = this.props.match.params.id
+                const obj
+                    { 
+                        @ title this.state.title
+                        @ content this.state.content
+                        @ author this.state.author
+                _ blogApis.updatePost
+                    @ id
+                    @ obj
+                    ._ then
+                        => 
+                            param res
+                            log res
+                            _ this.props.history.push('/index')
+            => onCancel
+                _ this.props.history.push('/index')
+            render
+                return 
+                    div 
+                        h3 
+                            @ align "center"
+                            + Update Post
+                        < form 
+                            @ onSubmit {this.onSubmit}
+                            div 
+                                @ className "form-group"
+                                label 
+                                    + Title:  \b
+                                input 
+                                    @ type "text"
+                                    @ className "form-control"
+                                    @ value {this.state.title}
+                                    @ onChange {this.onChange('title')}
+                            div 
+                                @ className "form-group"
+                                label 
+                                    + Content: \b
+                                input 
+                                    @ type "text"
+                                    @ className "form-control"
+                                    @ value {this.state.content}
+                                    @ onChange {this.onChange('content')}
+                            div 
+                                @ className "form-group"
+                                label 
+                                    + Author: \b
+                                input 
+                                    @ type "text"
+                                    @ className "form-control"
+                                    @ value {this.state.author}
+                                    @ onChange {this.onChange('author')}
+                            div 
+                                @ className "form-group"
+                                input 
+                                    @ type "submit"
+                                    @ value "Update"
+                                    @ className "btn btn-primary"
+                                button
+                                    + Cancel
+                                    @ onClick {this.onCancel}
+                                    @ className "btn"

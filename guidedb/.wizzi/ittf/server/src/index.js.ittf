@@ -1,0 +1,46 @@
+module
+    kind react
+    $
+        var dataFeatures = ['auth', 'blog', 'ga']
+    import 'babel-polyfill'
+    import 
+        @ config
+        from './features/config'
+    import mongodbStart from './services/mongodb'
+    import { siteControllers } from './site'
+    $foreach feature in dataFeatures
+        import 
+            @ ${feature}Controllers
+            @ ${feature}ModelBuilders
+            from './features/${feature}'
+    import 
+        @ appMiddlewares
+        from './middleware'
+    import App from './App'
+    
+    async-function start
+        let modelBuilders
+            [ 
+                $foreach feature in dataFeatures
+                    @ ...${feature}ModelBuilders
+        await mongodbStart(config, modelBuilders)
+        let middlewares
+            [ 
+                @ ...appMiddlewares
+        let controllers
+            [ 
+                @ ...siteControllers
+                $foreach feature in dataFeatures
+                    @ ...${feature}Controllers
+        const appInitializer
+            { 
+                @ config
+                @ controllers
+                @ middlewares
+        const app = new App(appInitializer)
+        _ app.listen
+    
+    try
+        _ start
+    catch ex
+        log ex

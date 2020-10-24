@@ -1,0 +1,10 @@
+$group
+    $params name, value
+    if !${value}
+        return
+            _ sendBadRequest
+                @ res
+                { 
+                    { errors
+                        @ ${name} 'is required'
+                @ 422

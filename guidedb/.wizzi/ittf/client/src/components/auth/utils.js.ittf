@@ -1,0 +1,41 @@
+module
+    kind react
+    
+    export 
+        function toParams
+            param query
+            const q = query.replace(/^\??\//, '')
+            return 
+                _ q.split('&').reduce
+                    => 
+                        param values
+                        param param
+                        const [key, value] = param.split('=')
+                        set values[key] = value
+                        return values
+                    { 
+    
+    export 
+        function toQuery
+            param params
+            param delimiter = '&'
+            const keys = Object.keys(params)
+            return 
+                _ keys.reduce
+                    => 
+                        param str
+                        param key
+                        param index
+                        let query
+                            `lit 
+                                + 
+                                @ str
+                                + 
+                                @ key
+                                + =
+                                @ params[key]
+                                + 
+                        if index < (keys.length - 1)
+                            set query += delimiter
+                        return query
+                    @ ''

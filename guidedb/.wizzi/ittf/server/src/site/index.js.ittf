@@ -1,0 +1,14 @@
+module
+    kind react
+    import 
+        @ HomeController
+        from './controllers/home'
+    import 
+        @ AuthController
+        from './controllers/auth'
+    const siteControllers
+        [ 
+            @ new HomeController()
+            @ new AuthController()
+    export 
+        @ siteControllers

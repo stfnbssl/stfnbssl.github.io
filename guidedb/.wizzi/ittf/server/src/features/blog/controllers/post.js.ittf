@@ -1,0 +1,150 @@
+module
+    kind es6
+
+    import { Router, Request, Response } from 'express'
+    import { sendFailure, sendSuccess } from '../../../utils/response'
+    import { GetPostModel } from '../mongo/post'
+
+    export
+        class PostController
+            ctor
+                set this.path = '/api/v1/posts'
+                set this.router = Router()
+                set this.postModel = null
+
+            m initialize
+                param initValues
+                log 'Entering PostController.initialize'
+                set this.postModel = GetPostModel()
+                _ this.router.get(`${this.path}`, this.getPosts.bind(this))
+                _ this.router.post(`${this.path}`, this.createPost.bind(this))
+                _ this.router.get(`${this.path}/:id`, this.getPostById.bind(this))
+                _ this.router.put(`${this.path}/:id`, this.updatePost.bind(this))
+                _ this.router.delete(`${this.path}/:id`, this.deletePost.bind(this))
+
+            m getPosts
+                param req
+                param res
+                _ this.postModel.find
+                    =>
+                        param err
+                        param posts
+                        if err
+                            log 'getPosts.err', posts
+                            return
+                                _ sendFailure
+                                    @ res
+                                    @ err
+                        else
+                            log 'getPosts.posts', posts
+                            _ sendSuccess
+                                @ res
+                                {
+                                    @ posts posts
+
+            m createPost
+                param req
+                param res
+                log 'Entering PostController.createPost', this
+                let post = new this.postModel(req.body)
+                _ post.save
+                    ._ then
+                        => 
+                            param post
+                            _ sendSuccess
+                                @ res
+                                { 
+                                    @ 'message' 'Post created successfully'
+                    ._ catch
+                        => 
+                            param err
+                            _ sendFailure
+                                @ res
+                                {
+                                    @ message "Post could not be created."
+                                    @ err
+                                    
+
+            m getPostById
+                param req
+                param res
+                let id = req.params.id
+                _ this.postModel.findById
+                    @ id
+                    function 
+                        param err
+                        param post
+                        if err
+                            return
+                                _ sendFailure
+                                    @ res
+                                    @ err
+                        _ sendSuccess
+                            @ res
+                            { 
+                                @ post post
+            
+            m updatePost
+                param req
+                param res
+                const id = req.params.id;
+                _ this.postModel.findById
+                    @ id
+                    =>
+                        param err
+                        param post
+                        if err
+                            return
+                                _ sendFailure
+                                    @ res
+                                    @ err
+                        if !post
+                            return
+                                _ sendFailure
+                                    @ res
+                                    {
+                                        @ message 'Post data not found'
+                                    @ 404
+                        else
+                            set post.title = req.body.title
+                            set post.content = req.body.content
+                            set post.author = req.body.author
+                            _ post.save
+                                ._ then
+                                    => 
+                                        param post
+                                        _ sendSuccess
+                                            @ res
+                                            {
+                                                @ message 'Post update complete.'
+                                ._ catch
+                                    => 
+                                        param err
+                                        _ sendFailure
+                                            @ res
+                                            {
+                                                @ message 'Post could not be updated.'
+                                                @ err
+                                            @ 400
+
+
+            m deletePost
+                param req
+                param res
+                const id = req.params.id;
+                _ this.postModel.findByIdAndRemove
+                    { 
+                        @ _id id
+                    =>
+                        param err
+                        param post
+                        if err
+                            return
+                                _ sendFailure
+                                    @ res
+                                    @ err
+                        else
+                            _ sendSuccess
+                                @ res
+                                { 
+                                    @ message 'Post successfully removed'

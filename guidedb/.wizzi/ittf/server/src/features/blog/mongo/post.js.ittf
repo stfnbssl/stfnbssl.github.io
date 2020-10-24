@@ -1,0 +1,27 @@
+module
+    kind es6
+    import { Schema, model } from "mongoose"
+    
+    const Post
+        new Schema
+            { 
+                { title
+                    @ type String
+                { content
+                    @ type String
+                { author
+                    @ type String
+            { 
+                @ collection 'posts'
+
+    let postModel = null
+    export
+        function GetPostModel
+            return postModel
+    
+    export
+        const PostModelBuilder
+            { 
+                @ buildModel
+                    => 
+                        set postModel = model('Post', Post)

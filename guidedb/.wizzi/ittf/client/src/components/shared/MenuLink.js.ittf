@@ -1,0 +1,28 @@
+styled_react( ListLink )
+    
+    $append imports
+        import { Link } from 'react-router-dom'
+        import MenuItem from '@material-ui/core/MenuItem'
+
+    prop primary
+        node 
+        required
+    prop to
+        string
+        required
+
+    => renderLink
+        param itemProps
+        return
+            < Link 
+                @ to {this.props.to}
+                @ {...itemProps}
+        
+    render
+        prop primary
+        return 
+            li 
+                < MenuItem 
+                    @ button
+                    @ component {this.renderLink}
+                    + {primary}

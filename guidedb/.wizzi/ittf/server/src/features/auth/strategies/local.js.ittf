@@ -1,0 +1,42 @@
+module
+    kind es6
+    import { Strategy } from 'passport-local'
+    import { GetUserModel } from '../mongo/user'
+    import { config } from '../../config'
+
+    let userModel = null
+
+    export
+        function createStrategy
+            set userModel = GetUserModel()
+            log 'features.auth.strategies.local.createStrategy'
+            return
+                new Strategy
+                    { 
+                        @ usernameField 'user[email]'
+                        @ passwordField 'user[password]'
+                    => 
+                        param email
+                        param password
+                        param done
+                        log 'features.auth.strategies.local.verify.email,password', email, password
+                        _ userModel.findOne
+                            { 
+                                @ email
+                            ._ then
+                                => 
+                                    param user
+                                    if !user || !user.validatePassword(password)
+                                        log 'features.auth.strategies.local.verify.false'
+                                        return 
+                                            _ done
+                                                @ null
+                                                @ false
+                                                { 
+                                                    { errors
+                                                        @ 'email or password' 'is invalid'
+                                    log 'features.auth.strategies.local.verify.true.user', user
+                                    return done(null, user)
+                            ._ catch
+                                @ done
+

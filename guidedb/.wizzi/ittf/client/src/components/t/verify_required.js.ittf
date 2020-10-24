@@ -1,0 +1,7 @@
+$group
+    $params name
+    if (formValues.${name} && formValues.${name}.length > 0) == false
+        _ this._setFieldError
+            @ '${name}'
+            @ 'Required field'
+        set isFormValid = false

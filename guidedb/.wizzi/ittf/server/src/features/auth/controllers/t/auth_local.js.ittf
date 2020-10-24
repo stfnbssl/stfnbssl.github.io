@@ -1,0 +1,122 @@
+$group
+    $params request
+    
+    $if request === 'routes'
+        _ this.router.post
+            @ `${this.path}/local/register`
+            @ jwtAuth.optional
+            _ this.localRegister.bind(this)
+        _ this.router.post
+            @ `${this.path}/local/login`
+            @ jwtAuth.optional
+            _ this.localLogin.bind(this)
+        _ this.router.get
+            @ `${this.path}/local/profile`
+            @ jwtAuth.required
+            _ this.localProfile.bind(this)
+
+    $if request === 'actions'
+        m localLogin
+            param req
+            param res
+            param next
+            const 
+                { 
+                    { body
+                        @ user
+                = req
+
+            valid_required( email, user.email )
+            valid_required( password, user.password )
+
+            log 'features.auth.controllers.auth.localLogin.email,password', user.email, user.password
+
+            return 
+                _ authenticate
+                    @ 'local'
+                    { 
+                        @ session false
+                    => 
+                        param err
+                        param passportUser
+                        param info
+                        if err
+                            log 'features.auth.controllers.auth.localLogin.err', err
+                            return next(err)
+                        log 'features.auth.controllers.auth.localLogin.passportUser,info', passportUser, info
+                        if passportUser
+                            const user = passportUser
+                            set user.token =
+                                _ passportUser.generateJWT
+                            log 'features.auth.controllers.auth.localLogin.token', user.token
+                            return 
+                                _ sendSuccess
+                                    @ res
+                                    { 
+                                        @ user
+                                            _ user.toAuthJSON
+                        return
+                            _ sendBadRequest
+                                @ res
+                                @ info
+                    (
+                        @ req
+                        @ res
+                        @ next
+
+        m localRegister
+            param req
+            param res
+            param next
+            const 
+                { 
+                    { body
+                        @ user
+                = req
+
+            valid_required( email, user.email )
+            valid_required( password, user.password )
+
+            log 'features.auth.controllers.auth.localRegister.email,password', user.email, user.password
+            
+            const registeredUser = new this.userModel(user)
+            _ registeredUser.setPassword(user.password)
+            
+            return 
+                _ registeredUser.save
+                    ._ then
+                        => 
+                            _ sendSuccess
+                                @ res
+                                { 
+                                    @ user
+                                        _ registeredUser.toAuthJSON
+
+        m localProfile
+            param req
+            param res
+            param next
+            log 'features.auth.controllers.auth.localProfile.req.payload', req.payload
+            const 
+                { 
+                    { payload
+                        @ id
+                = req
+            return 
+                _ this.userModel.findById
+                    @ id
+                    ._ then
+                        => 
+                            param user
+                            log 'features.auth.controllers.auth.localProfile.user', user
+                            if !user
+                                _ sendBadRequest
+                                    @ res
+                                    {
+                                        @ message 'User not found'
+                            return 
+                                _ sendSuccess
+                                    @ res
+                                    { 
+                                        @ user
+                                            _ user.toAuthJSON

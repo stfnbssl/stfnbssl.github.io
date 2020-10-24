@@ -1,0 +1,32 @@
+module
+    kind es6
+    import cors from 'cors'
+    $if data.Features.useSocketio
+        import 
+            @ config
+            from '../features/config'
+        const whitelist
+            [
+                @ config.corsClientOrigin
+
+    export 
+        const CorsMiddleware
+            => 
+                param app
+                const options
+                    {
+                        $if data.Features.useSocketio
+                            $if false
+                                @ origin
+                                    =>
+                                        param origin
+                                        param callback
+                                        const originWhitelisted = whitelist.indexOf(origin) !== -1
+                                        log 'cors.originWhitelisted', originWhitelisted, origin, whitelist
+                                        _ callback(null, originWhitelisted)
+                            $if true
+                                @ origin config.corsClientOrigin
+                                @ credentials true
+                _ app.use
+                    _ cors
+                        @ options

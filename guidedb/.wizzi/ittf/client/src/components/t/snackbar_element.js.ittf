@@ -1,0 +1,16 @@
+$group
+    < Snackbar
+        @ anchorOrigin
+            {
+                @ vertical 'bottom'
+                @ horizontal 'left'
+        @ open {isSnackbarOpen}
+        @ autoHideDuration {6000}
+        @ onClose {this._handleToggleSnackbar}
+        @ ContentProps
+            { 
+                @ 'aria-describedby' 'message-id'
+        @ message
+            span 
+                @ id "message-id"
+                + {snackbarMessage}

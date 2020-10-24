@@ -1,0 +1,28 @@
+$group
+
+    field gnoseologia
+        + Termine filosofico equivalente a «teoria della conoscenza». 
+        + Compito della gnoseologia è fornire una definizione di conoscenza, 
+            \b individuare i suoi possibili oggetti 
+            \b e studiare i modi in cui è acquisibile dal soggetto conoscente, accertandone la validità. 
+            \b Pertanto la gnoseologia si configura variamente nella storia della filosofia,
+            \b a seconda delle premesse metafisiche a cui è abbinata. 
+        + Nei paesi anglosassoni il termine usato è epistemology.
+
+    field epistemologia
+        + Indagine critica intorno alla struttura logica e alla metodologia delle scienze. 
+        + Il termine, coniato dal filosofo scozzese J.F. Ferrier, 
+            \b designa quella parte della gnoseologia che studia i fondamenti, la validità, 
+            \b i limiti della conoscenza scientifica (episteme). 
+        + Nei paesi anglosassoni il termine è prevalentemente 
+            \b usato per indicare la teoria della conoscenza o gnoseologia. 
+
+    approach epistemologia genetica
+        + Denominazione che lo psicologo svizzero J. Piaget ha dato alle sue ricerche 
+            \b sui ‘meccanismi attraverso cui si forma la conoscenza’, 
+            \b le quali, in contrapposizione tanto all’apriorismo razionalistico quanto all’empirismo e al positivismo, 
+            \b pongono in evidenza l’originario legame tra i processi cognitivi e l’attività senso-motoria, 
+            \b offrendo inoltre argomenti a favore della teoria, 
+            \b articolata anche su basi sperimentali, 
+            \b della nascita graduale, nel corso dell’evoluzione psichica infantile, 
+            \b dei concetti logici, matematici e fisici.

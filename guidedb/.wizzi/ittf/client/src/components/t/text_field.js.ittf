@@ -1,0 +1,12 @@
+$group
+    $params name, label
+    < TextField 
+        @ label "${label}"
+        @ value {values.${name}}
+        @ name "${name}"
+        @ onChange {onChange}
+        @ margin "normal"
+        @ fullWidth
+        @ autoComplete "off"
+        @ error {errors.${name} && errors.${name}.length > 0}
+        @ helperText {errors.${name} || ''}

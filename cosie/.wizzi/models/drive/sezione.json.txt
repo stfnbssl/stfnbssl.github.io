@@ -1,0 +1,7 @@
+{
+    $params numero, titolo, settimane
+    numero ${numero}
+    titolo "${titolo}"
+    settimane ${settimane}
+    [ messaggi
+        $hook

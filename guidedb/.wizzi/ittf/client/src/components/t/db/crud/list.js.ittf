@@ -1,0 +1,75 @@
+$group
+    $params &ctx
+
+    $
+        var t = ctx.table;
+    
+    export
+        react ${t.Name}List
+            ctor 
+                set this.state =
+                    { 
+                        @ ${t.collection} []
+            
+            did-mount
+                _ ${ctx.feature}Apis.get${t.Name}List().then
+                    => 
+                        param response
+                        _ this.setState
+                            { 
+                                @ ${t.collection} response.${t.collection}
+                    ._ catch
+                        => 
+                            param err
+                            log err
+                            _ alert("Api error: " + err.message)
+
+            => delete
+                param id
+                _ ${ctx.feature}Apis.delete${t.Name}(id)
+                    ._ then
+                        => 
+                            log 'Deleted'
+                    ._ catch
+                        => 
+                            param err
+                            log err
+            
+            render
+                return 
+                    div 
+                        h3 
+                            @ align "center"
+                            + ${t.Name} List
+                        table 
+                            @ className "table table-striped"
+                            thead 
+                                tr 
+                                    $foreach c in t.columns
+                                        th 
+                                            + ${c.name}
+                                    th 
+                                        @ colSpan "2"
+                                        + Action
+                            tbody 
+                                { 
+                                    _ this.state.${t.collection}.map
+                                        =>
+                                            param obj
+                                            param i
+                                            return 
+                                                tr 
+                                                    @ key {i}
+                                                    $foreach c in t.columns
+                                                        td 
+                                                            + {obj.${c.name}}
+                                                    td 
+                                                        < Link 
+                                                            @ to {"/edit/" + obj._id}
+                                                            @ className "btn btn-primary"
+                                                            + Edit
+                                                    td 
+                                                        button 
+                                                            @ onClick {()=>this.delete(obj._id)}
+                                                            @ className "btn btn-danger"
+                                                            + Delete                                                 

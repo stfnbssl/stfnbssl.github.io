@@ -1,0 +1,12 @@
+$group
+    => _handleToggleSnackbar
+        { 
+            @ message
+                = 'Error'
+        _ this.setState
+            => 
+                param state
+                return
+                    { 
+                        @ isSnackbarOpen !state.isSnackbarOpen
+                        @ snackbarMessage message

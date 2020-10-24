@@ -1,0 +1,12 @@
+$group
+    $params label, to, icon|@@null
+
+    $if icon == null
+        < MenuLink
+            @ to {'${to}'}
+            @ primary ${label}
+    $else
+        < MenuIconLink
+            @ to {'${to}'}
+            @ primary ${label}
+            @ icon ${icon}

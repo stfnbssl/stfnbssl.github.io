@@ -1,0 +1,146 @@
+module
+    kind es6
+
+    import { config } from '../config'
+    import { getTokens, setTokens } from './storage'
+
+    const AUTH_URL = config.AUTH_URL
+
+    export
+        async-function localLogin
+            {
+                @ email
+                @ password
+            
+            return
+                _ callApi
+                    @ 'local/login'
+                    {
+                        @ method 'post'
+                        { data
+                            { user
+                                @ email
+                                @ password
+                    ._ then
+                        =>
+                            param data
+                            log 'features.auth.api.localLogin.data', data
+                            _ setTokens(data.user.token, data.user.refresh_token)
+                            return
+                                {
+                                    @ status 'ok'
+                                    @ user 'logged on'
+
+    export
+        async-function localRegister
+            {
+                @ email
+                @ password
+                @ abortSignal
+
+            log 'features.auth.api.localRegister.email,password,abortSignal', email,password,abortSignal
+            return
+                _ callApi
+                    @ 'local/register'
+                    {
+                        @ method 'post'
+                        @ abortSignal abortSignal
+                        { data
+                            { user
+                                @ email
+                                @ password
+                    ._ then
+                        =>
+                            param data
+                            log 'features.auth.api.localRegister.data', data
+                            _ setTokens(data.user.token, data.user.refresh_token)
+                            return
+                                {
+                                    @ status 'ok'
+                                    @ user 'registered'
+
+    export
+        function localProfile
+            const tokens = getTokens()
+            return
+                _ callApi
+                    @ `local/profile`
+                    {
+                        @ method 'get'
+                        @ token tokens.token
+                    ._ then
+                        =>
+                            param data
+                            log 'features.auth.api.localProfile.data', data
+                            return data.user
+
+    export
+        function githubConnect
+            const tokens = getTokens()
+            return
+                _ callApi
+                    @ `github/connect`
+                    {
+                        @ method 'get'
+                        @ token tokens.token
+                    ._ then
+                        =>
+                            param data
+                            log 'features.auth.api.githubAccount.data', data
+                            return data.account
+
+    async-function callApi
+        param path
+        param options
+
+        if options.abortSignal && options.abortSignal.aborted
+            log 'features.auth.api.callApi.aborted at start'
+            return Promise.reject(new DOMException('Aborted', 'AbortError'))
+
+        return
+            new Promise
+                async=>
+                    param resolve
+                    param reject
+                    if options.abortSignal
+                        # Begin doing thimgs, and call resolve(result) when done.
+                        # But also, watch for signals
+                        _ options.abortSignal.addEventListener
+                            @ 'abort'
+                            =>
+                                # Stop doing things, and
+                                log 'features.auth.api.callApi.aborted'
+                                _ reject(new DOMException('Aborted', 'AbortError'))
+        
+                    log 'callApi request', AUTH_URL, path, options
+
+                    const headers
+                        {
+                            @ Accept 'application/json'
+                            @ 'Content-Type' 'application/json'
+                    if options.token
+                        set headers['Authorization'] = `Token ${options.token}`
+
+                    log 'features.auth.api.callApi.headers', headers
+
+                    try
+                        const res
+                            await 
+                                _ fetch
+                                    @ `${AUTH_URL}/${path}`
+                                    { 
+                                        @ method options.method
+                                        @ headers
+                                        @ body options.data ? JSON.stringify(options.data) : null
+                        log 'callApi result.res', res
+                        if res.ok
+                            const json = await res.json()
+                            log 'callApi result.json', json
+                            if json.errors
+                                _ reject(json)
+                            else
+                                _ resolve(json)
+                        else
+                            _ reject(res)
+                    catch error
+                        _ reject(error)

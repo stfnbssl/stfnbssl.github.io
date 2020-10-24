@@ -1,0 +1,11 @@
+{
+    baseUrl "http://localhost:8080"
+    { Params
+        name "demo-mern"
+        version "0.0.1"
+        description "Demo MERN"
+        title "Demo MERN"
+        license "MIT"
+        author "Stefano Bassoli stfn.bssl@gmail.com"
+    features()
+    ga()

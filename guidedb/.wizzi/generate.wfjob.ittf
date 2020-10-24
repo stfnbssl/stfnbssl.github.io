@@ -1,0 +1,87 @@
+﻿wfjob packy-template-mern
+	
+	$
+		var ittf_models_folder         = path.join(__dirname, 'ittf', 'models');
+		var ittf_client_root_folder    = path.join(__dirname, 'ittf', 'client', 'root');
+		var ittf_client_src_folder     = path.join(__dirname, 'ittf', 'client', 'src');
+		var dest_client_folder         = path.resolve(__dirname, '..', 'client');
+		var ittf_server_root_folder    = path.join(__dirname, 'ittf', 'server', 'root');
+		var ittf_server_src_folder     = path.join(__dirname, 'ittf', 'server', 'src');
+		var dest_server_folder         = path.resolve(__dirname, '..', 'server');
+
+	model data
+        schema json
+        src ${ittf_models_folder}/data.json.ittf
+
+	model style
+        schema json
+        src ${ittf_models_folder}/style.json.ittf
+
+	line client-root
+		cwd-folder ${ittf_client_root_folder}
+		dest-folder ${dest_client_folder}
+
+		wfjob/any_js()
+			wfjob/models()
+		wfjob/any_json()
+			wfjob/models()
+		wfjob/.babelrc()
+			wfjob/models()
+		wfjob/.eslintrc()
+			wfjob/models()
+		wfjob/.eslintignore()
+			wfjob/models()
+		wfjob/any_md()
+			wfjob/models()
+
+	line client-src
+		cwd-folder ${ittf_client_src_folder}
+		dest-folder ${dest_client_folder}/src
+
+		wfjob/any_js()
+			wfjob/models()
+		wfjob/any_json()
+			wfjob/models()
+		wfjob/any_css()
+			wfjob/models()
+		wfjob/any_svg()
+			wfjob/models()
+		wfjob/any_html()
+			wfjob/models()
+		wfjob/any_plain(css)
+		wfjob/any_md()
+			wfjob/models()
+
+	line server-root
+		cwd-folder ${ittf_server_root_folder}
+		dest-folder ${dest_server_folder}
+
+		wfjob/any_js()
+			wfjob/models()
+		wfjob/any_json()
+			wfjob/models()
+		wfjob/any_md()
+			wfjob/models()
+		wfjob/.babelrc()
+			wfjob/models()
+		wfjob/.env()
+
+	line server-src
+		cwd-folder ${ittf_server_src_folder}
+		dest-folder ${dest_server_folder}/src
+
+		wfjob/any_js()
+			wfjob/models()
+		wfjob/any_json()
+			wfjob/models()
+		wfjob/any_md()
+			wfjob/models()
+		artifact any_ittf_inside___copy
+			src ${ittf_server_src_folder}/**/*__copy/**/*.ittf
+			extension ittf
+
+	production
+		line-ref client-root
+		line-ref client-src
+		line-ref server-root
+		line-ref server-src		

@@ -1,0 +1,65 @@
+module
+    $params name
+    kind react
+    import React
+        @ Component
+        from 'react'
+    import PropTypes from 'prop-types'
+    import 
+        @ withStyles
+        from '@material-ui/core/styles'
+    import Snackbar from '@material-ui/core/Snackbar'
+    $hook imports
+
+    const styles
+        => 
+            param theme
+            return
+                {
+                    $hook styles
+    
+    react ${name}
+
+        state
+            { formValues
+                $hook stateFormValues
+            { formErrors
+            @ isLoading false
+            @ isSnackbarOpen false
+            @ snackbarMessage ''
+            @ abortController null
+            $hook state
+
+        => _handleChangeForm
+            param event
+            _ this.setState
+                { 
+                    { formValues
+                        @ ...this.state.formValues
+                        @ [event.target.name] event.target.value
+
+        => _setFieldError
+            param name
+            param errorInfo
+            _ this.setState
+                { 
+                    { formErrors
+                        @ ...this.state.formErrors
+                        @ [name] errorInfo
+
+        => _validateForm
+            const { formValues } = this.state
+            _ this.setState
+                { 
+                    @ formErrors {}
+            let isFormValid = true
+            $hook validateForm
+            return isFormValid
+
+        $hook
+
+    set ${name}.propTypes =
+        { 
+            $hook propTypes
+
+    export-default withStyles(styles)(${name})

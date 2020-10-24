@@ -1,0 +1,23 @@
+I messaggi sono suddivisi in vari documenti per comodità di editing.
+Il documento "index.json" ne determina la inclusione e l'ordine.
+
+In ogni documento la struttura dei messagi è data dai rientri di spaziatura nelle righe.
+
+Ad esempio in
+{
+    { bam
+        titolo "bla bla"
+        [ items
+            "bla bla"
+
+La prima aperta graffa "{" indica l'inizio di un "oggetto" messaggio. 
+La seconda "{ bam", dopo 4 spazi di rientro, indica l'inizio di un "oggetto" voce del bambino.
+Nella terza riga "titolo 'bla bla", dopo 8 spazi di rientro (4 + 4), indica la proprietà "titolo" del tweet che introduce le frasi del bambino.
+La quarta "[ items", dopo 8 spazi di rientro (4 + 4) , indica l'inizio di un "elenco" di frasi del bambino.
+E cosi via.
+
+Il carattere "courier" impostato nei documenti è "mono-space" quindi i rientri si vedono meglio.
+Il formato A3 orizzontale consente di ridurre gli a capo.
+
+Non preoccupatevi troppo dei segni tecnici di formattazione: "{" : oggetto, "[" : elenco, valori tra virgolette, ecc.
+Il programma segnala le formattazioni non corrette e verranno corrette al momento di ricreare il documento finale.

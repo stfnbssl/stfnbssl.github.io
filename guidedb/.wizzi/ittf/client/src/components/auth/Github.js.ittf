@@ -1,0 +1,49 @@
+styled_react( Github )
+    $append imports
+        import 
+            @ Paper
+            @ Grid
+            from '@material-ui/core'
+        import { authApis } from '../../features/auth'
+
+    $append styles
+        { margin
+            @ margin theme.spacing.unit * 2
+        { padding
+            @ padding theme.spacing.unit
+    
+    state
+        @ account {}
+    
+    async=> _githubConnect
+        try
+            const account = await authApis.githubConnect()
+            log 'components.auth.github.account', account
+            _ this.setState
+                {
+                    @ account account
+        catch error
+            _ alert(error.status + ' / ' + error.statusText)
+    
+    did-mount
+        _ this._githubConnect
+
+    render
+        const 
+            { 
+                @ classes
+            = this.props
+        const 
+            { 
+                @ account
+            = this.state
+        return 
+            < Paper 
+                @ className {classes.padding}
+                div 
+                    @ className {classes.margin}
+                    < Grid 
+                        @ container
+                        @ spacing {8}
+                        @ alignItems "flex-end"
+                        h1 {account.uid} 

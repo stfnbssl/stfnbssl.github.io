@@ -1,0 +1,21 @@
+module
+    kind es6
+    
+    export 
+        const LoggerMiddleware
+            => 
+                param app
+                _ app.use
+                    => 
+                        param request
+                        param response
+                        param next
+                        _ console.log
+                            `lit 
+                                @ new Date().toString()
+                                + \b \b
+                                @ request.method
+                                + \b \b
+                                @ request.path
+                                + 
+                        _ next

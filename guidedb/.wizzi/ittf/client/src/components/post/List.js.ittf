@@ -1,0 +1,80 @@
+module
+    kind react
+    import React, { Component } from 'react'
+    import { Link } from 'react-router-dom'
+    import { blogApis } from '../../features/blog'
+    
+    export-default
+        react PostList
+            ctor 
+                set this.state =
+                    { 
+                        @ posts []
+            
+            did-mount
+                _ blogApis.getPostList().then
+                    => 
+                        param response
+                        _ this.setState
+                            { 
+                                @ posts response.posts
+                    ._ catch
+                        function 
+                            param error
+                            _ console.log(error)
+
+            => delete
+                param id
+                _ blogApis.deletePost(id)
+                    ._ then
+                        => 
+                            log 'Deleted'
+                    ._ catch
+                        => 
+                            param err
+                            log err
+            
+            render
+                return 
+                    div 
+                        h3 
+                            @ align "center"
+                            + Post List
+                        table 
+                            @ className "table table-striped"
+                            thead 
+                                tr 
+                                    th 
+                                        + Title
+                                    th 
+                                        + Content
+                                    th 
+                                        + Author
+                                    th 
+                                        @ colSpan "2"
+                                        + Action
+                            tbody 
+                                { 
+                                    _ this.state.posts.map
+                                        =>
+                                            param obj
+                                            param i
+                                            return 
+                                                tr 
+                                                    @ key {i}
+                                                    td 
+                                                        + {obj.title}
+                                                    td 
+                                                        + {obj.content}
+                                                    td 
+                                                        + {obj.author}
+                                                    td 
+                                                        < Link 
+                                                            @ to {"/edit/" + obj._id}
+                                                            @ className "btn btn-primary"
+                                                            + Edit
+                                                    td 
+                                                        button 
+                                                            @ onClick {()=>this.delete(obj._id)}
+                                                            @ className "btn btn-danger"
+                                                            + Delete                                                 

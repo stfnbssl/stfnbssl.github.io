@@ -1,0 +1,48 @@
+styled_react( Profile )
+    $append imports
+        import 
+            @ Paper
+            @ Grid
+            from '@material-ui/core'
+        import { authApis } from '../../features/auth'
+
+    $append styles
+        { margin
+            @ margin theme.spacing.unit * 2
+        { padding
+            @ padding theme.spacing.unit
+    
+    state
+        @ user {}
+    
+    async=> _getProfile
+        try
+            const user = await authApis.localProfile()
+            _ this.setState
+                {
+                    @ user user
+        catch error
+            _ alert(error.status + ' / ' + error.statusText)
+    
+    did-mount
+        _ this._getProfile
+
+    render
+        const 
+            { 
+                @ classes
+            = this.props
+        const 
+            { 
+                @ user
+            = this.state
+        return 
+            < Paper 
+                @ className {classes.padding}
+                div 
+                    @ className {classes.margin}
+                    < Grid 
+                        @ container
+                        @ spacing {8}
+                        @ alignItems "flex-end"
+                        h1 {user.email} 

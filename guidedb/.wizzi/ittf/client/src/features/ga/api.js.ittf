@@ -1,0 +1,55 @@
+module
+    kind es6
+
+    import { callApi } from '../../utils/api'
+
+    $foreach table in data.ga.tables 
+        $
+            table.Name = _.capitalize(table.name);
+
+        export
+            function get${table.Name}List
+                return
+                    _ callApi
+                        @ '${table.collection}'
+                        {
+                            @ method 'get'
+
+        export
+            function create${table.Name}
+                param post
+                return
+                    _ callApi
+                        @ '${table.collection}'
+                        {
+                            @ method 'post'
+                            @ data post
+
+        export
+            function get${table.Name}
+                param id
+                return
+                    _ callApi
+                        @ `${table.collection}/${id}`
+                        {
+                            @ method 'get'
+
+        export
+            function update${table.Name}
+                param id
+                param post
+                return
+                    _ callApi
+                        @ `${table.collection}/${id}`
+                        {
+                            @ method 'put'
+                            @ data post
+        
+        export
+            function delete${table.Name}
+                param id
+                return
+                    _ callApi
+                        @ `${table.collection}/${id}`
+                        {
+                            @ method 'delete'

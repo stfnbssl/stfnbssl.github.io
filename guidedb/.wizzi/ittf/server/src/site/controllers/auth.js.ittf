@@ -1,0 +1,28 @@
+module
+    kind es6
+    import 
+        @ Router
+        from 'express'
+    export 
+        class AuthController
+            ctor 
+                set this.router = Router()
+            
+            => initialize
+                param initValues
+                _ this.router.get('/auth/login', this.login)
+                _ this.router.get('/auth/login2', this.login2)
+            
+            m login
+                param req
+                param res
+                _ res.render
+                    @ 'auth/login.html.ittf'
+                    { 
+
+            m login2
+                param req
+                param res
+                _ res.render
+                    @ 'auth/login2.html.ittf'
+                    {                     

@@ -1,0 +1,13 @@
+module
+    kind es6
+    import { manager as authManager } from '../features/auth'
+
+    export 
+        const PassportMiddleware
+            => 
+                param app
+                const passport = authManager.getPassport()
+                _ app.use
+                    _ passport.initialize
+                _ app.use
+                    _ passport.session

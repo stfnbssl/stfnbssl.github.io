@@ -1,0 +1,155 @@
+module
+    kind es6
+
+    import { Router, Request, Response } from 'express'
+    import { sendFailure, sendSuccess } from '../../../utils/response'
+    $foreach table in data.ga.tables
+        $
+            table.Name = _.capitalize(table.name)
+        import { Get${table.Name}Model } from '../mongo/models'
+
+    $foreach table in data.ga.tables
+        $
+            table.Name = _.capitalize(table.name)
+            table.Collection = _.capitalize(table.collection)
+
+        export
+            class ${table.Name}Controller
+                ctor
+                    set this.path = '/api/v1/${table.collection}'
+                    set this.router = Router()
+                    set this.${table.name}Model = null
+
+                m initialize
+                    param initValues
+                    log 'Entering ${table.Name}Controller.initialize'
+                    set this.${table.name}Model = Get${table.Name}Model()
+                    _ this.router.get(`${this.path}`, this.get${table.Collection}.bind(this))
+                    _ this.router.post(`${this.path}`, this.create${table.Name}.bind(this))
+                    _ this.router.get(`${this.path}/:id`, this.get${table.Name}ById.bind(this))
+                    _ this.router.put(`${this.path}/:id`, this.update${table.Name}.bind(this))
+                    _ this.router.delete(`${this.path}/:id`, this.delete${table.Name}.bind(this))
+
+                m get${table.Collection}
+                    param req
+                    param res
+                    _ this.${table.name}Model.find
+                        =>
+                            param err
+                            param ${table.collection}
+                            if err
+                                log 'get${table.Collection}.err', ${table.collection}
+                                return
+                                    _ sendFailure
+                                        @ res
+                                        @ err
+                            else
+                                log 'get${table.Collection}.${table.collection}', ${table.collection}
+                                _ sendSuccess
+                                    @ res
+                                    {
+                                        @ ${table.collection} ${table.collection}
+
+                m create${table.Name}
+                    param req
+                    param res
+                    log 'Entering ${table.Name}Controller.create${table.Name}', this
+                    let ${table.name} = new this.${table.name}Model(req.body)
+                    _ ${table.name}.save
+                        ._ then
+                            => 
+                                param ${table.name}
+                                _ sendSuccess
+                                    @ res
+                                    { 
+                                        @ 'message' '${table.Name} created successfully'
+                        ._ catch
+                            => 
+                                param err
+                                _ sendFailure
+                                    @ res
+                                    {
+                                        @ message "${table.Name} could not be created."
+                                        @ err
+                                        
+
+                m get${table.Name}ById
+                    param req
+                    param res
+                    let id = req.params.id
+                    _ this.${table.name}Model.findById
+                        @ id
+                        function 
+                            param err
+                            param ${table.name}
+                            if err
+                                return
+                                    _ sendFailure
+                                        @ res
+                                        @ err
+                            _ sendSuccess
+                                @ res
+                                { 
+                                    @ ${table.name} ${table.name}
+                
+                m update${table.Name}
+                    param req
+                    param res
+                    const id = req.params.id;
+                    _ this.${table.name}Model.findById
+                        @ id
+                        =>
+                            param err
+                            param ${table.name}
+                            if err
+                                return
+                                    _ sendFailure
+                                        @ res
+                                        @ err
+                            if !${table.name}
+                                return
+                                    _ sendFailure
+                                        @ res
+                                        {
+                                            @ message '${table.Name} data not found'
+                                        @ 404
+                            else
+                                $foreach column in table.columns
+                                    set ${table.name}.${column.name} = req.body.${column.name}
+                                _ ${table.name}.save
+                                    ._ then
+                                        => 
+                                            param ${table.name}
+                                            _ sendSuccess
+                                                @ res
+                                                {
+                                                    @ message '${table.Name} update complete.'
+                                    ._ catch
+                                        => 
+                                            param err
+                                            _ sendFailure
+                                                @ res
+                                                {
+                                                    @ message '${table.Name} could not be updated.'
+                                                    @ err
+                                                @ 400
+                m delete${table.Name}
+                    param req
+                    param res
+                    const id = req.params.id;
+                    _ this.${table.name}Model.findByIdAndRemove
+                        { 
+                            @ _id id
+                        =>
+                            param err
+                            param ${table.name}
+                            if err
+                                return
+                                    _ sendFailure
+                                        @ res
+                                        @ err
+                            else
+                                _ sendSuccess
+                                    @ res
+                                    { 
+                                        @ message '${table.Name} successfully removed'

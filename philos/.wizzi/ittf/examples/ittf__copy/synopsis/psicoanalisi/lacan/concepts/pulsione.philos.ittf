@@ -1,0 +1,17 @@
+$group
+
+    namespace lacan
+
+        concept pulsione
+            + la pulsione è in relazione con la domanda dell’Altro ($<>D) 
+                \b come una sceneggiatura 
+                \b che pur implicando un soggetto non lo designa direttamente
+
+            quote
+                + I significanti che fissano – pietrificandola – 
+                    \b l’identità del soggetto 
+                    \b sono gli stessi che introducono nel corpo del soggetto 
+                    \b una quota di godimento 
+                    \b che innesca il movimento inerte della ripetizione
+                book recalcati.la-clinica-psicoanalitica
+                page 275                    

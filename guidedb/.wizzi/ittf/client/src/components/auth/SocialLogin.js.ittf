@@ -1,0 +1,68 @@
+styled_react( SocialLogin )
+    $append imports
+        import io from 'socket.io-client'
+        import OAuthLogin from './OAuthLogin'
+        import PageLoader from '../shared/PageLoader'
+        import 
+            @ config
+            from '../../features/config'
+        const socket = io(config.SERVER_URL)
+        const providers
+            [ 
+                @ 'twitter'
+                @ 'google'
+                @ 'facebook'
+                @ 'github'
+    state
+        @ loading true
+
+    $append styles
+        { wrapper
+            @ display 'flex'
+            @ flexDirection 'column'
+            @ alignItems 'center'
+
+        { container
+            @ display 'flex'
+            @ alignItems 'center'
+            @ justifyContent 'space-around'
+            @ height '87vh'
+            @ width '90vw'
+    
+    did-mount
+        _ fetch
+            `lit 
+                @ config.SERVER_URL
+                + /wake-up
+            ._ then
+                => 
+                    param res
+                    if res.ok
+                        _ this.setState
+                            { 
+                                @ loading false
+    
+    render
+        prop classes
+        const buttons
+            => 
+                param providers
+                param socket
+                _ providers.map
+                    => 
+                        param provider
+                        < OAuthLogin 
+                            @ provider {provider}
+                            @ key {provider}
+                            @ socket {socket}
+        
+        return 
+            div 
+                @ className {classes.wrapper}
+                div 
+                    @ className {classes.container}
+                    { 
+                        iif this.state.loading
+                            then
+                                < PageLoader 
+                            else buttons(providers, socket)

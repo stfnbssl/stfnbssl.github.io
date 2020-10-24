@@ -1,0 +1,55 @@
+{ ga
+    [ tables
+        {
+            name "GAImage"
+            collection "GAImages"
+            [ columns
+                {
+                    name "Caption"
+                    type "string"
+                {
+                    name "Source"
+                    type "string"
+        {
+            name "GASection"
+            collection "GASections"
+            [ columns
+                {
+                    name "Number"
+                    type "integer"
+                {
+                    name "Title"
+                    type "string"
+                {
+                    name "WeeksOfLife"
+                    type "integer"
+        {
+            name "GAMessage"
+            collection "GAMessages"
+            [ columns
+                {
+                    name "Number"
+                    type "integer"
+                {
+                    name "ChildTweet"
+                    type "string"
+                {
+                    name "ChildPhrases"
+                    type "array"
+                    of "string"
+                {
+                    name "PediatricianTweet"
+                    type "string"
+                {
+                    name "PediatricianPhrases"
+                    type "array"
+                    of "string"
+                {
+                    name "Images"
+                    type "tablearray"
+                    of "GAImage"
+                {
+                    name "Tags"
+                    type "array"
+                    of "string"
+

@@ -1,0 +1,7 @@
+$group
+    $params name, match
+    if (formValues.${name} !== formValues.${match})
+        _ this._setFieldError
+            @ '${match}'
+            @ 'Does not match'
+        set isFormValid = false

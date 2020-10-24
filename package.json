@@ -25,6 +25,9 @@
         "url": "https://github.com/stfnbssl/stfnbssl.github.io/issues"
     },
     "homepage": "https://stfnbssl.github.io/",
+    "dependencies": {
+        "js-yaml": "^3.13.1"
+    },
     "devDependencies": {
         "wizzi": "^0.7.5",
         "wizzi-core": "^0.6.16",

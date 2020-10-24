@@ -1,0 +1,28 @@
+module
+    kind es6
+    const mongoose = require('mongoose')
+
+    set module.exports
+        function start
+            param config
+            param modelBuilders
+
+            const { mongoUser, mongoPassword, mongoPath } = config;
+            const connectUrl = `mongodb://${mongoUser}:${mongoPassword}${mongoPath}`;
+            set mongoose.Promise = global.Promise
+            return
+                _ mongoose.connect
+                    @ connectUrl
+                    { 
+                        @ useNewUrlParser true
+                    ._ then
+                        => 
+                            log 'Mongodb. Connected to', mongoPath
+                            _ modelBuilders.forEach
+                                => 
+                                    param builder
+                                    _ builder.buildModel
+                            return 'Connected'
+                        => 
+                            param err
+                            throw new Error('Mongodb. Can not connect to the database. ' + err.message)

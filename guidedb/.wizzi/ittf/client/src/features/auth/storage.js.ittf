@@ -1,0 +1,22 @@
+module
+    kind es6
+
+    export
+        function setTokens
+            param token
+            param refreshToken
+            log 'features.auth.storage.setTokens.token, refreshToken', token, refreshToken
+            _ localStorage.setItem('token', token)
+            _ localStorage.setItem('refresh_token', refreshToken)
+
+    export 
+        function getTokens
+            return
+                { 
+                    @ token localStorage.getItem('token')
+                    @ refreshToken localStorage.getItem('refresh_token')
+
+    export 
+        function removeTokens
+            _ localStorage.removeItem('token')
+            _ localStorage.removeItem('refresh_token')

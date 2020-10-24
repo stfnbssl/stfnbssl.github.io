@@ -1,0 +1,102 @@
+styled_react_form( RegisterPage )
+    
+    $append imports
+        import LoginForm from './LoginForm'
+        import WelcomeMessage from './WelcomeMessage'
+        import { authApis } from '../../features/auth'
+
+    $append propTypes
+        # React Router Injected
+        @ history PropTypes.object
+    
+    $append styles
+        { container
+            @ display 'flex'
+            @ flexDirection 'column'
+            @ justifyContent 'center'
+            @ alignItems 'center'
+            @ height '100vh'
+            @ backgroundColor '#607d8b'
+
+    $append stateFormValues
+        @ email ''
+        @ password ''
+
+    $append validateForm
+        verify_required(email)
+        verify_required(password)
+    
+    async=> _handleSubmitForm
+        param event
+        _ event.preventDefault
+        if this._validateForm() == false
+            return
+        const 
+            { 
+                @ history
+            = this.props
+        const 
+            { 
+                @ formValues
+            = this.state
+        try 
+            _ this.setState
+                { 
+                    @ isLoading true
+            const result
+                await
+                    _ authApis.localLogin
+                        {
+                            @ email formValues.email
+                            @ password formValues.password
+            log 'components.auth.loginpage._handleSubmitForm.result', result
+            _ this.setState
+                { 
+                    @ isLoading false
+                    @ formErrors {}
+            _ history.push('/profile')
+        catch error
+            log 'components.auth.loginpage._handleSubmitForm.error', error
+            const 
+                { 
+                    @ message
+                    @ errorCode
+                    @ errors
+                = error
+            if errorCode === '401'
+                _ this._handleToggleSnackbar
+                    { 
+                        @ message
+            elif errors
+                _ this._handleToggleSnackbar
+                    { 
+                        @ message "Invalid parameters"
+            _ this.setState
+                { 
+                    @ isLoading false
+                    @ formErrors errors
+    
+    snackbar_handle_toggle()
+    
+    render
+        const { classes } = this.props
+        const 
+            { 
+                @ formValues
+                @ formErrors
+                @ isLoading
+                @ isSnackbarOpen
+                @ snackbarMessage
+            = this.state
+        
+        return 
+            div
+                @ className {classes.container}
+                < WelcomeMessage 
+                < LoginForm
+                    @ values {formValues}
+                    @ errors {formErrors}
+                    @ isLoading {isLoading}
+                    @ onChange {this._handleChangeForm}
+                    @ onSubmit {this._handleSubmitForm}
+                snackbar_element()

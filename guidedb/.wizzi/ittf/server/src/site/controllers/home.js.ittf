@@ -1,0 +1,21 @@
+module
+    kind es6
+    import 
+        @ Router
+        from 'express'
+    export 
+        class HomeController
+            ctor 
+                set this.router = Router()
+            
+            => initialize
+                param initValues
+                _ this.router.get('/', this.home)
+            
+            m home
+                param request
+                param response
+                _ response.render
+                    @ 'home/index.html.ittf'
+                    { 
+                        @ title 'Site Home'

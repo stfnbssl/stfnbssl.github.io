@@ -1,0 +1,11 @@
+$group
+
+    namespace lacan
+
+        concept godimento
+            + Il godimento, non è un’esperienza di benessere, 
+                \b non è un piacere estremo.
+                \b Esso è il luogo in cui 
+                \b tutto il complesso del principio di piacere collassa,
+                \b producendo un movimento contrario alla
+                \b conservazione/eternizzazione del desiderio.

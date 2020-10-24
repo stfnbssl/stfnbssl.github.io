@@ -1,0 +1,72 @@
+$group
+    $params &ctx
+
+    $
+        var t = ctx.table;
+
+    export
+        react ${t.Name}Create
+            ctor 
+                set this.state =
+                    {
+                        $foreach c in t.columns
+                            @ ${c.name} ''
+            => onChange
+                param name
+                return 
+                    =>
+                        param e
+                        _ this.setState
+                            { 
+                                @ [name] e.target.value
+            => onSubmit
+                param e
+                _ e.preventDefault
+                const obj
+                    { 
+                        $foreach  c in t.columns
+                            @ ${c.name} this.state.${c.name}
+                _ ${ctx.feature}Apis.create${t.Name}(obj)
+                    ._ then
+                        => 
+                            param res
+                            log res
+                    ._ catch
+                        => 
+                            param err
+                            log err
+                            _ alert("Api error: " + err.message)
+                _ this.setState
+                    { 
+                        $foreach c in t.columns
+                            @ ${c.name} ''
+            => onCancel
+                _ this.props.history.push('/index')
+            render
+                return 
+                    div 
+                        h3 
+                            @ align "center"
+                            + Add New ${t.Name}
+                        < form 
+                            @ onSubmit {this.onSubmit}
+                            $foreach c in t.columns
+                                div 
+                                    @ className "form-group"
+                                    label 
+                                        + ${c.name}:  \b
+                                    input 
+                                        @ type "text"
+                                        @ className "form-control"
+                                        @ value {this.state.${c.name}}
+                                        @ onChange {this.onChange('${c.name}')}
+                            div
+                                @ className "form-group"
+                                input 
+                                    @ type "submit"
+                                    @ value "Create"
+                                    @ className "btn btn-primary"
+                                button
+                                    + Cancel
+                                    @ onClick {this.onCancel}
+                                    @ className "btn"

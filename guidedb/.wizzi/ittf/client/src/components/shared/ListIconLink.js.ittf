@@ -1,0 +1,38 @@
+styled_react( ListIconLink )
+    
+    $append imports
+        import { Link as RouterLink } from 'react-router-dom'
+        import ListItem from '@material-ui/core/ListItem'
+        import ListItemIcon from '@material-ui/core/ListItemIcon'
+        import ListItemText from '@material-ui/core/ListItemText'
+
+    prop icon
+        node
+        required
+    prop primary
+        node 
+        required
+    prop to
+        string
+        required
+
+    => renderLink
+        param itemProps
+        return
+            < RouterLink 
+                @ to {this.props.to}
+                @ {...itemProps}
+        
+    render
+        prop icon
+        prop primary
+        return 
+            li 
+                < ListItem 
+                    @ button
+                    @ component {this.renderLink}
+                    < ListItemIcon 
+                        + {icon}
+                    < ListItemText 
+                        @ primary {primary}
+

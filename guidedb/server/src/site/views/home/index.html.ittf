@@ -1,0 +1,11 @@
+html
+    body
+        h1 Hello world
+        ul
+            li
+                a login
+                    href /auth/login
+
+            li
+                a login2
+                    href /auth/login2                    

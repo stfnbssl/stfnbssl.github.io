@@ -1,0 +1,79 @@
+styled_react_f( RegisterForm )
+    
+    $append imports
+        import TextField from '@material-ui/core/TextField'
+        import Button from '@material-ui/core/Button'
+        import CircularProgress from '@material-ui/core/CircularProgress'
+        import { authApis } from '../../features/auth'
+
+    $append propTypes
+        @ values PropTypes.object
+        @ errors PropTypes.object
+        @ isLoading PropTypes.bool
+        @ onChange PropTypes.func
+        @ onSubmit PropTypes.func
+        # Material UI Injected
+        @ classes PropTypes.object
+
+    $append styles
+        { container
+            @ backgroundColor '#fff'
+            @ padding `${theme.margin * 1.5}px ${theme.margin}px`
+            @ width 450
+            @ borderRadius 6
+            @ margin '0 auto'
+        { button
+            @ borderColor theme.palette.primary.main
+            @ marginTop theme.margin           
+        { little
+            @ fontSize '0.7em'
+
+    { 
+        @ values
+        @ errors
+        @ isLoading
+        @ onChange
+        @ onSubmit
+        @ classes
+    
+    log 'features.components.auth.registerform.errors', errors
+
+    const isFormEnabled
+        _ Object.values(values).every
+            => 
+                param item
+                set item !== ''
+    
+    return 
+        form 
+            @ className {classes.container}
+            @ onSubmit {onSubmit}
+            text_field( email, E-email )
+            password_field( password, Password )
+            password_field( confirm_password, Confirm password )
+            p 
+                @ className {classes.little}
+                + Make sure it's more than 15 characters OR at least 8 characters including a number and a lowercase letter. Learn more.
+            < Button 
+                @ onClick {onSubmit}
+                @ variant "outlined"
+                @ color "primary"
+                @ fullWidth
+                @ className {classes.button}
+                @ disabled {!isFormEnabled}
+                @ type "submit"
+                { 
+                    iif isLoading
+                        then
+                            < CircularProgress 
+                                @ size {20}
+                        else 'Sign up for ${data.Params.name}'
+            p 
+                @ className {classes.little}
+                + By clicking “Sign up for ${data.Params.name}”, you agree to our &nbsp;
+                a terms of service
+                    href /help/terms
+                span &nbsp; and &nbsp;
+                a privacy statement
+                    href /help/privacy
+                span . We’ll occasionally send you account related emails.

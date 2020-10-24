@@ -1,0 +1,9 @@
+$group
+    
+    artifact .eslintrc
+        src .eslintrc.js.ittf
+        schema js
+        generator js/module
+        dest-path .eslintrc.js
+        extension js
+        $hook

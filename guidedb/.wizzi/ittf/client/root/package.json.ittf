@@ -1,0 +1,109 @@
+{
+    name "${data.Params.name}"
+    description "${data.Params.description}"
+    version "${data.Params.version}"
+    author "${data.Params.author}"
+    license "${data.Params.license}"
+
+    { scripts
+        $if data.Features.webpack.simple
+            start "webpack-dev-server --mode development --open"
+            build "webpack --mode production"
+        $if data.Features.webpack.baseAndProd
+            start "webpack-dev-server --mode development --config ./webpack.base.config.js --open --hot --history-api-fallback --env.PLATFORM=local --env.VERSION=stag"
+            prebuild "webpack --mode production --config ./webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress"
+            build "node server"
+        $if data.Features.lint.default
+            lint "eslint --debug src/"
+            lint:write "eslint --debug src/ --fix"
+        $if data.Features.test.jest
+            test "jest"
+            test:watch "jest --watch"
+            test:coverage "jest --coverage --colors"
+        $if data.Features.prettier.default
+            prettier "prettier --write src/**/*.js"
+
+    $if data.Features.lint.husky
+        { husky
+            { hooks
+                pre-commit "lint-staged"
+        { lint-staged
+            [ *.(js|jsx)
+                "npm run lint:write" 
+                "git add" 
+
+    { dependencies
+        $if data.Features.react.materialUi
+            @material-ui/core "^3.0.0"
+            @material-ui/icons "^3.0.0"
+        bootstrap "^4.1.3"
+        prop-types "^15.6.2"
+        react "^16.6.1"
+        react-fontawesome "^1.6.1"
+        react-dom "^16.6.1"
+        $if data.Features.react.redux
+            react-redux "^5.0.7"
+        $if data.Features.react.router
+            react-router-dom "^4.3.1"
+        $if data.Features.react.redux
+            redux "^4.0.0"
+            redux-thunk "^2.3.0"
+        $if data.Features.useSocketio
+            socket.io-client "^2.2.0"
+        $if data.Features.react.styledComponents
+            styled-components "^3.3.3"
+        $if data.Features.react.transition
+            react-transition-group "^2.4.0"
+
+    { devDependencies
+        @babel/core "^7.0.0"
+        @babel/plugin-proposal-class-properties "^7.0.0"
+        @babel/plugin-proposal-export-namespace-from "^7.0.0"
+        @babel/plugin-proposal-throw-expressions "^7.0.0"
+        @babel/plugin-syntax-dynamic-import "^7.0.0"
+        @babel/polyfill "^7.0.0-beta.51"
+        @babel/preset-env "^7.0.0-beta.51"
+        @babel/preset-react "^7.0.0-beta.51"
+        $if data.Features.lint.default
+            babel-eslint "^8.2.3"
+        $if data.Features.test.jest
+            babel-jest "^23.4.2"
+        babel-loader "^8.0.0-beta.0"
+        copy-webpack-plugin "^4.5.1"
+        css-loader "^0.28.11"
+        $if data.Features.test.enzime
+            enzyme "^3.3.0"
+            enzyme-adapter-react-16 "^1.1.1"
+        $if data.Features.lint.default
+            eslint "^4.19.1"
+            eslint-config-airbnb "^17.0.0"
+            $if data.Features.test.jest
+                eslint-config-jest-enzyme "^6.0.2"
+            eslint-plugin-babel "^5.1.0"
+            eslint-plugin-import "^2.12.0"
+            $if data.Features.test.jest
+                eslint-plugin-jest "^21.18.0"
+            eslint-plugin-jsx-a11y "^6.0.3"
+            $if data.Features.prettier.default
+                eslint-plugin-prettier "^2.6.0"
+            eslint-plugin-react "^7.9.1"
+        html-webpack-plugin "^3.2.0"
+        $if data.Features.test.jest
+            jest "^23.4.2"
+        $if data.Features.lint.default
+            lint-staged "^7.3.0"
+        mini-css-extract-plugin "^0.4.3"
+        node-sass "^4.8.3"
+        optimize-css-assets-webpack-plugin "^4.0.0"
+        $if data.Features.prettier.default
+            husky "^1.1.2"
+        $if data.Features.prettier.default
+            prettier "^1.14.3"
+        sass-loader "^7.0.3"
+        style-loader "^0.21.0"
+        uglifyjs-webpack-plugin "^1.2.5"
+        webpack "^4.12.0"
+        webpack-cli "^3.0.8"
+        webpack-dev-server "^3.1.4"
+        webpack-merge "^4.1.3"
+        webpack-visualizer-plugin "^0.1.11"

@@ -1,0 +1,9 @@
+$group
+    $params label, to, liclass|nav-item, linkclass|nav-link
+    
+    li 
+        @ className "${liclass}"
+        < Link 
+            @ to {'${to}'}
+            @ className "${linkclass}"
+            + ${label}

@@ -1,0 +1,34 @@
+module
+    kind es6
+
+    $foreach table in data.ga.tables 
+        $
+            table.Name = _.capitalize(table.name);
+
+    import 
+        $foreach table in data.ga.tables 
+            @ ${table.Name}ModelBuilder
+            @ ${table.Name}Model
+        from './mongo/models'
+    import 
+        $foreach table in data.ga.tables 
+            @ ${table.Name}Controller
+        from './controllers/models'
+    
+    const gaModels
+        { 
+            $foreach table in data.ga.tables 
+                @ ${table.Name}Model
+    const gaModelBuilders
+        [ 
+            $foreach table in data.ga.tables 
+                @ ${table.Name}ModelBuilder
+    const gaControllers
+        [ 
+            $foreach table in data.ga.tables 
+                @ new ${table.Name}Controller()
+    
+    export
+        @ gaModels
+        @ gaModelBuilders
+        @ gaControllers

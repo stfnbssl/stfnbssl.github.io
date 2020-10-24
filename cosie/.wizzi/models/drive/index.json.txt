@@ -1,0 +1,13 @@
+{ cosie
+    titolo "Guide anticipatorie"
+    [ sezioni
+        sezione( 1, Nascita, 0 )
+            0/gettato()
+            0/cambiamenti_genitori()
+            0/alimentazione()
+            0/allattamento()
+            0/pianto()
+            0/ciuccio()
+            0/alcol()
+            0/nplnpm()
+            0/giochi()          

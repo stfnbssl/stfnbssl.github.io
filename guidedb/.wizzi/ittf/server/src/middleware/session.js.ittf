@@ -1,0 +1,57 @@
+module
+    kind es6
+    import 
+        @ Application
+        @ Request
+        @ Response
+        @ RequestHandler
+        @ CookieOptions
+        from 'express'
+    const session = require('express-session')
+    const mongoSessionStore = require('connect-mongo')
+    import { connection as mongooseConnection } from 'mongoose'
+    import 
+        @ config
+        from '../features/config'
+    
+    export 
+        const SessionMiddleware
+            => 
+                param app
+                const MongoStore = mongoSessionStore(session)
+                const cookieOptions
+                    { 
+                        # serve secure cookies, requires https
+                        @ secure
+                            iif app.get('env') === 'production'
+                                then true
+                                else false
+                        @ httpOnly true
+                        # expires in 14 days
+                        @ maxAge 14 * 24 * 60 * 60 * 1000
+                const sessionOptions
+                    { 
+                        @ name '${data.Params.name}.sid'
+                        @ secret config.sessionSecret
+                        @ store
+                            new MongoStore
+                                { 
+                                    @ mongooseConnection mongooseConnection
+                                    # save session 14 days
+                                    @ ttl 14 * 24 * 60 * 60
+                        @ cookie cookieOptions
+                        $if data.Features.useSocketio
+                            @ resave true
+                            @ saveUninitialized true
+                        $else
+                            @ resave false
+                            @ saveUninitialized false
+                #
+                    # 
+                    # if (!dev) {
+                    #   server.set('trust proxy', 1); // trust first proxy
+                    # }
+                    # 
+                _ app.use
+                    _ session
+                        @ sessionOptions

@@ -1,0 +1,133 @@
+$group
+
+    concept freud.inconscio-non-rimosso
+        theory freud.prima-topica
+            + Inconscio, Preconscio, Coscienza
+            concept freud.prima-topica.inconscio
+                + è la vera realtà psichica
+                + ha cinque caratteristiche:
+                    \b 1) condensazione; 
+                    \b 2) spostamento; 
+                    \b 3) assenza di contraddizione mutua tra la presentazione dei differenti impulsi, 
+                    \b quindi assenza di negazione;
+                    \b 4) assenza di tempo;
+                    \b 5) sostituzione della realtà esterna con quella psichica
+
+            concept freud.inconscio.assenza-di-contraddizione-mutua-tra-la-presentazione-dei-differenti-impulsi
+                quote
+                    + Quando due impulsi di desiderio, 
+                        \b i cui scopi non possono non apparirci incompatibili, 
+                        \b diventano simultaneamente attivi, 
+                        \b i due impulsi non si riducono né si escludono a vicenda.
+                    book freud.l-inconscio
+            concept freud.inconscio.condensazione
+            concept freud.inconscio.spostamento
+                quote
+                    author Blanco
+                    + [..] è alla base della proiezione, della sublimazione, 
+                        \b del transfert, del ritorno del rimosso e 
+                        \b della divisione degli oggetti: 
+                        \b tutti questi meccanismi sono, in qualche modo, 
+                        \b esempi di spostamento e 
+                        \b in gran parte differiscono tra di loro 
+                        \b solo per quanto riguarda le circostanze in cui lo spostamento ha luogo
+                    book blanco.l-inconscio-come-insiemi-infiniti
+            concept freud.inconscio.assenza-di-tempo
+            concept freud.inconscio.sostituzione-della-realtà-esterna-con-quella-psichica
+                + In psichiatria, specialmente in relazione alla schizofrenia, 
+                    \b questa caratteristica è talvolta chiamata "interpretazione letterale della metafora"
+                bax
+                    + Ha a che fare con il double-bind di Bateson?
+    
+    concept freud.prima-topica.inconscio
+        quote
+            + Come possiamo arrivare a conoscere l'inconscio? 
+                \b Naturalmente lo conosciamo soltanto in una forma conscia 
+                \b dopo che ha subito una trasformazione o traduzione in qualcosa di conscio. 
+                \b Il lavoro psicoanalitico ci fa sperimentare ogni giorno che una traduzione del genere è possibile.
+            book freud.l-inconscio
+                page 49
+
+    concept freud.prima-topica.preconscio
+    
+    concept freud.prima-topica.coscienza
+
+
+    concept freud.inconscio-rimosso
+        theory freud.seconda-topica
+            alias freud.concezione-tripartita
+            + Es, Io, Super-Io
+    
+    concept freud.seconda-topica.es
+        title L'Es
+        quote
+            + [..] siamo in grado di attribuire all’Es 
+                \b altre caratteristiche oltre a quella di essere inconscio e 
+                \b che è possibile che parti dell'Io e del Super-io siano inconsce 
+                \b senza condividere i caratteri primitivi e irrazionali dell'Es 
+
+    concept freud.seconda-topica.inconscio-non-rimosso
+        title Inconscio non rimosso
+        + inconscio "primitivo e irrazionale"
+        quote
+            + [..] dobbiamo attribuire a questo tipo di inconscio non rimosso (primitivo e irrazionale) 
+                \b tutte le caratteristiche che Freud ha in precedenza descritto 
+                \b come processo primario o come caratteristiche del sistema inconscio 
+            book blanco.l-inconscio-come-insiemi-infiniti
+            page 88
+        quote
+            + [..] nel lavoro "L'inconscio", 1915, dove non parla ancora dell'inconscio non rimosso 
+                \b ma certamente lo implica e comunica l'idea della rimozione come 
+                \b ritorno allo stato primitivo (non rimosso) attraverso il diniego 
+                \b (precedentemente aveva parlato di ritiro di investimenti) degli investimenti di parole
+            book blanco.l-inconscio-come-insiemi-infiniti
+            page 89
+
+
+    concept freud.seconda-topica.io
+        title L'Io
+        quote
+            + [..] l'inconscio non rimosso dell'Io è l'aspetto rimovente dell'Io
+            book blanco.l-inconscio-come-insiemi-infiniti
+            page 93
+
+    concept freud.seconda-topica.super-io
+        title Il Super-Io
+
+    concept freud.scena-primaria
+
+    concept freud.lavoro-onirico
+        + utilizza il modo di essere del sistema inconscio ma è svolto dall'Io
+
+    concept freud.energia-mentale
+        concept freud.eccitamento-legato
+        concept freud.eccitamento-mobile
+        concept freud.modo-dinamico
+            + Freud descrisse i modi di essere con l'espressione
+                \b "agenzie costruttrici di pensiero"
+                \b e anche in termini di energia
+                quote
+                    + sostituire un .. modo di rappresentare le cose con uno dinamico
+            concept freud.eccitamento-legato
+            concept freud.eccitamento-mobile
+
+    concept freud.formazione-reattiva
+        + nel caso della rimozione i contenuti psichici 
+            \b possono avere apparenza del tutto opposta al rimosso
+
+    concept freud.tracce-mnestiche
+
+    concept freud.immagine-mnestica
+
+    book freud.l-interpretazione-dei-sogni
+        author Freud
+        edition 1900, Bollati Boringhieri
+        title L’interpretazione dei sogni
+
+    essay freud.l-inconscio
+        title L'Inconscio
+        author Freud
+        book freud.opere-VIII
+            author Freud
+            edition 1976, Bollati Boringhieri
+            title Le opere. Volume VIII

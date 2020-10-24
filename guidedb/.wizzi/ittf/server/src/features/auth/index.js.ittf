@@ -1,0 +1,40 @@
+module
+    kind es6
+    import 
+        @ UserModelBuilder
+        @ UserModel
+        from './mongo/user'
+    import 
+        @ TokenModelBuilder
+        @ TokenModel
+        from './mongo/token'
+    import 
+        @ AccountModelBuilder
+        @ AccountModel
+        from './mongo/account'
+    import 
+        @ AuthController
+        from './controllers/auth'
+    import * as manager from './manager'
+    
+    const authModels
+        { 
+            @ UserModel
+            @ TokenModel
+            @ AccountModel
+    
+    const authModelBuilders
+        [ 
+            @ UserModelBuilder
+            @ TokenModelBuilder
+            @ AccountModelBuilder
+    
+    const authControllers
+        [ 
+            @ new AuthController()
+    
+    export
+        @ authModels
+        @ authModelBuilders
+        @ authControllers
+        @ manager

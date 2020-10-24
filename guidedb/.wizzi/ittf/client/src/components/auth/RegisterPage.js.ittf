@@ -1,0 +1,108 @@
+styled_react_form( RegisterPage )
+    
+    $append imports
+        
+        import RegisterForm from './RegisterForm'
+        import { authApis } from '../../features/auth'
+
+    $append styles
+        { container
+            @ display 'flex'
+            @ flexDirection 'column'
+            @ justifyContent 'center'
+            @ alignItems 'center'
+            @ height '100vh'
+            @ backgroundColor '#607d8b'
+
+    $append stateFormValues
+        @ email ''
+        @ password ''
+        @ confirm_password ''
+
+    $append validateForm
+        verify_required(email)
+        verify_required(password)
+        verify_required(confirm_password)
+        verify_match(password, confirm_password)
+
+    async=> _handleSubmitForm
+        param event
+        _ event.preventDefault
+        if this._validateForm() == false
+            return
+        const 
+            { 
+                @ history
+            = this.props
+        const 
+            { 
+                @ formValues
+            = this.state
+        log 'components.auth.registerpage._handleSubmitForm.formValues', formValues
+        try 
+            var controller = new AbortController()
+            _ this.setState
+                { 
+                    @ isLoading true
+                    @ abortController controller
+            const result
+                await
+                    _ authApis.localRegister
+                        {
+                            @ email formValues.email
+                            @ password formValues.password
+                            @ abortSignal controller.signal
+            log 'components.auth.registerpage._handleSubmitForm.result', result
+            _ this.setState
+                { 
+                    @ isLoading false
+                    @ abortController null
+            _ history.push('/profile')
+        catch error
+            if error.name === 'AbortError'
+                log 'components.auth.registerpage._handleSubmitForm.AbortError'
+            else
+                log 'components.auth.registerpage._handleSubmitForm.error', error
+                const 
+                    { 
+                        @ message
+                        @ errorCode
+                        @ errors
+                    = error
+                if errorCode === '401'
+                    _ this.onToggleSnackbar
+                        { 
+                            @ message
+                elif errors
+                    _ this._handleToggleSnackbar
+                        { 
+                            @ message "Invalid parameters"
+                _ this.setState
+                    { 
+                        @ isLoading false
+                        @ abortController null
+
+    snackbar_handle_toggle()
+
+    render
+        const { classes } = this.props
+        const 
+            { 
+                @ formValues
+                @ formErrors
+                @ isLoading
+                @ isSnackbarOpen
+                @ snackbarMessage
+            = this.state
+
+        return
+            div
+                @ className {classes.container}
+                h1 Register
+                < RegisterForm
+                    @ values {formValues}
+                    @ errors {formErrors}
+                    @ isLoading {isLoading}
+                    @ onChange {this._handleChangeForm}
+                    @ onSubmit {this._handleSubmitForm}
+                    snackbar_element()

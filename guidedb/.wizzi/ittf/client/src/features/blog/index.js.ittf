@@ -1,0 +1,4 @@
+module
+    kind es6
+    import * as blogApis from './api'
+    export { blogApis }

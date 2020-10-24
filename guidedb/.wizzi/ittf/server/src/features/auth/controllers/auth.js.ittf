@@ -1,0 +1,67 @@
+module
+    kind es6
+
+    import { Router, Request, Response } from 'express'
+    import { sendBadRequest, sendServerError, sendSuccess } from '../../../utils/response'
+    import { GetUserModel } from '../mongo/user'
+    import
+        @ authenticate
+        $if data.Features.auth.strategies.useLocal
+            @ jwtAuth
+        from '../manager'
+
+    export
+        class AuthController
+            ctor
+                set this.path = '/api/v1/auth'
+                set this.router = Router()
+                set this.userModel = null
+
+            m initialize
+                param initValues
+                log 'Entering AuthController.initialize'
+                set this.userModel = GetUserModel()
+                _ this.router.get(`${this.path}/login`, this.login.bind(this))
+                $if data.Features.useSocketio
+                    _ this.router.use
+                        =>
+                            param req
+                            param res
+                            param next
+                            if req.query.socketId
+                                log 'features.auth.controllers.auth.middleware.req.originalUrl,query', req.originalUrl, req.query
+                                log 'features.auth.controllers.auth.middleware.req.sessionID, session', req.sessionID, req.session
+                                set req.session.socketId = req.query.socketId
+                                set req.session.socketUserId = req.query.socketUserId
+                            _ next()
+                $if data.Features.auth.strategies.useLocal
+                    auth_local( routes )
+                $if data.Features.auth.strategies.useGithub
+                    auth_github( routes )
+
+            m login
+                param req
+                param res
+                param next
+                _ res.send('Go back and register!')
+
+            m github
+                param req
+                param res
+                param next
+                # The request will be redirected to GitHub for authentication, so this
+                # function will not be called.
+            
+            m githubCallback
+                param req
+                param res
+                param next
+                # Successful authentication
+                log 'features.auth.controllers.auth.githubCallback.req.user', req.user
+                _ res.json(req.user)
+
+            $if data.Features.auth.strategies.useLocal
+                auth_local( actions )
+
+            $if data.Features.auth.strategies.useGithub
+                auth_github( actions )

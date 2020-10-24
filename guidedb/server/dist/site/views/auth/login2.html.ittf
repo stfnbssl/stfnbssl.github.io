@@ -1,0 +1,281 @@
+html 
+    html 
+        lang en
+        head 
+            @title Login/Register Modal by Creative Tim
+            meta 
+                charset utf-8
+            meta 
+                http-equiv X-UA-Compatible
+                content IE=edge,chrome=1
+            link 
+                rel canonical
+                href https://www.creative-tim.com/product/login-and-register-modal
+            meta 
+                name keywords
+                content creative tim, bootstrap modal, modal , register modal, login modal, login and register, easy to integrate modal, bootstrap plugin, social login
+            meta 
+                name description
+                content Do you want your login/register process to be seamless? Just add this awesome modal that is easy to integrate and looks awesome.
+            meta 
+                itemprop name
+                content Login/Register Modal by Creative Tim
+            meta 
+                itemprop description
+                content Do you want your login/register process to be seamless? Just add this awesome modal that is easy to integrate and looks awesome.
+            meta 
+                itemprop image
+                content https://s3.amazonaws.com/creativetim_bucket/products/12/opt_login_template.jpg
+            meta 
+                name twitter:card
+                content summary
+            meta 
+                name twitter:site
+                content @creativetim
+            meta 
+                name twitter:title
+                content Login/Register Modal by Creative Tim
+            meta 
+                name twitter:description
+                content Do you want your login/register process to be seamless? Just add this awesome modal that is easy to integrate and looks awesome.
+            meta 
+                name twitter:creator
+                content @creativetim
+            meta 
+                name twitter:image
+                content https://s3.amazonaws.com/creativetim_bucket/products/12/opt_login_template.jpg
+            meta 
+                property og:title
+                content Login/Register Modal by Creative Tim
+            meta 
+                property og:type
+                content article
+            meta 
+                property og:url
+                content https://demos.creative-tim.com/login-register
+            meta 
+                property og:image
+                content https://s3.amazonaws.com/creativetim_bucket/products/12/opt_login_template.jpg
+            meta 
+                property og:description
+                content Do you want your login/register process to be seamless? Just add this awesome modal that is easy to integrate and looks awesome.
+            meta 
+                property og:site_name
+                content Creative Tim
+            @style 
+                css
+                    < body
+                        padding-top 60px
+            link 
+                href assets/css/bootstrap.css
+                rel stylesheet
+            link 
+                href assets/css/login-register.css
+                rel stylesheet
+            link 
+                rel stylesheet
+                href https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css
+            js assets/js/jquery-1.10.2.js
+            js https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css
+            js assets/js/login-register.js
+
+            
+            script 
+                module
+                    kind react
+                    iife 
+                        param w
+                        param d
+                        param s
+                        param l
+                        param i
+                        set w[l] = w[l] || []
+                        _ w[l].push
+                            { 
+                                @ 'gtm.start'
+                                    _ new Date().getTime
+                                @ event 'gtm.js'
+                        var 
+                            decl f = d.getElementsByTagName(s)[0]
+                            decl j = d.createElement(s)
+                            decl dl
+                                iif l != 'dataLayer'
+                                    then '&l=' + l
+                                    else ''
+                        set j.async = true
+                        set j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+                        _ f.parentNode.insertBefore(j, f)
+                        (
+                            @ window
+                            @ document
+                            @ 'script'
+                            @ 'dataLayer'
+                            @ 'GTM-NKDMSK6'
+        body 
+            noscript 
+                iframe 
+                    src https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6
+                    height 0
+                    width 0
+                    style display:none;visibility:hidden
+            . container
+                . row
+                    . col-sm-4
+                    . col-sm-4
+                        a Log in
+                            class btn big-login
+                            data-toggle modal
+                            href javascript:void(0)
+                            onclick openLoginModal();
+                        a Register
+                            class btn big-register
+                            data-toggle modal
+                            href javascript:void(0)
+                            onclick openRegisterModal();
+                    . col-sm-4
+                . modal fade login
+                    id loginModal
+                    . modal-dialog login animated
+                        . modal-content
+                            . modal-header
+                                button &times;
+                                    type button
+                                    class close
+                                    data-dismiss modal
+                                    aria-hidden true
+                                h4 Login with
+                                    class modal-title
+                            . modal-body
+                                . box
+                                    . content
+                                        . social
+                                            a 
+                                                class circle github
+                                                href #
+                                                i 
+                                                    class fa fa-github fa-fw
+                                            a 
+                                                id google_login
+                                                class circle google
+                                                href #
+                                                i 
+                                                    class fa fa-google-plus fa-fw
+                                            a 
+                                                id facebook_login
+                                                class circle facebook
+                                                href #
+                                                i 
+                                                    class fa fa-facebook fa-fw
+                                        . division
+                                            . line l
+                                            span or
+                                            . line r
+                                        . error
+                                        . form loginBox
+                                            form 
+                                                method 
+                                                action 
+                                                accept-charset UTF-8
+                                                input 
+                                                    id email
+                                                    class form-control
+                                                    type text
+                                                    placeholder Email
+                                                    name email
+                                                input 
+                                                    id password
+                                                    class form-control
+                                                    type password
+                                                    placeholder Password
+                                                    name password
+                                                input 
+                                                    class btn btn-default btn-login
+                                                    type button
+                                                    value Login
+                                                    onclick loginAjax()
+                                . box
+                                    . content registerBox
+                                        style display:none;
+                                        . form
+                                            form 
+                                                method 
+                                                html {:multipart=>true}
+                                                data-remote true
+                                                action 
+                                                accept-charset UTF-8
+                                                input 
+                                                    id email
+                                                    class form-control
+                                                    type text
+                                                    placeholder Email
+                                                    name email
+                                                input 
+                                                    id password
+                                                    class form-control
+                                                    type password
+                                                    placeholder Password
+                                                    name password
+                                                input 
+                                                    id password_confirmation
+                                                    class form-control
+                                                    type password
+                                                    placeholder Repeat Password
+                                                    name password_confirmation
+                                                input 
+                                                    class btn btn-default btn-register
+                                                    type button
+                                                    value Create account
+                                                    name commit
+                            . modal-footer
+                                . forgot login-footer
+                                    span Looking to
+                                        a create an account
+                                            href javascript: showRegisterForm();
+                                        + ?
+                                . forgot register-footer
+                                    style display:none
+                                    span Already have an account?
+                                    a Login
+                                        href javascript: showLoginForm();
+            script 
+                type text/javascript
+                module
+                    kind react
+                    _ $(document).ready
+                        function 
+                            _ openLoginModal
+            script 
+                module
+                    kind react
+                    iife 
+                        param i
+                        param s
+                        param o
+                        param g
+                        param r
+                        param a
+                        param m
+                        set i['GoogleAnalyticsObject'] = r
+                        sequence 
+                            set i[r] =
+                                || 
+                                    + i[r]
+                                    function 
+                                        _ i[r].q = i[r].q || []
+                                            ._ push
+                                                @ arguments
+                            set i[r].l = 1 * new Date()
+                        sequence 
+                            set a = s.createElement(o)
+                            set m = s.getElementsByTagName(o)[0]
+                        set a.async = 1
+                        set a.src = g
+                        _ m.parentNode.insertBefore(a, m)
+                        (
+                            @ window
+                            @ document
+                            @ 'script'
+                            @ '//www.google-analytics.com/analytics.js'
+                            @ 'ga'
+                    _ ga('create', 'UA-46172202-1', 'auto')
+                    _ ga('send', 'pageview')

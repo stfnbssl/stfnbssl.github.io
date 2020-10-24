@@ -1,0 +1,4 @@
+module
+    kind es6
+    import * as authApis from './api'
+    export { authApis }

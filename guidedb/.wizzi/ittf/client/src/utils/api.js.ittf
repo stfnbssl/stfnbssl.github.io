@@ -1,0 +1,24 @@
+module
+    kind es6
+
+    const apiUrl = 'http://localhost:5000/api/v1'
+
+    export
+        async-function callApi
+            param path
+            param options
+            log 'callApi request', apiUrl, path, options
+            const res
+                await 
+                    _ fetch
+                        @ `${apiUrl}/${path}`
+                        { 
+                            @ method options.method
+                            { headers
+                                @ Accept 'application/json'
+                                @ 'Content-Type' 'application/json'
+                            @ body options.data ? JSON.stringify(options.data) : null
+            
+            const json = await res.json()
+            log 'callApi result', json
+            return json

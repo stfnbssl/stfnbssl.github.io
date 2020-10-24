@@ -1,0 +1,15 @@
+$group
+    {
+        { bam
+            titolo "A volte sento un brutto capogiro"
+            [ items
+                "Il mio cervello si stà formando, è ancora molto fragile."
+                "L'alcol distrugge le cellule di cui ho bisogno per imparare."
+        { ped
+            titolo "Non bevete bevande alcoliche durante l'allattamento"
+            [ items
+                "Quando una donna che allatta beve alcol anche il bimbo assume l'alcol che può danneggiare la crescita del cervello."
+                "Proteggete il vostro bambino dagli effetti dell’alcol già dal momento del concepimento: anche in piccole quantità può provocare danni permanenti alla sua salute."
+                "Coinvolgete chi vi sta vicino perché vi aiuti a ricordarlo."
+                "Chiedete informazioni al vostro medico, ginecologo, ostetrica e pediatra di fiducia."
+        tags "da evitare, criticità"

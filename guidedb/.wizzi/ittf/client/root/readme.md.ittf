@@ -1,0 +1,27 @@
+md
+    h1 Packy template MERN (Mongoose, Express, React and Nodejs)
+
+    h1 Documentation
+    p Client WebApp Was Built In:
+    ul  
+        li ReactJS
+        li Webpack 4 
+        li Babel 7
+        li React Material UI
+        li Bootstrap 4
+        li SCSS, CSS Support
+        li HMR
+        li Code Splitting with <b>React.lazy</b> & <b>React.Suspense</b>
+        li Code Formatter (Prettier)
+        li Eslint configured extended with Airbnb style guide & support for prettier
+        li Jest & Enzyme Configured
+        li Automatically lint & format code, when committing it. [Husky/Lint-Staged]
+
+    h2 Credits
+    ul
+        li
+            a How to combine webpack 4 and babel 7 to create a fantastic react app. 
+                href https://medium.freecodecamp.org/how-to-combine-webpack-4-and-babel-7-to-create-a-fantastic-react-app-845797e036ff
+            span By \b
+                a Adeel Imranr
+                    href https://medium.freecodecamp.org/@adeelimranr

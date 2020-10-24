@@ -1,0 +1,14 @@
+module
+    kind react
+    import '@babel/polyfill'
+    import React from "react"
+    import ReactDOM from "react-dom"
+    import App from './App'
+    const Index
+        => 
+            return 
+                div 
+                    < App
+    _ ReactDOM.render
+        < Index 
+        _ document.getElementById("root")

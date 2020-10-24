@@ -1,0 +1,75 @@
+module
+    kind es6
+    
+    import 
+        @ toParams
+        @ toQuery
+        from './utils'
+    
+    class PopupWindow
+        ctor 
+            param id
+            param url
+            param options = {}
+            set this.id = id
+            set this.url = url
+            set this.options = options
+        
+        m open
+            const 
+                { 
+                    @ url
+                    @ id
+                    @ options
+                = this
+            set this.window = window.open(url, id, toQuery(options, ','))
+        
+        m close
+            _ this.cancel
+            _ this.window.close
+        
+        m poll
+            set this.promise =
+                new Promise
+                    => 
+                        param resolve
+                        param reject
+                        set this._iid =
+                            _ window.setInterval
+                                => 
+                                    try 
+                                        const popup = this.window
+                                        if !popup || popup.closed !== false
+                                            _ this.close
+                                            _ reject(new Error('The popup was closed'))
+                                            return 
+                                        if popup.location.href === this.url || popup.location.pathname === 'blank'
+                                            return 
+                                        const params = toParams(popup.location.search.replace(/^\?/, ''))
+                                        _ resolve(params)
+                                        _ this.close
+                                    catch error
+                                @ 500
+        
+        m cancel
+            if this._iid
+                _ window.clearInterval(this._iid)
+                set this._iid = null
+        
+        m then
+            param ...args
+            return this.promise.then(...args)
+        
+        m catch
+            param ...args
+            return this.promise.then(...args)
+        
+        m open
+            static
+            param ...args
+            const popup = new this(...args)
+            _ popup.open
+            _ popup.poll
+            return popup
+    
+    export-default PopupWindow

@@ -1,0 +1,60 @@
+module
+    kind es6
+    import { Schema, model } from "mongoose"
+
+    $foreach table in data.ga.tables 
+
+        $
+            table.Name = _.capitalize(table.name);
+            var ctypes = {
+                string: "String",
+                number: "Number",
+                integer: "Number",
+                boolean: "Boolean",
+                date: "Date",
+                mixed: "Mixed",
+                buffer: "Buffer",
+            };
+    
+        const ${table.Name}Schema
+            new Schema
+                { 
+                    $foreach column in table.columns
+                        { ${column.name}
+                            $if ctypes[column.type]
+                                @ type ${ctypes[column.type]}
+                            $elif column.type === 'array'
+                                @ type [${ctypes[column.of]}]
+                            $elif column.type === 'tablearray'
+                                @ type [${column.of}Schema]
+                            $elif column.type === 'map'
+                                @ type Map
+                                @ of ${ctypes[column.of]}
+                            $else
+                                @ type Unknown
+                            $if column.required
+                                @ required true
+                            $if column.trim
+                                @ trim true
+                            $if column.lowercase
+                                @ lowercase true
+                            $if column.uppercase
+                                @ uppercase true
+                            $if column.minlength > -1
+                                @ minlength ${column.minlength}
+                            $if column.maxlength > -1
+                                @ minlength ${column.maxlength}
+                { 
+                    @ collection '${table.collection}'
+
+        let ${table.name}Model = null
+        export
+            function Get${table.Name}Model
+                return ${table.name}Model
+    
+        export
+            const ${table.Name}ModelBuilder
+                { 
+                    @ buildModel
+                        => 
+                            set ${table.name}Model = model('${table.Name}', ${table.Name}Schema)

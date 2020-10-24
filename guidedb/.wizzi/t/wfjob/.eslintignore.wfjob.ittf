@@ -1,0 +1,9 @@
+$group
+    
+    artifact .eslintignore
+        src .eslintignore.text.ittf
+        schema text
+        generator text/document
+        dest-path .eslintignore
+        extension eslintignore
+        $hook

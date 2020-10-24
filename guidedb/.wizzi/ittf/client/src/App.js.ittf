@@ -1,0 +1,98 @@
+module
+    kind react
+    
+    import React
+        @ Component
+        from 'react'
+    import 'bootstrap/dist/css/bootstrap.min.css'
+    import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+    import 
+        @ BrowserRouter
+            as Router
+        @ Switch
+        @ Route
+        @ Link
+        from 'react-router-dom'
+    
+    import Navbar from './components/app/Navbar'
+    import LoginPage from './components/auth/LoginPage'
+    import LoginLab from './components/auth/LoginLab'
+    import RegisterPage from './components/auth/RegisterPage'
+    import Profile from './components/auth/Profile'
+    import Github from './components/auth/Github'
+    import GithubLogin from './components/auth/GithubLogin'
+    import SocialLogin from './components/auth/SocialLogin'
+    import PostCreate from './components/post/Create'
+    import PostEdit from './components/post/Edit'
+    import PostList from './components/post/List'
+    
+    $foreach table in data.ga.tables 
+        $
+            table.Name = _.capitalize(table.name);
+
+        import
+            @ ${table.Name}Create from './components/ga/crud'
+            @ ${table.Name}Edit from './components/ga/crud'
+            @ ${table.Name}List from './components/ga/crud'
+
+    import GithubCallback from './features/auth/GithubCallback'
+
+    # Material UI Theme Customization
+    import Theme from './styles/muiTheme';
+    const THEME = createMuiTheme(Theme)
+    
+    class App
+        super Component
+        m render
+            return 
+                < MuiThemeProvider
+                    @ theme {THEME}
+                    < Router 
+                        div 
+                            @ className "container"
+                            < Navbar
+                            < Switch
+                                < Route 
+                                    @ exact
+                                    @ path '/create'
+                                    @ component {PostCreate}
+                                < Route 
+                                    @ path '/edit/:id'
+                                    @ component {PostEdit}
+                                < Route 
+                                    @ path '/index'
+                                    @ component {PostList}
+                                $foreach table in data.ga.tables                                     
+                                    < Route 
+                                        @ exact
+                                        @ path '/${table.collection}/create'
+                                        @ component ${table.Name}Create
+                                    < Route 
+                                        @ path '/${table.collection}/edit/:id'
+                                        @ component ${table.Name}Edit
+                                    < Route 
+                                        @ path '/${table.collection}/index'
+                                        @ component ${table.Name}List
+                                < Route 
+                                    @ path '/login'
+                                    @ component {LoginPage}
+                                < Route 
+                                    @ path '/loginlab'
+                                    @ component {LoginLab}
+                                < Route 
+                                    @ path '/register'
+                                    @ component {RegisterPage}
+                                < Route 
+                                    @ path '/profile'
+                                    @ component {Profile}
+                                < Route 
+                                    @ path '/auth/social'
+                                    @ component {SocialLogin}
+                                < Route 
+                                    @ path '/auth/github'
+                                    @ component {GithubLogin}
+                                < Route 
+                                    @ path '/auth/github/callback'
+                                    @ component {GithubCallback}
+
+    export-default App

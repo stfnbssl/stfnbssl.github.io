@@ -1,0 +1,46 @@
+$group
+
+    {
+        { bam
+            titolo "Che buono il latte della mamma"
+            [ items
+                "Se la mamma mangia sano il latte è ancora più buono"
+        { ped
+            titolo "Non c'è una dieta speciale per l'allattamento"
+            [ items
+                "La mamma può mangiare qualsiasi alimento purché la dieta sia sempre variata e ricca di acqua, frutta e verdura."
+                "Il fumo di sigaretta e l'alcol passano nel latte e possono provocare danno al bambino."
+                "Pochi farmaci sono incompatibili con l’allattamento: se devi assumerne parlane con il pediatra o contatta il numero verde 800 nnnnnn -sempre attivo- degli Ospedali xxxx di yyyyyy."
+        [ images
+            {
+                titolo "Attacco adegauto e inadeguato"
+                src "attacco-adeguato-allattamento.png"
+        tags "allattamento"
+    {
+        { bam
+            titolo "E se la mamma non può allattare?"
+            [ items
+        { ped
+            titolo "Allora deve usare un latte artificiale"
+            [ items
+                "La quantità va regolata sul peso del bambino"
+                "Deve parlarne con il suo pediatra"
+                "Il latte vaccino non va usato prima dell'anno di età"
+        tags "alimentazione, allattamento"        
+    {
+        { bam
+            titolo "Come mi scalda la pancia della mamma mentre mangio"
+            [ items
+                "Che lusso il latte sempre pronto"
+                "E che bello dormire soddisfatto sulla pancia"
+                "E quando ho voglia ... ricomincio"
+        { ped
+            titolo "Quando possibile mantieni un contatto pelle a pelle con il tuo bambino"
+            [ items
+                "Grazie al contatto pelle a pelle il bambino è in grado maggiormente di capire quando ha fame e quando si sente ben sazio"
+                "Se hai problemi contatta le ostetriche di Latte e Coccole."
+        [ images
+            {
+                titolo "Posizioni allattamento"
+                src "posizioni-allattamento.png"
+        tags "allattamento"

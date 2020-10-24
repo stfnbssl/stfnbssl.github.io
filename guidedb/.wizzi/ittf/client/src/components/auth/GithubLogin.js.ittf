@@ -1,0 +1,86 @@
+styled_react( GitHubLogin )
+    $append imports
+        import PopupWindow from './PopupWindow'
+        import 
+            @ toQuery
+            from './utils'
+    
+    prop buttonText
+        default 'Sign in with GitHub'
+    prop children
+        node
+    prop className
+    prop clientId
+        required
+    prop onRequest
+        func
+    prop onSuccess
+        func
+    prop onFailure
+        func
+    prop redirectUri
+        default ''
+    prop scope
+        default 'user:email'
+    => onBtnClick
+        const 
+            { 
+                @ clientId
+                @ scope
+                @ redirectUri
+            = this.props
+        const search
+            _ toQuery
+                { 
+                    @ client_id clientId
+                    @ scope
+                    @ redirect_uri redirectUri
+        const popup
+            set this.popup =
+                _ PopupWindow.open
+                    @ 'github-oauth-authorize'
+                    `lit 
+                        + https://github.com/login/oauth/authorize?
+                        @ search
+                        + 
+                    { 
+                        @ height 1000
+                        @ width 600
+        _ this.onRequest
+        _ popup.then
+            => 
+                param data
+                _ this.onSuccess(data)
+            => 
+                param error
+                _ this.onFailure(error)
+    
+    => onRequest
+        _ this.props.onRequest
+    
+    => onSuccess
+        param data
+        if !data.code
+            return this.onFailure(new Error('\'code\' not found'))
+        _ this.props.onSuccess(data)
+    
+    => onFailure
+        param error
+        _ this.props.onFailure(error)
+    
+    render
+        prop className
+        prop buttonText
+        prop children
+        const attrs
+            { 
+                @ onClick this.onBtnClick
+        if className
+            set attrs.className = className
+        
+        return 
+            button 
+                @ {...attrs}
+                + {children || buttonText}
+
+

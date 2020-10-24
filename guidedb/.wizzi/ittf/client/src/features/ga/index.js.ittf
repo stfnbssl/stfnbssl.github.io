@@ -1,0 +1,6 @@
+module
+    kind es6
+    $
+        var feature = "ga";
+    import * as ${ga}Apis from './api'
+    export { ${ga}Apis }

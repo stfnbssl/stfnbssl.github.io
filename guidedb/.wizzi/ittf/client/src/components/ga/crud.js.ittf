@@ -1,0 +1,19 @@
+module
+    kind react
+    $
+        var feature = "ga";
+    import React, { Component } from 'react'
+    import { Link } from 'react-router-dom'
+    import { ${feature}Apis } from '../../features/${feature}'
+
+    $foreach table in data.ga.tables 
+        $
+            table.Name = _.capitalize(table.name);
+            var ctx = {
+                feature: feature,
+                table: table,
+            };
+        
+        db/crud/create(&ctx)
+        db/crud/edit(&ctx)
+        db/crud/list(&ctx)

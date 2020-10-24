@@ -1,0 +1,82 @@
+$group
+    $params request
+    
+    $if request === 'routes'
+
+        $if data.Features.auth.github.login
+            _ this.router.get
+                @ `${this.path}/github/login`
+                _ authenticate
+                    @ 'github'
+                    { 
+                        [ scope
+                            @ 'user:email'
+                _ this.githubLogin.bind(this)
+            _ this.router.get
+                @ `${this.path}/github/callback`
+                _ authenticate
+                    @ 'github'
+                    { 
+                        @ failureRedirect `${this.path}/login`
+                _ this.githubCallback.bind(this)
+        
+        $if data.Features.auth.github.service
+            _ this.router.get
+                @ `/auth/github`
+                _ authenticate
+                    @ 'github'
+                    { 
+                        [ scope
+                            @ 'user:email'
+                _ this.githubConnect.bind(this)
+            _ this.router.get
+                @ `/auth/github/callback`
+                _ authenticate
+                    @ 'github'
+                    { 
+                        @ failureRedirect `${this.path}/account`
+                _ this.githubConnectCallback.bind(this)
+
+    $if request === 'actions'
+        
+        $if data.Features.auth.github.login
+            m githubLogin
+                param req
+                param res
+                param next
+                # The request will be redirected to GitHub for authentication, so this
+                # function will not be called.
+            
+            m githubCallback
+                param req
+                param res
+                param next
+                # Successful authentication
+                log 'features.auth.controllers.auth.githubCallback.req.user', req.user
+                _ res.json(req.user)
+        
+        $if data.Features.auth.github.service
+            m githubConnect
+                param req
+                param res
+                param next
+                # The request will be redirected to GitHub for authentication, 
+                # so this function will not be called.
+            
+            m githubConnectCallback
+                param req
+                param res
+                param next
+                # Successful authentication
+                log 'features.auth.controllers.auth.githubCallback.req.originalUrl,session.socketId,socketUserId', req.originalUrl, req.session.socketId, req.session.socketUserId
+                log 'features.auth.controllers.auth.githubCallback.req.sessionID,session', req.sessionID, req.session
+                log 'features.auth.controllers.auth.githubCallback.req.user', req.user
+                const io = req.app.get('io')
+                const user
+                    {
+                        @ name req.user.displayName
+                        @ avatar_url req.user.avatar_url
+                _ io.in(req.session.socketId).emit
+                    @ 'github'
+                    @ user
+                _ res.end

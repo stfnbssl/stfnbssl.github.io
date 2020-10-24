@@ -1,0 +1,89 @@
+$group
+    $params &ctx
+
+    $
+        var t = ctx.table;
+
+    export
+        react ${t.Name}Edit
+            ctor 
+                set this.state =
+                    { 
+                        $foreach c in t.columns
+                            @ ${c.name} ''
+            
+            did-mount
+                const id = this.props.match.params.id
+                _ ${ctx.feature}Apis.get${t.Name}(id)
+                    ._ then
+                        => 
+                            param response
+                            _ this.setState
+                                { 
+                                    $foreach c in t.columns
+                                        @ ${c.name} response.${t.name}.${c.name}
+                        ._ catch
+                            => 
+                                param err
+                                log err
+                                _ alert("Api error: " + err.message)
+
+            => onChange
+                param name
+                return 
+                    =>
+                        param e
+                        _ this.setState
+                            { 
+                                @ [name] e.target.value
+            => onSubmit
+                param e
+                _ e.preventDefault
+                const id = this.props.match.params.id
+                const obj
+                    { 
+                        $foreach  c in t.columns
+                            @ ${c.name} this.state.${c.name}
+                _ ${ctx.feature}Apis.update${t.Name}
+                    @ id
+                    @ obj
+                    ._ then
+                        => 
+                            param res
+                            log res
+                            _ this.props.history.push('/index')
+                    ._ catch
+                        => 
+                            param err
+                            log err
+                            _ alert("Api error: " + err.message)
+            => onCancel
+                _ this.props.history.push('/index')
+            render
+                return 
+                    div 
+                        h3 
+                            @ align "center"
+                            + Update ${t.Name}
+                        < form 
+                            @ onSubmit {this.onSubmit}
+                            $foreach c in t.columns
+                                div 
+                                    @ className "form-group"
+                                    label 
+                                        + ${c.name}:  \b
+                                    input 
+                                        @ type "text"
+                                        @ className "form-control"
+                                        @ value {this.state.${c.name}}
+                                        @ onChange {this.onChange('${c.name}')}
+                            div 
+                                @ className "form-group"
+                                input 
+                                    @ type "submit"
+                                    @ value "Update"
+                                    @ className "btn btn-primary"
+                                button
+                                    + Cancel
+                                    @ onClick {this.onCancel}
+                                    @ className "btn"

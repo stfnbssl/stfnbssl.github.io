@@ -1,0 +1,89 @@
+module
+    kind es6
+    import { Strategy } from 'passport-github2'
+    import { GetUserModel } from '../mongo/user'
+    $if data.Features.auth.github.service
+        import { GetAccountModel } from '../mongo/account'
+    import { config } from '../../config'
+
+    let userModel = null
+    $if data.Features.auth.github.service
+        let accountModel = null
+
+    export
+        function createStrategy
+            set userModel = GetUserModel()
+            $if data.Features.auth.github.service
+                set accountModel = GetAccountModel()
+            log 'features.auth.strategies.github.createStrategy'
+            return
+                $if data.Features.auth.github.login
+                    new Strategy
+                        { 
+                            @ clientID config.githubClientID
+                            @ clientSecret config.githubClientSecret
+                            @ callbackURL config.githubCallbackURL
+                        function 
+                            param accessToken
+                            param refreshToken
+                            param profile
+                            param done
+                            log 'features.auth.strategies.github.accessToken.refreshToken', accessToken, refreshToken
+                            log 'features.auth.strategies.github.profile', profile
+                            var searchQuery
+                                { 
+                                    @ name profile.displayName
+                            var updates
+                                { 
+                                    @ realName profile.displayName
+                                    @ email profile.email
+                            var options
+                                {
+                                    @ upsert true
+                            # update the user if s/he exists or add a new user
+                            _ userModel.findOneAndUpdate
+                                @ searchQuery
+                                @ updates
+                                @ options
+                                function 
+                                    param err
+                                    param user
+                                    if err
+                                        log 'features.auth.strategies.github.userModel.findOneAndUpdate.err', err
+                                        return done(err)
+                                    else
+                                        log 'features.auth.strategies.github.userModel.findOneAndUpdate.user', user
+                                        return done(null, user)
+                
+                $if data.Features.auth.github.service
+                    new Strategy
+                        { 
+                            @ clientID config.githubClientID
+                            @ clientSecret config.githubClientSecret
+                            @ callbackURL config.githubCallbackURL
+                            @ passReqToCallback true
+                        function 
+                            param req
+                            param accessToken
+                            param refreshToken
+                            param profile
+                            param done
+                            log 'features.auth.strategies.github.req.session.socketId,socketUserId', req.session.socketId, req.session.socketUserId
+                            log 'features.auth.strategies.github.req.sessionID,session', req.sessionID, req.session
+                            log 'features.auth.strategies.github.req.user', req.user
+                            log 'features.auth.strategies.github.accessToken.refreshToken', accessToken, refreshToken
+                            log 'features.auth.strategies.github.profile', profile
+                            var account = new accountModel()
+                            set account.domain = 'github.com'
+                            set account.uid = profile.id
+                            set account.username = profile.username
+                            set account.displayName = profile.displayName
+                            set account.avatar_url = profile._json.avatar_url
+                            var t
+                                {
+                                    @ kind 'oauth'
+                                    @ token accessToken
+                                    { attributes
+                                        @ refreshToken refreshToken
+                            _ account.tokens.push(t)
+                            return done(null, account)    

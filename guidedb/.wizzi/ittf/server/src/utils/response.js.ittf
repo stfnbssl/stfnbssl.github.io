@@ -1,0 +1,44 @@
+module
+    kind es6
+    
+    export
+        const sendSuccess
+            => 
+                param res
+                param message
+                _ res.status(200)
+                _ res.type('application/json')
+                _ res.send(message)
+
+    export
+        const sendBadRequest
+            => 
+                param res
+                param error
+                _ sendFailure
+                    @ res
+                    @ error
+                    @ 400
+
+    export
+        const sendServerError
+            => 
+                param res
+                param error
+                _ sendFailure
+                    @ res
+                    @ error
+                    @ 500
+    
+    export
+        const sendFailure
+            => 
+                param res
+                param error
+                param status
+                _ res.status
+                    iif error && error.status
+                        then error.status
+                        else status || 500
+                _ res.type('application/json')
+                _ res.send(error)
