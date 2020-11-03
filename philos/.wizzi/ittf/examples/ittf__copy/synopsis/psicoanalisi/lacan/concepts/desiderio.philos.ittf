@@ -3,11 +3,23 @@ $group
     namespace lacan
 
         concept desiderio
+            
+            quote
+                + Il desiderio è quello che resta della domanda una volta soddisfatto il bisogno.
+            
+            
             quote
                 + La dimensione del desiderio apre il soggetto a un movimento di trascendenza, 
                     \b alla ricerca di una soddisfazione che rimanda sempre ad altro,
                     \b il desiderio è un dire che non si lascia condensare in nessun detto.
                 book terminio.misurare-l-inconscio
+            
+            quote
+                + Il desiderio, costretto a farsi parola in foggia di domanda, 
+                    \b è dunque ostaggio del processo del linguaggio. 
+                    \b Tuttavia, in ragione della sua anteriorità logica sulla sequenza del discorso che lo attualizza, 
+                    \b il linguaggio resta preso interamente nelle reti delle determinazioni inconsce del desiderio
+                        bax ???
 
         concept oggetto-del-desiderio
             alias fallo

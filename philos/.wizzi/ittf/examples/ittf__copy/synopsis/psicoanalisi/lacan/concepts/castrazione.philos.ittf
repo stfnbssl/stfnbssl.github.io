@@ -3,6 +3,8 @@ $group
     namespace lacan
 
         concept castrazione
+            + La castrazione è l’accettazione, valida per tutti gli esseri umani, 
+                \b del limite imposto al godimento con la madre.
 
             quote
                 + La castrazione non è una minaccia, 
@@ -37,7 +39,7 @@ $group
 
             quote
                 + La paternità è indissolubilmente correlata alla castrazione del padre,
-                    \b e che l’eredità paterna non è altro 
+                    \b e l’eredità paterna non è altro 
                     \b che la trasmissione della castrazione di un padre al figlio.
                     \b L’amore per il Padre ideale, costrutto dell’Edipo, 
                     \b nasconde al figlio il desiderio del padre reale rivolto a una donna
@@ -61,5 +63,3 @@ $group
                     \b del cui amore-odio non possiamo nevroticamente fare a meno, 
                     \b “Freud per primo”.
                 article manghi.un-edipo-di-meno
-
-lacan mancanza di oggetto                

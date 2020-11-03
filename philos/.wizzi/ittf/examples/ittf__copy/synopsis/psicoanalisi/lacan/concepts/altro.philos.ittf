@@ -3,13 +3,16 @@ $group
     namespace lacan
 
         concept altro
-            title Altro
+            title altro piccolo
+            + È l'altro speculare, il simile, l'altro nel registro dell'immaginario.
+        
+        concept Altro
             alias grande Altro
             + designa, per schematizza­­re, l’oggetto primordiale, la madre, 
                 \b il cui desiderio grazie all’intervento del Nome-del-Padre appare “regolato”, 
                 \b sottoposto cioè alle leggi del significante.
 
-        concept altro-barrato
+        concept Altro-barrato
             title Altro barrato
             alias non c’è Altro dell’Altro
             alias non c’è metalinguaggio

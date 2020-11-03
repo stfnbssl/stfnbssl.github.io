@@ -1,0 +1,7 @@
+$group
+
+    namespace freud
+
+        concept libido
+            + espressione dinamica della pulsione sessuale nella vita psichica
+

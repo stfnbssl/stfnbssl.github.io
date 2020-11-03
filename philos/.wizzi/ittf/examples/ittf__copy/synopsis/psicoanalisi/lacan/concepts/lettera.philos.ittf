@@ -1,0 +1,6 @@
+$group
+
+    namespace lacan
+
+        concept lettera
+            + godimento e scarto rispetto al senso

@@ -1,0 +1,14 @@
+$group
+
+    namespace lacan
+
+        concept domanda
+            + La domanda è un appello rivolto all'Altro (del discorso).
+            + Quando il bisogno passa nel registro della domanda si produce un resto,
+                \b uno scarto (differenza) tra bisogno o domanda; 
+                \b la domanda è sempre almeno parzialmente insoddisfatta. 
+                \b Questo resto è il desiderio, che riappare al di là della domanda
+                \b e che non si lascia assorbire nella dialettica soggetto-Altro.
+                \b Il fallo, in quanto significante del desiderio, 
+                \b configura la possibilità di significantizzare la differenza
+                \b tra bisogno e domanda (il desiderio).

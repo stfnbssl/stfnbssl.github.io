@@ -1,0 +1,15 @@
+$group
+
+    book freud.l-interpretazione-dei-sogni
+        title L'interpretazione dei sogni
+        author Freud
+        edition 1900, Bollati Boringhieri
+        title L’interpretazione dei sogni
+
+    article freud.l-inconscio
+        title L'Inconscio
+        author Freud
+        book freud.opere-VIII
+            author Freud
+            edition 1976, Bollati Boringhieri
+            title Le opere. Volume VIII

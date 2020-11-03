@@ -46,18 +46,24 @@ $group
                 author O. Sacks 
                 title L'uomo che scambiò sua moglie per un cappello
                 edition 1995
-                + affronta in chiave narrativa il complesso tema della “neurologia dell’identità” e dei fondamenti neurofisiologici 
-                    \b dell’io e, a questo proposito, argomenta la necessità di “parlare di storie e fiabe non meno che di casi”. 
+                + affronta in chiave narrativa il complesso tema della “neurologia dell’identità” 
+                    \b e dei fondamenti neurofisiologici dell’io e, a questo proposito, 
+                    \b argomenta la necessità di “parlare di storie e fiabe non meno che di casi”. 
                 quote
-                    + Le anamnesi sono una forma di storia naturale, ma non ci dicono nulla sull'individuo e sulla sua
-                        \b storia; non comunicano nulla della persona e della sua esperienza, di come essa affronta la malattia 
-                        \b e lotta per sopravvivere. Non vi è “soggetto” nella scarna storia di un caso clinico; le anamnesi moderne 
-                        \b accennano al soggetto con formule sbrigative (“albino femmina trisomico di anni 21”) che potrebbero 
-                        \b riferirsi a un essere umano come a un ratto. Per riportare il soggetto – il soggetto umano che
-                        \b soffre, si avvilisce, lotta – al centro del quadro, dobbiamo approfondire la storia di
-                        \b un caso fino a farne una storia vera, un racconto: solo allora avremo un “chi” oltre a
-                        \b un “che cosa”, avremo una persona reale, un paziente in relazione alla malattia – in
-                        \b relazione alla sfera fisica
+                    + Le anamnesi sono una forma di storia naturale, 
+                        \b ma non ci dicono nulla sull'individuo e sulla sua storia; 
+                        \b non comunicano nulla della persona e della sua esperienza, 
+                        \b di come essa affronta la malattia e lotta per sopravvivere. 
+                        \b Non vi è “soggetto” nella scarna storia di un caso clinico; 
+                        \b le anamnesi moderne accennano al soggetto con formule sbrigative 
+                        \b (“albino femmina trisomico di anni 21”) 
+                        \b che potrebbero riferirsi a un essere umano come a un ratto. 
+                        \b Per riportare il soggetto – il soggetto umano che soffre, si avvilisce, lotta – 
+                        \b al centro del quadro, 
+                        \b dobbiamo approfondire la storia di un caso fino a farne una storia vera, un racconto: 
+                        \b solo allora avremo un “chi” oltre a un “che cosa”, 
+                        \b avremo una persona reale, un paziente 
+                        \b in relazione alla malattia  – in relazione alla sfera fisica
         
         application
             field sistemica
@@ -65,21 +71,29 @@ $group
                 author M. White
                 title libro La terapia come narrazione
                 edition 1992
-                + White parla di “storia dominante” per descrivere la tendenza a raccontare la storia di vita seguendo una trama
-                    \b coerente con il nucleo narrativo centrale, generativo di realtà e identità; quando tale storia appare 
-                    \b “saturata dal problema”, ovvero pervasa dalla dimensione del problema, si crea la cosiddetta “psicopatologia”. 
-                    \b Il compito del clinico diventa accompagnare la persona ad individuare gli aspetti dell’esperienza che
-                    \b contraddicono la descrizione di sé saturata dal problema, partendo dai quali costruire una nuova storia.
+                + White parla di “storia dominante” per descrivere la tendenza a raccontare la storia di vita 
+                    \b seguendo una trama coerente con il nucleo narrativo centrale, 
+                    \b generativo di realtà e identità; 
+                    \b quando tale storia appare  “saturata dal problema”, 
+                    \b ovvero pervasa dalla dimensione del problema, 
+                    \b si crea la cosiddetta “psicopatologia”. 
+                    \b Il compito del clinico diventa accompagnare la persona 
+                    \b ad individuare gli aspetti dell’esperienza 
+                    \b che contraddicono la descrizione di sé saturata dal problema, 
+                    \b partendo dai quali costruire una nuova storia.
             article
                 title Punti di attrazione inconsueti e trasformazioni narrative in terapia familiare
                 author C. Sluski
                 edition 1999
-                + Sluski propone una metodologia psicoterapeutica funzionale alla costruzione di “storie formalmente migliori”, 
-                    \b ponendo come obiettivo del lavoro clinico la trasformazione delle storie perpetuanti il problema in racconti 
-                    \b vivibili, autodiretti e soddisfacenti; racconti che descrivono i protagonisti come attivi, competenti, 
+                + Sluski propone una metodologia psicoterapeutica 
+                    \b funzionale alla costruzione di “storie formalmente migliori”, 
+                    \b ponendo come obiettivo del lavoro clinico 
+                    \b la trasformazione delle storie perpetuanti il problema in racconti vivibili, autodiretti e soddisfacenti; 
+                    \b racconti che descrivono i protagonisti come attivi, competenti, 
                     \b responsabili, riflessivi, portatori di valori etico/morali quali il rispetto di sé e del prossimo, 
-                    \b l’evitamento della sofferenza, il senso di responsabilità collettiva, la promozione di processi di evoluzione 
-                    \b e di cambiamento.
+                    \b l’evitamento della sofferenza, 
+                    \b il senso di responsabilità collettiva, 
+                    \b la promozione di processi di evoluzione e di cambiamento.
                 book
                     author L. Boscolo e P. Bertando
                     title Terapia sistemica individuale

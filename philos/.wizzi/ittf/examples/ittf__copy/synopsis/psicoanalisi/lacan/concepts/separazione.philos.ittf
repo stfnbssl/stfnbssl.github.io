@@ -3,10 +3,9 @@ $group
     namespace lacan
 
         concept separazione
-            la separazione riesce a separare il soggetto dalla catena infernale 
+            + la separazione riesce a separare il soggetto dalla catena infernale 
                 \b che lo spinge di significante in significante senza mai risolvere il problema, 
-                \b basta individuare questo punto al di là del significante dell’Altro, 
-
+                \b basta individuare questo punto al di là del significante dell’Altro 
 
             quote 
                 + E’ questa una opzione etica che non verrà mai meno: 
@@ -19,6 +18,26 @@ $group
                 article recalcati.lezioni-su-lacan
                 page 145
 
+            r-concept lacan.oggetto-piccolo-a
+                quote
+                    + L’Altro manca di qualcosa – ad esempio l’Altro è debole, insomma l’Altro è mancante, 
+                        \b c’è un desiderio altrove, posso essere io quel desiderio altrove, 
+                        \b mi vado a ficcare in quel cuneo là della mancanza dell’Altro, 
+                        \b cosa ci vado a mettere là dentro? 
+                        \b L’Altro ha un meno e ci vado a mettere il mio meno 
+                        \b perché il risultato è un più.
+                        \b Quindi, quell’essere che non ha trovato nell’alienazione lo trova nella separazione.
+                        \b Che cos’è questo essere che emerge come più, come lo chiamiamo? 
+                        \b Questo essere che risulta da una sovrapposizione di due mancanze è l’oggetto piccolo a. 
+                        \b Quindi, dalla sovrapposizione delle due mancanze si ottiene una pienezza d’essere 
+                        \b che è il lato oggetto piccolo a del soggetto;
+                        \b il soggetto nella separazione si separa dalla catena significante 
+                        \b e si ritrova come essere in quanto oggetto a
+                        \b ritrova l’essere in quanto oggetto a, il suo essere è l’oggetto a. 
+                        \b Si ritrova come essere in quanto oggetto a
+                        \b perché se no come soggetto del significante è una mancanza-a-essere
+                    article licitra.alienazione-e-separazione
+
         concept separtizione
             + Se per Klein e Winnicott la separazione indica un processo di separazione del soggetto dall’Altro materno, 
                 \b dunque una differenziazione in esteriorità, 
@@ -28,32 +47,11 @@ $group
                 \b è il soggetto che si separa da se stesso, che è separtito, 
                 \b staccato da una parte di sé come accade nel quadro di santa Agata 
                 \b che offre i suoi seni su di un vassoio 
-                \b e che Lacan evoca nel Seminario X come esempio iconico di separtizione.                
+                \b e che Lacan evoca nel Seminario X come esempio iconico di separtizione.        
+            + Cosa perde il soggetto nela separtizione, quel'è l'oggetto perduto?
+                \b Il seno della madre, le feci, lo sguardo, la voce, ecc..        
 
 
     
-l’Altro manca di qualcosa – ad esempio l’Altro è debole, insomma l’Altro è mancante, 
-c’è un desiderio altrove, posso essere io quel desiderio altrove, 
-mi vado a ficcare in quel cuneo là della mancanza dell’Altro, 
-cosa ci vado a mettere là dentro? 
-l’Altro ha un meno e ci vado a mettere il mio meno perché il risultato è un più
 
-Quindi, quell’essere che non ha trovato nell’alienazione lo trova nella separazione. 
-Che cos’è questo essere che emerge come più, come lo chiamiamo? 
 
-Questo essere che risulta da una sovrapposizione di due mancanze è l’oggetto piccolo a. 
-
-Quindi, dalla sovrapposizione delle due mancanze 
-si ottiene una pienezza d’essere 
-che è il lato oggetto piccolo a del soggetto, 
-
-il soggetto nella separazione si separa dalla catena significante 
-e si ritrova come essere in quanto oggetto a
-
-ritrova l’essere in quanto oggetto a, 
-il suo essere è l’oggetto a. 
-
-Si ritrova come essere in quanto oggetto a
-perché se no come soggetto del significante è una mancanza-a-essere
-
-article licitra.alienazione-e-separazione

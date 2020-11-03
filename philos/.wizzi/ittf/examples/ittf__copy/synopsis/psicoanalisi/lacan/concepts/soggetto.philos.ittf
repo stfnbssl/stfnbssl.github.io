@@ -80,17 +80,22 @@ $group
                         \b perché fondata sulla mancanza a essere. 
 
         concept soggetto-dell-inconscio
-            + è una sfasatura tra Io (moi) e Je (me)
+            title soggetto dell'inconscio
+            alias soggetto del desiderio
+            alias soggetto dell'enunciato
+            + È una sfasatura tra Io (moi) e Je (me)
             + L’essere del soggetto non si esaurisce nell’Io (moi), 
                 \b l'Io è un miraggio, un luogo di un misconoscimento che ha radice nell’identificazione. 
+            + il suo statuto è di soggetto diviso
 
         concept soggetto-barrato
+            title soggetto barrato
+            alias soggetto diviso
             + $, S barrato, nell’algebra/dizione lacaniana, 
                 \b è il soggetto diviso, 
                 \b ovvero il soggetto abitato da una parte di sé a lui sconosciuta, 
                 \b l’inconscio.
-            + Il soggetto, lo stesso con cui ha a che fare la psicoanalisi,
-                \b è barrato 
+            + Il soggetto, lo stesso con cui ha a che fare la psicoanalisi, è barrato 
                 quote
                     + [in quanto si va a costituire] come secondo rispetto al significante
                     book lacan.i-quattro-concetti-fondamentali-della-psicoanalisi

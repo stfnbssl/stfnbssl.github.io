@@ -1,0 +1,10 @@
+$group
+
+    namespace freud
+
+        concept formazione-di-compromesso
+            r-concept freud.sintomo
+            r-concept freud.sogno
+            r-concept freud.atto-mancato
+            r-concept freud.ricordo-di-copertura
+
