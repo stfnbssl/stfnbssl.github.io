@@ -1,0 +1,8 @@
+$group
+
+    namespace freud
+
+        concept investimento
+            alias carica
+            + Quantità di energia che un neurone ha ricevuto
+                \b e di cui tenderà a liberarsi.
