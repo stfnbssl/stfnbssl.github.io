@@ -3,6 +3,8 @@ $group
     namespace freud
 
         concept neuroni-ω
+            alias neuroni della coscienza
+            alias sistema ω
 
             + Una percezione (carica in ψ avente origine in φ)
                 \b  eccita la coscienza di una qualità in ω.

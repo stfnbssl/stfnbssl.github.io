@@ -6,10 +6,32 @@ $group
         edition 1900, Bollati Boringhieri
         title L’interpretazione dei sogni
 
+    book freud.opere-complete
+        author Freud
+        title Opere complete 
+        edition Bollati Boringhieri. Kindle Edition.
+    
+    article freud.al-di-la-del-principio-del-piacere
+        title Al di la del principio di piacere
+        author Freud
+        book freud.opere-IX
+
+    article freud.psicologia-delle-masse-e-analisi-dell-io
+        title Psicologia delle masse e analisi dell'Io
+        author Freud
+        book freud.opere-IX
+
     article freud.l-inconscio
         title L'Inconscio
         author Freud
         book freud.opere-VIII
-            author Freud
-            edition 1976, Bollati Boringhieri
-            title Le opere. Volume VIII
+
+    book freud.opere-VIII
+        author Freud
+        edition 1976, Bollati Boringhieri
+        title Le opere. Volume VIII. Introduzione alla psicanalisi e altri scritti.
+
+    book freud.opere-IX
+        author Freud
+        edition 1976, Bollati Boringhieri
+        title Le opere. Volume IX. L'Io e l'Es e altri scritti.

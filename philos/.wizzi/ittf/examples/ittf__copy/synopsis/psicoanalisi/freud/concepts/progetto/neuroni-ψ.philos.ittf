@@ -4,6 +4,7 @@ $group
 
         concept neuroni-ψ
             alias neuroni impermeabili
+            alias sistema ψ
             
             r-concept freud.progetto.barriera-di-contatto
                 + I neuroni ψ offrono resistenza,
@@ -22,3 +23,11 @@ $group
             r-concept freud.progetto.facilitazione
                 + Le alterazioni che possono subire i neuroni-ψ consistono nell'agevolare il passaggio della carica
                     \b rendendoli più simili ai neuroni φ.
+
+            concept del-pallio
+                + Neurone ψ che sono investiti da neuroni φ.
+
+            concept nucleari
+                + Neuroni ψ che sono investiti dalle vie endogene di conduzione.
+
+

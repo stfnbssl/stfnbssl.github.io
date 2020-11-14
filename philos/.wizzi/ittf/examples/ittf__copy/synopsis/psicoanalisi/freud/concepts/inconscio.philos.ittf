@@ -4,6 +4,21 @@ $group
 
         concept inconscio
 
+            quote
+                + L’inconscio è l’infantile: è quella parte della personalità che a quell’epoca si è separata, 
+                    \b non ha seguito l’evoluzione del tutto ed è stata perciò rimossa.
+                kindle-page 3250
+                article freud.l-uomo-dei-topi
+
+            quote
+                + Nell’inconscio gli investimenti possono essere facilmente trasferiti in modo completo, spostati, condensati;
+                    \b tale trattamento, se fosse applicato a un materiale preconscio, 
+                    \b potrebbe dare solo risultati difettosi; 
+                    \b e ciò determina anche le note peculiarità del sogno manifesto 
+                    \b una volta che i residui preconsci del giorno precedente 
+                    \b siano stati elaborati secondo le leggi dell’inconscio.
+                kindle-page 5670-5671                 
+
             concept non-rimosso
                 theory freud.prima-topica
                     + Inconscio, Preconscio, Coscienza

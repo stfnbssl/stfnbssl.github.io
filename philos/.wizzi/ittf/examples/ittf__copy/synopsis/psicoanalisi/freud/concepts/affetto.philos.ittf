@@ -36,6 +36,12 @@ $group
                 r-concept freud.affetto
                     + l'affetto è in Freud la controparte qualitativa della quantità di importo d'affetto
 
+                r-concept freud.rimozione
+                    quote
+                        + [..] la liquidazione dell’ammontare affettivo, 
+                            \b che costituisce il vero e proprio compito della rimozione [..]
+                        kindle-loc 65273 
+
             concept bloccato
                 + L'origine del sintomo isterico è cercata in un evento traumatico 
                     \b a cui non ha potuto corrispondere una scarica adeguata (affetto bloccato).

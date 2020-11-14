@@ -4,6 +4,9 @@ $group
 
         concept pensiero
             alias processo di pensiero
+            + [..] delle facilitazioni prodotte dal pensiero resta solo il risultato e non un ricordo.
+
+        concept pensiero-cosciente-osservante
 
         concept pensiero-conoscitivo
             alias pensiero giudicante

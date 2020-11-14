@@ -1,6 +1,6 @@
 $group
 
-    namespace freud
+    namespace freud.progetto
 
         concept attenzione
             + L'attenzione consiste nello stabilire una situazione psichica di attesa

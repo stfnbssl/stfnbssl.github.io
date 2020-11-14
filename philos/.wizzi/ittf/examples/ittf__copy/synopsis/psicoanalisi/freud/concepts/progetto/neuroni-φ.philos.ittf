@@ -5,6 +5,7 @@ $group
         concept neuroni-φ
             alias neuroni permeabili
             alias neuroni percettivi
+            alias sistema φ
             
             + I neuroni φ non offrono resistenza e non trattengono nulla della carica Qἠ,
                 \b da cui sono eccitati,
