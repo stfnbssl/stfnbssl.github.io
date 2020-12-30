@@ -1,6 +1,0 @@
-$group
-
-    namespace freud
-
-        concept sistema-Prec
-            title sistema Prec

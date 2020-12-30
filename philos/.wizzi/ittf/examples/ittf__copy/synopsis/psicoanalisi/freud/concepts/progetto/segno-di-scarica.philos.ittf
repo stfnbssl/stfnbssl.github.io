@@ -1,7 +1,0 @@
-$group
-
-    namespace freud
-
-        concept segno-di-scarica
-
-        concept segno-di-scarica-verbale

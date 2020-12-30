@@ -1,6 +1,0 @@
-$group
-
-    namespace sartre
-
-        concept oggetto-posizionale
-            + il mondo è oggetto posizionale di coscienza 

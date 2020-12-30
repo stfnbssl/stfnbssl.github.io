@@ -1,6 +1,0 @@
-$group
-
-    namespace freud
-
-        concept ricordo
-            + Un ricordo quando investito può sviluppare piacere o dispiacere.

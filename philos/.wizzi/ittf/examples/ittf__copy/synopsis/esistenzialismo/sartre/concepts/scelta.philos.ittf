@@ -1,7 +1,0 @@
-$group
-
-    namespace sartre
-
-        concept scelta
-
-            quote

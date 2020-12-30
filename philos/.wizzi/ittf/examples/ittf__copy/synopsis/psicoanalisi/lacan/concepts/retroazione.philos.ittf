@@ -1,6 +1,0 @@
-$group
-
-    namespace lacan
-
-        concept retroazione
-            alias apres coup

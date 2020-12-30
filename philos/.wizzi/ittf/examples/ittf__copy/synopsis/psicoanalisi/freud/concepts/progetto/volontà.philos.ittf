@@ -1,6 +1,0 @@
-$group
-
-    namespace freud
-
-        concept volontà
-            + La volontà è il derivato delle pulsioni.

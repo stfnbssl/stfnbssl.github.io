@@ -1,5 +1,0 @@
-$group
-
-    namespace desaussure
-
-        concept linguaggio
