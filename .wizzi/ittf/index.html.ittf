@@ -92,5 +92,5 @@ html
                 . menu menu__standard
                     data-v-380202fa 
                     menu-item(01, wizzi, https://stfnbssl.github.io/wizzi/)
-                    $$ menu-item(02, cosie, ./cosie/index.html)
+                    menu-item(02, cosie, ./cosie/17marzo2021/index.html)
                     menu-item(03, philos, https://stfnbssl.github.io/philos/)

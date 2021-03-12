@@ -29,9 +29,9 @@
         "js-yaml": "^3.13.1"
     },
     "devDependencies": {
-        "wizzi": "^0.7.12",
-        "wizzi-core": "^0.7.1",
-        "wizzi-js": "^0.7.5",
-        "wizzi-web": "^0.7.2"
+        "wizzi": "^0.7.21",
+        "wizzi-core": "^0.7.2",
+        "wizzi-js": "^0.7.7",
+        "wizzi-web": "^0.7.7"
     }
 }

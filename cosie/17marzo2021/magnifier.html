@@ -1,0 +1,46 @@
+<!--
+    artifact generator: C:\My\wizzi\stfnbssl\stfnbssl.github.io\node_modules\wizzi-web\lib\artifacts\html\document\gen\main.js
+    package: wizzi-web@0.7.7
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\stfnbssl.github.io\cosie\.wizzi\src\17marzo2021\magnifier.html.ittf
+-->
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .img-magnifier-container {
+            position: relative;
+        }
+        .img-magnifier-glass {
+            position: absolute;
+            border: 3px solid #000;
+            -webkit-border-radius: 50%;
+            -khtml-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            cursor: none;
+            width: 200px;
+            height: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Image Magnifier Glass</h1>
+    <p>Mouse over the image:</p>
+    <div class="img-magnifier-container">
+        <img id="myimage" src="./images/1 mese.png" width="600" height="400" />
+    </div>
+    <p>Feel free to change the strength of the magnifier glass when initiating the magnify function.</p>
+    <script src="./magnifier.js.ittf"></script>
+    <script>
+        //
+        magnify("myimage", 3);
+    </script>
+</body>
+
+</html>
