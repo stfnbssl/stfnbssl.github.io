@@ -1,0 +1,23 @@
+{ 
+    name "Cosie"
+    version "0.0.1"
+    description ""
+    { author
+        name ""
+        email ""
+    private false
+    [ licenses
+        { 
+            type "MIT"
+            url "https://github.com///tree/master/license.txt"
+    { repository
+        type "git"
+        url "https://github.com///tree/master"
+    { engines
+        node ">=0.10.28"
+        npm ">=1.4.28"
+    { scripts
+        pdf "node 17marzo2021/17marzo2021.makepdf"
+    { dependencies
+        pdfmake "^0.1.70"
+    { devDependencies

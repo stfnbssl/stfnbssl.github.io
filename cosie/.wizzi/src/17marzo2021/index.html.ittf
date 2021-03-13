@@ -26,7 +26,7 @@ html
         id menu
         $foreach page in site.Marzo17.pages
             li 
-                data-menuanchor ${page.name}
+                data-menuanchor ${page.id}
                 class active
                 a ${page.name}
                     href #${page.id}
@@ -143,7 +143,9 @@ html
 
                 $if page.header
                     h1 Header
-
+                    p 
+                        a PDF
+                            href ./Cosie17marzo2021.pdf
                 $elif page.tags
                     . tagged-texts
                         $include tags

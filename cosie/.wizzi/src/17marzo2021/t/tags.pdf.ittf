@@ -1,0 +1,35 @@
+$group
+
+    $function processTag
+        $param tag
+        $if tag.p
+            p ${tag.p}
+                style para1
+        $elif tag.li
+            + ${tag.li}
+                style para1
+        $elif tag.ul
+            ul
+                $foreach item in tag.items
+                    + ${item.li}
+                        style para1
+        $*
+        $elif tag.reviews
+            . cite-reviews
+                $foreach rev in tag.items
+                    $if rev.article
+                        . cite-article
+                            + ${rev.article}
+                    $if rev.authors
+                        . cite-authors
+                            + ${rev.authors}
+                    $if rev.review
+                        . cite-review
+                            + ${rev.review}
+        *$
+
+    $foreach tag in page.tags
+        $_ processTag
+            $@ tag
+
+

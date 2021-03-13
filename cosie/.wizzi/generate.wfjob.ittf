@@ -1,15 +1,16 @@
 wfjob content-server
 
-  $
-    var ittf_models_folder     = path.join(__dirname, 'models');
-    var ittf_src_folder        = path.join(__dirname, 'src');
-    var dest_folder            = path.join(__dirname, '..');
+    $
+        var ittf_models_folder     = path.join(__dirname, 'models');
+        var ittf_src_folder        = path.join(__dirname, 'src');
+        var ittf_root_folder       = path.join(__dirname, 'root');
+        var dest_folder            = path.join(__dirname, '..');
   
-  model site 
-    schema json
-    src ${ittf_models_folder}/site.json.ittf
+    model site 
+        schema json
+        src ${ittf_models_folder}/site.json.ittf
 
-  line models
+    line models
 		cwd-folder ${ittf_models_folder}
 		artifact json modules
 			src ./**/*.json.ittf
@@ -19,7 +20,7 @@ wfjob content-server
             model-ref site
                 export-name site
 
-  line src
+    line src
 		cwd-folder ${ittf_src_folder}
 
 		artifact html documents
@@ -46,7 +47,27 @@ wfjob content-server
             model-ref site
                 export-name site
 
-  production
+		artifact pdf documents
+			src ./**/*.pdf.ittf
+			schema pdf
+			generator pdf/document
+			extension makepdf.js
+            model-ref site
+                export-name site
+
+    line root
+		cwd-folder ${ittf_root_folder}
+
+		artifact json documents
+			src ./**/*.json.ittf
+			schema json
+			generator json/document
+			extension json
+            model-ref site
+                export-name site
+
+    production
 		dest-folder ${dest_folder}
 		line-ref models
         line-ref src
+        line-ref root

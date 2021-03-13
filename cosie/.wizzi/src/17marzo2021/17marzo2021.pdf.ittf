@@ -1,0 +1,38 @@
+pdf Cosie17marzo2021
+    $
+        var imagesBaseUrl = _.replace(path.join(__dirname, "images"), '\\', '/');
+
+    style-def titolo1
+        font-size 48
+        bold
+        italic
+        color red
+        alignment right
+
+    style-def titolo2
+        font-size 36
+        bold
+        italic
+        color #e02424
+        alignment left
+
+    style-def para1
+        font-size 24
+        alignment left
+
+    $foreach page in site.Marzo17.pages
+        section
+            p ${page.cat}
+                style titolo1
+            p ${page.title ? page.title : page.name}
+                style titolo2
+            $if page.header
+                p Header
+
+            $elif page.tags
+                $include tags
+
+            $else
+                image ${imagesBaseUrl}/${page.name}.png
+                    width 300
+                    height 600
