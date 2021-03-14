@@ -1,5 +1,8 @@
 html
     $$ h/std/empty_layout()
+    $
+        var styles = site.Marzo17.styles;
+
     head
         $$ $append head-styles-0
         meta 
@@ -37,6 +40,41 @@ html
         
         < html
             cursor url('./images/cursor.jpg'), default
+
+        . forefront
+            text-align left
+            padding-left 100px
+        
+        . forefront-title
+            font-size ${styles.titolo1.fontSize * 2.5}px
+            color ${styles.titolo1.color}
+            margin 200px 0 0 0
+            font-weight bold
+    
+        . forefront-author
+            font-size ${styles.para1.fontSize * 2.5}px
+            color ${styles.titolo2.color}
+            margin 50px 0 0 0
+    
+        . forefront-date
+            font-size ${styles.cite.fontSize * 2.5}px
+            color ${styles.titolo2.color}
+            margin 20px 0 0 0
+            font-style italic
+
+        . thanks-title
+            font-size ${styles.titolo1.fontSize * 3.5}px
+            color ${styles.titolo1.color}
+            text-align left
+            padding-left 100px
+            text-align center
+        
+        . thanks-subtitle
+            font-size ${styles.titolo2.fontSize * 3.5}px
+            color ${styles.titolo1.color}
+            text-align left
+            padding-left 100px
+            text-align center
 
         . titles
             display flex
@@ -134,18 +172,33 @@ html
             . section
                 id section_${page.id}
                 class section1
-                . titles
-                    . title2
-                        + ${page.title ? page.title : page.name}
-                    . title1
-                        + ${page.cat}
+                $if !(page.header || page.thanks)
+                    . titles
+                        . title2
+                            + ${page.title ? page.title : page.name}
+                        . title1
+                            + ${page.cat}
                 $$ p ${page.name}
 
                 $if page.header
-                    h1 Header
-                    p 
-                        a PDF
-                            href ./Cosie17marzo2021.pdf
+                    . forefront
+                        p ${page.header.title}
+                            class forefront-title
+                        p ${page.header.author}
+                            class forefront-author
+                        p ${page.header.date}
+                            class forefront-date
+                        p 
+                            style margin-top: 200px
+                            a PDF
+                                href ./Cosie17marzo2021.pdf
+
+                $elif page.thanks
+                    p ${page.thanks.title}
+                        class thanks-title
+                    p ${page.thanks.subtitle}
+                        class thanks-subtitle
+                            
                 $elif page.tags
                     . tagged-texts
                         $include tags
@@ -177,11 +230,12 @@ html
             kind react
             $foreach page in site.Marzo17.pages
                 $if page.header
+                $elif page.thanks
                 $elif page.tags
                 $else
                     var eldiv_${page.id} = document.querySelector("#magnifier_${page.id}");
                     var elimg_${page.id} = document.querySelector("#section_${page.id} .image-inside");
-                    # log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+                    log 'call magnify', 'eldiv_${page.id}, elimg_${page.id}', eldiv_${page.id}, elimg_${page.id}
                     _ magnify(eldiv_${page.id}, elimg_${page.id}, 4)
 
             var myFullpage

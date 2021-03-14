@@ -29,10 +29,24 @@
     $ var catN = "NpL e NpM";
 
     { Marzo17
+        $ var baseSize = 5;
+
+        { styles
+            { titolo1
+                fontSize ${baseSize * 8}
+                color "#e02424"
+            { titolo2
+                fontSize ${baseSize * 6}
+                color "#020202"
+            { para1
+                fontSize ${baseSize * 3}
+            { cite
+                fontSize ${baseSize * 2}
         [ pages
             {
                 name "0"
                 cat "${cat}"
+                title " "
                 { header
                     author "Anna Maria Davoli"
                     title "Le guide anticipatorie"
@@ -156,4 +170,12 @@
                 name "NpL dialogico"
                 title "4 anni, Dialogico"
                 cat "${catN}"
+            {
+                name "Fine"
+                cat " "
+                title " "
+                { thanks
+                    title "Grazie"
+                    subtitle "per l'attenzione"
+
 

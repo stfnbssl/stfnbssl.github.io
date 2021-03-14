@@ -462,10 +462,27 @@
         }
     },
     "Marzo17": {
+        "styles": {
+            "titolo1": {
+                "fontSize": 40,
+                "color": "#e02424"
+            },
+            "titolo2": {
+                "fontSize": 30,
+                "color": "#020202"
+            },
+            "para1": {
+                "fontSize": 15
+            },
+            "cite": {
+                "fontSize": 10
+            }
+        },
         "pages": [
             {
                 "name": "0",
                 "cat": "Tutti a tavola",
+                "title": " ",
                 "header": {
                     "author": "Anna Maria Davoli",
                     "title": "Le guide anticipatorie",
@@ -635,6 +652,15 @@
                 "name": "NpL dialogico",
                 "title": "4 anni, Dialogico",
                 "cat": "NpL e NpM"
+            },
+            {
+                "name": "Fine",
+                "cat": " ",
+                "title": " ",
+                "thanks": {
+                    "title": "Grazie",
+                    "subtitle": "per l'attenzione"
+                }
             }
         ]
     }

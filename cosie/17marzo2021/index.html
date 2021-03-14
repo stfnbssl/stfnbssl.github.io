@@ -54,6 +54,8 @@
     </li>
     <li data-menuanchor="NpL_dialogico" class="active"><a href="#NpL_dialogico">NpL dialogico</a>
     </li>
+    <li data-menuanchor="Fine" class="active"><a href="#Fine">Fine</a>
+    </li>
 </ul>
 <style>
     * {
@@ -61,6 +63,41 @@
     }
     html {
         cursor: url('./images/cursor.jpg'), default;
+    }
+    .forefront {
+        text-align: left;
+        padding-left: 100px;
+    }
+    .forefront-title {
+        font-size: 100px;
+        color: #e02424;
+        margin: 200px 0 0 0;
+        font-weight: bold;
+    }
+    .forefront-author {
+        font-size: 37.5px;
+        color: #020202;
+        margin: 50px 0 0 0;
+    }
+    .forefront-date {
+        font-size: 25px;
+        color: #020202;
+        margin: 20px 0 0 0;
+        font-style: italic;
+    }
+    .thanks-title {
+        font-size: 140px;
+        color: #e02424;
+        text-align: left;
+        padding-left: 100px;
+        text-align: center;
+    }
+    .thanks-subtitle {
+        font-size: 105px;
+        color: #e02424;
+        text-align: left;
+        padding-left: 100px;
+        text-align: center;
     }
     .titles {
         display: -ms-flexbox;
@@ -178,16 +215,14 @@
 </style>
 <div id="fullpage">
     <div id="section_0" class="section">
-        <div class="titles">
-            <div class="title2">
-                0</div>
-            <div class="title1">
-                Tutti a tavola</div>
+        <div class="forefront">
+            <p class="forefront-title">Le guide anticipatorie</p>
+            <p class="forefront-author">Anna Maria Davoli</p>
+            <p class="forefront-date">17 marzo 2021</p>
+            <p style="margin-top: 200px">
+                <a href="./Cosie17marzo2021.pdf">PDF</a>
+            </p>
         </div>
-        <h1>Header</h1>
-        <p>
-            <a href="./Cosie17marzo2021.pdf">PDF</a>
-        </p>
     </div>
     <div id="section_1" class="section">
         <div class="titles">
@@ -509,6 +544,10 @@
             <img src="images/NpL dialogico.png" class="image-inside" alt="NpL dialogico" />
         </div>
     </div>
+    <div id="section_Fine" class="section">
+        <p class="thanks-title">Grazie</p>
+        <p class="thanks-subtitle">per l'attenzione</p>
+    </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js"></script>
 <div id="js examples.js"></div>
@@ -516,67 +555,67 @@
 <script type="text/javascript">
     var eldiv_nascita = document.querySelector("#magnifier_nascita");
     var elimg_nascita = document.querySelector("#section_nascita .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_nascita, elimg_nascita', eldiv_nascita, elimg_nascita);
     magnify(eldiv_nascita, elimg_nascita, 4);
     var eldiv_15_giorni = document.querySelector("#magnifier_15_giorni");
     var elimg_15_giorni = document.querySelector("#section_15_giorni .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_15_giorni, elimg_15_giorni', eldiv_15_giorni, elimg_15_giorni);
     magnify(eldiv_15_giorni, elimg_15_giorni, 4);
     var eldiv_1_mese = document.querySelector("#magnifier_1_mese");
     var elimg_1_mese = document.querySelector("#section_1_mese .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_1_mese, elimg_1_mese', eldiv_1_mese, elimg_1_mese);
     magnify(eldiv_1_mese, elimg_1_mese, 4);
     var eldiv_5_mesi = document.querySelector("#magnifier_5_mesi");
     var elimg_5_mesi = document.querySelector("#section_5_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_5_mesi, elimg_5_mesi', eldiv_5_mesi, elimg_5_mesi);
     magnify(eldiv_5_mesi, elimg_5_mesi, 4);
     var eldiv_6_mesi = document.querySelector("#magnifier_6_mesi");
     var elimg_6_mesi = document.querySelector("#section_6_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_6_mesi, elimg_6_mesi', eldiv_6_mesi, elimg_6_mesi);
     magnify(eldiv_6_mesi, elimg_6_mesi, 4);
     var eldiv_9_mesi_1 = document.querySelector("#magnifier_9_mesi_1");
     var elimg_9_mesi_1 = document.querySelector("#section_9_mesi_1 .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_9_mesi_1, elimg_9_mesi_1', eldiv_9_mesi_1, elimg_9_mesi_1);
     magnify(eldiv_9_mesi_1, elimg_9_mesi_1, 4);
     var eldiv_9_mesi_2 = document.querySelector("#magnifier_9_mesi_2");
     var elimg_9_mesi_2 = document.querySelector("#section_9_mesi_2 .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_9_mesi_2, elimg_9_mesi_2', eldiv_9_mesi_2, elimg_9_mesi_2);
     magnify(eldiv_9_mesi_2, elimg_9_mesi_2, 4);
     var eldiv_1_anno = document.querySelector("#magnifier_1_anno");
     var elimg_1_anno = document.querySelector("#section_1_anno .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_1_anno, elimg_1_anno', eldiv_1_anno, elimg_1_anno);
     magnify(eldiv_1_anno, elimg_1_anno, 4);
     var eldiv_14_mesi = document.querySelector("#magnifier_14_mesi");
     var elimg_14_mesi = document.querySelector("#section_14_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_14_mesi, elimg_14_mesi', eldiv_14_mesi, elimg_14_mesi);
     magnify(eldiv_14_mesi, elimg_14_mesi, 4);
     var eldiv_17_mesi = document.querySelector("#magnifier_17_mesi");
     var elimg_17_mesi = document.querySelector("#section_17_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_17_mesi, elimg_17_mesi', eldiv_17_mesi, elimg_17_mesi);
     magnify(eldiv_17_mesi, elimg_17_mesi, 4);
     var eldiv_18_mesi = document.querySelector("#magnifier_18_mesi");
     var elimg_18_mesi = document.querySelector("#section_18_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_18_mesi, elimg_18_mesi', eldiv_18_mesi, elimg_18_mesi);
     magnify(eldiv_18_mesi, elimg_18_mesi, 4);
     var eldiv_19_mesi = document.querySelector("#magnifier_19_mesi");
     var elimg_19_mesi = document.querySelector("#section_19_mesi .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_19_mesi, elimg_19_mesi', eldiv_19_mesi, elimg_19_mesi);
     magnify(eldiv_19_mesi, elimg_19_mesi, 4);
     var eldiv_5a_9_m = document.querySelector("#magnifier_5a_9_m");
     var elimg_5a_9_m = document.querySelector("#section_5a_9_m .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_5a_9_m, elimg_5a_9_m', eldiv_5a_9_m, elimg_5a_9_m);
     magnify(eldiv_5a_9_m, elimg_5a_9_m, 4);
     var eldiv_5a_9m_2 = document.querySelector("#magnifier_5a_9m_2");
     var elimg_5a_9m_2 = document.querySelector("#section_5a_9m_2 .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_5a_9m_2, elimg_5a_9m_2', eldiv_5a_9m_2, elimg_5a_9m_2);
     magnify(eldiv_5a_9m_2, elimg_5a_9m_2, 4);
     var eldiv_NpL_3a_6m_papa = document.querySelector("#magnifier_NpL_3a_6m_papa");
     var elimg_NpL_3a_6m_papa = document.querySelector("#section_NpL_3a_6m_papa .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_NpL_3a_6m_papa, elimg_NpL_3a_6m_papa', eldiv_NpL_3a_6m_papa, elimg_NpL_3a_6m_papa);
     magnify(eldiv_NpL_3a_6m_papa, elimg_NpL_3a_6m_papa, 4);
     var eldiv_NpL_dialogico = document.querySelector("#magnifier_NpL_dialogico");
     var elimg_NpL_dialogico = document.querySelector("#section_NpL_dialogico .image-inside");
-    // log 'AFTER LOAD', 'eldiv,elimg', eldiv, elimg
+    console.log('call magnify', 'eldiv_NpL_dialogico, elimg_NpL_dialogico', eldiv_NpL_dialogico, elimg_NpL_dialogico);
     magnify(eldiv_NpL_dialogico, elimg_NpL_dialogico, 4);
     var myFullpage = new fullpage('#fullpage', {
         anchors: [
@@ -599,7 +638,8 @@
             '5a_9_m', 
             '5a_9m_2', 
             'NpL_3a_6m_papa', 
-            'NpL_dialogico'
+            'NpL_dialogico', 
+            'Fine'
         ], 
         menu: '#menu', 
         continuousVertical: false, 

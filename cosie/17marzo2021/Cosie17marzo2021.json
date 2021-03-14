@@ -2,20 +2,21 @@
 	"content": [
 		{
 			"text": [
-				"Tutti a tavola"
+				"Le guide anticipatorie"
 			],
-			"style": "titolo1"
+			"style": ".forefront-title"
 		},
 		{
 			"text": [
-				"0"
+				"Anna Maria Davoli"
 			],
-			"style": "titolo2"
+			"style": ".forefront-author"
 		},
 		{
 			"text": [
-				"Header"
-			]
+				"17 marzo 2021"
+			],
+			"style": ".forefront-date"
 		},
 		{
 			"text": " ",
@@ -68,7 +69,7 @@
 			"style": "para1"
 		},
 		{
-			"text": [
+			"stack": [
 				{
 					"text": [
 						"Content and Quality of Infant Feeding Smartphone Apps: Five-Year Update on a Systematic Search and Evaluation"
@@ -131,7 +132,7 @@
 			"style": "para1"
 		},
 		{
-			"text": [
+			"stack": [
 				{
 					"text": [
 						"A Mobile App, KhunLook, to Support Thai Parents and Caregivers With Child Health Supervision: Development, Validation, and Acceptability Study"
@@ -242,7 +243,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/nascita.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -263,7 +264,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/15 giorni.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -284,7 +285,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/1 mese.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -305,7 +306,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -326,7 +327,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/6 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -347,7 +348,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/9 mesi 1.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -368,7 +369,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/9 mesi 2.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -389,7 +390,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/1 anno.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -410,7 +411,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/14 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -431,7 +432,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/17 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -452,7 +453,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/18 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -473,7 +474,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/19 mesi.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -494,7 +495,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5a 9 m.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -515,7 +516,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5a 9m 2.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -536,7 +537,7 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/NpL 3a 6m papa.png",
 			"width": 300,
-			"height": 600
+			"height": 550
 		},
 		{
 			"text": " ",
@@ -557,7 +558,23 @@
 		{
 			"image": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/NpL dialogico.png",
 			"width": 300,
-			"height": 600
+			"height": 550
+		},
+		{
+			"text": " ",
+			"pageBreak": "after"
+		},
+		{
+			"text": [
+				"Grazie"
+			],
+			"style": ".thank-title"
+		},
+		{
+			"text": [
+				"per l'attenzione"
+			],
+			"style": ".thank-subtitle"
 		},
 		{
 			"text": " ",
@@ -565,44 +582,122 @@
 		}
 	],
 	"styles": {
-		"titolo1": {
-			"fontSize": 48,
-			"bold": true,
-			"italics": true,
-			"color": "red",
-			"alignment": "right"
+		".forefront-title": {
+			"fontSize": 60,
+			"margin": [
+				0,
+				150,
+				0,
+				0
+			],
+			"bold": true
 		},
-		"titolo2": {
-			"fontSize": 36,
+		".forefront-author": {
+			"fontSize": 15,
+			"margin": [
+				0,
+				50,
+				0,
+				0
+			]
+		},
+		".forefront-date": {
+			"fontSize": 10,
+			"margin": [
+				0,
+				20,
+				0,
+				0
+			],
+			"italics": true
+		},
+		"titolo1": {
+			"fontSize": 40,
 			"bold": true,
 			"italics": true,
 			"color": "#e02424",
-			"alignment": "left"
+			"alignment": "right",
+			"margin": [
+				0,
+				20,
+				0,
+				20
+			]
+		},
+		"titolo2": {
+			"fontSize": 30,
+			"bold": true,
+			"italics": true,
+			"color": "#020202",
+			"alignment": "left",
+			"margin": [
+				0,
+				10,
+				0,
+				10
+			]
 		},
 		"para1": {
-			"fontSize": 18,
+			"fontSize": 15,
 			"alignment": "left",
-			"margin": 0
+			"margin": [
+				0,
+				20,
+				0,
+				0
+			]
 		},
 		".cite-reviews": {
-			"margin": 0
+			"margin": [
+				0,
+				10,
+				0,
+				0
+			]
 		},
-		".cite-articles": {
-			"fontSize": 12,
+		".cite-article": {
+			"fontSize": 10,
 			"alignment": "left",
-			"margin": 0
+			"bold": true,
+			"margin": [
+				0,
+				10,
+				0,
+				0
+			]
 		},
 		".cite-authors": {
-			"fontSize": 12,
+			"fontSize": 10,
 			"italics": true,
-			"alignment": "left",
-			"margin": 0
+			"alignment": "left"
 		},
 		".cite-review": {
-			"fontSize": 12,
+			"fontSize": 10,
 			"italics": true,
-			"alignment": "left",
-			"margin": 0
+			"alignment": "left"
+		},
+		".thank-title": {
+			"fontSize": 60,
+			"margin": [
+				0,
+				100,
+				0,
+				0
+			],
+			"alignment": "center",
+			"color": "#e02424",
+			"bold": true
+		},
+		".thank-subtitle": {
+			"fontSize": 45,
+			"margin": [
+				0,
+				20,
+				0,
+				0
+			],
+			"alignment": "center",
+			"color": "#e02424"
 		}
 	}
 }

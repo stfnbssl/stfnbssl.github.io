@@ -1,38 +1,97 @@
 pdf Cosie17marzo2021
     $
         var imagesBaseUrl = _.replace(path.join(__dirname, "images"), '\\', '/');
+        var styles = site.Marzo17.styles;
+
+    style-def .forefront-title
+        font-size ${styles.titolo1.fontSize * 1.5}
+        margin 0 150 0 0
+        bold
+    
+    style-def .forefront-author
+        font-size ${styles.para1.fontSize}
+        margin 0 50 0 0
+    
+    style-def .forefront-date
+        font-size ${styles.cite.fontSize}
+        margin 0 20 0 0
+        italic
 
     style-def titolo1
-        font-size 48
+        font-size ${styles.titolo1.fontSize}
         bold
         italic
-        color red
+        color ${styles.titolo1.color}
         alignment right
+        margin 0 20
 
     style-def titolo2
-        font-size 36
+        font-size ${styles.titolo2.fontSize}
         bold
         italic
-        color #e02424
+        color ${styles.titolo2.color}
         alignment left
+        margin 0 10
 
     style-def para1
-        font-size 24
+        font-size ${styles.para1.fontSize}
         alignment left
+        margin 0,20,0,0
+
+    style-def .cite-reviews
+        margin 0,10,0,0
+    
+    style-def .cite-article
+        font-size ${styles.cite.fontSize}
+        alignment left
+        bold
+        margin 0,10,0,0
+
+    style-def .cite-authors
+        font-size ${styles.cite.fontSize}
+        italic
+        alignment left
+
+    style-def .cite-review
+        font-size ${styles.cite.fontSize}
+        italic
+        alignment left
+
+    style-def .thank-title
+        font-size ${styles.titolo1.fontSize * 1.5}
+        margin 0 100 0 0
+        alignment center
+        color ${styles.titolo1.color}
+        bold
+    
+    style-def .thank-subtitle
+        font-size ${styles.titolo2.fontSize * 1.5}
+        margin 0 20 0 0
+        alignment center
+        color ${styles.titolo1.color}
 
     $foreach page in site.Marzo17.pages
         section
-            p ${page.cat}
-                style titolo1
-            p ${page.title ? page.title : page.name}
-                style titolo2
+            $if !(page.header || page.thank)
+                p ${page.cat}
+                    style titolo1
+                p ${page.title ? page.title : page.name}
+                    style titolo2
             $if page.header
-                p Header
-
+                p ${page.header.title}
+                    style .forefront-title
+                p ${page.header.author}
+                    style .forefront-author
+                p ${page.header.date}
+                    style .forefront-date
+            $elif page.thank
+                p ${page.thank.title}
+                    style .thank-title
+                p ${page.thank.subtitle}
+                    style .thank-subtitle
             $elif page.tags
                 $include tags
-
             $else
                 image ${imagesBaseUrl}/${page.name}.png
                     width 300
-                    height 600
+                    height 550

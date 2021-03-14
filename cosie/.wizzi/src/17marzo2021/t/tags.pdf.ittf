@@ -6,27 +6,26 @@ $group
             p ${tag.p}
                 style para1
         $elif tag.li
-            + ${tag.li}
+            p ${tag.li}
                 style para1
         $elif tag.ul
             ul
                 $foreach item in tag.items
-                    + ${item.li}
+                    p ${item.li}
                         style para1
-        $*
         $elif tag.reviews
-            . cite-reviews
+            stack
+                style .cite-reviews
                 $foreach rev in tag.items
                     $if rev.article
-                        . cite-article
-                            + ${rev.article}
+                        p ${rev.article}
+                            style .cite-article
                     $if rev.authors
-                        . cite-authors
-                            + ${rev.authors}
+                        p ${rev.authors}
+                            style .cite-authors
                     $if rev.review
-                        . cite-review
-                            + ${rev.review}
-        *$
+                        p ${rev.review}
+                            style .cite-review
 
     $foreach tag in page.tags
         $_ processTag
