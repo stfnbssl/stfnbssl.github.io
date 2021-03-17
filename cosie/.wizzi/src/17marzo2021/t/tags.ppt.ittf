@@ -29,38 +29,38 @@ $group
                 p ${item.li}
                     style para1
                     bullet
-                        indent 6
+                        indent 12
                         code 2B24
+                    color FF0000
                     x ${MAIN_x}%
                     y ${MAIN_y + pos.y}%
                     w ${90 - MAIN_x}%
                     $ pos.y += 10
         $elif tag.reviews
-            p
-                $foreach rev in tag.items
-                    $if rev.article
-                        p ${rev.article}
-                            style .cite-article
-                            x ${MAIN_x}%
-                            y ${MAIN_y + pos.y}%
-                            w ${90 - MAIN_x}%
-                            $ pos.y += 6
-                    $if rev.authors
-                        p ${rev.authors}
-                            style .cite-authors
-                            x ${MAIN_x}%
-                            y ${MAIN_y + pos.y}%
-                            w ${90 - MAIN_x}%
-                            $ pos.y += 6
-                    $if rev.review
-                        p ${rev.review}
-                            style .cite-review
-                            x ${MAIN_x}%
-                            y ${MAIN_y + pos.y}%
-                            w ${90 - MAIN_x}%
-                            $ pos.y += 6
+            $foreach rev in tag.items
+                $if rev.article
+                    p ${rev.article}
+                        style .cite-article
+                        x ${MAIN_x}%
+                        y ${MAIN_y + pos.y + 2}%
+                        w ${90 - MAIN_x}%
+                        $ pos.y += 6
+                $if rev.authors
+                    p ${rev.authors}
+                        style .cite-authors
+                        x ${MAIN_x}%
+                        y ${MAIN_y + pos.y}%
+                        w ${90 - MAIN_x}%
+                        $ pos.y += 4
+                $if rev.review
+                    p ${rev.review}
+                        style .cite-review
+                        x ${MAIN_x}%
+                        y ${MAIN_y + pos.y}%
+                        w ${90 - MAIN_x}%
+                        $ pos.y += 4
 
-    $ var pos = { y: MAIN_y }
+    $ var pos = { y: 0 }
     $foreach tag in page.tags
         $_ processTag
             $@ tag

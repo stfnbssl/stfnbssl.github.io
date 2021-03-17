@@ -488,7 +488,12 @@
                     "title": "Le guide anticipatorie",
                     "subtitle1": "Tutti a tavola",
                     "subtitle2": "Nati per leggere",
-                    "date": "17 marzo 2021"
+                    "date": "17 marzo 2021",
+                    "images": [
+                        "cosie.jpg",
+                        "bminforma.png",
+                        "npl.jpg"
+                    ]
                 }
             },
             {

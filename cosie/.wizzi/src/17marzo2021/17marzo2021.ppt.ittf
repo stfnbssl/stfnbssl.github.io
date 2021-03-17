@@ -8,11 +8,11 @@ ppt Davoli_Cosie17marzo2021
         var T1_h = 20;
         var T2_x = 10;
         var T2_y = 12;
-        var T2_w = 50;
+        var T2_w = 90 - T2_x;
         var T2_h = 8;
         var MAIN_x = 10;
         var MAIN_y = 24;
-        var FORE_x = 25;
+        var FORE_x = 30;
         var P_x = 30;
         var fsize_Normal = 12;
     
@@ -22,30 +22,30 @@ ppt Davoli_Cosie17marzo2021
         valign middle
 
     style-def .forefront-title
-        font-size ${styles.titolo1.fontSize * 1.5}
+        font-size ${styles.titolo1.fontSize * 1.3}
         x ${FORE_x}%
         w ${100 - (FORE_x + 10)}%
         bold
     
     style-def .forefront-subtitle
-        font-size ${styles.titolo1.fontSize}
+        font-size ${styles.titolo1.fontSize * .9}
         x ${FORE_x}%
         w ${100 - (FORE_x + 10)}%
         italic
 
     style-def .forefront-author
-        font-size ${styles.para1.fontSize}
+        font-size ${styles.para1.fontSize * 0.9}
         x ${FORE_x}%
         w ${100 - (FORE_x + 10)}%
     
     style-def .forefront-date
-        font-size ${styles.cite.fontSize}
+        font-size ${styles.cite.fontSize * 0.9}
         x ${FORE_x}%
         w ${100 - (FORE_x + 10)}%
         italic
 
     style-def titolo1
-        font-size ${styles.titolo1.fontSize}
+        font-size ${styles.titolo1.fontSize * 0.8}
         x ${T1_x}%
         y ${T1_y}%
         w ${T1_w}%
@@ -55,7 +55,7 @@ ppt Davoli_Cosie17marzo2021
         align right
 
     style-def titolo2
-        font-size ${styles.titolo2.fontSize}
+        font-size ${styles.titolo2.fontSize * 0.7}
         x ${T2_x}%
         y ${T2_y}%
         w ${T2_w}%
@@ -115,16 +115,13 @@ ppt Davoli_Cosie17marzo2021
     
     style-def .column-title
         font-size ${styles.cite.fontSize * 1.6}
-        $$ margin 0 20 0 0
         bold
 
     style-def .column-p
         font-size ${styles.cite.fontSize * 1.4}
-        $$ margin 0 10 0 0
 
     style-def .column-p-big
         font-size ${styles.cite.fontSize * 2.8}
-        $$ margin 0 10 0 0
 
     $foreach page in site.Marzo17.pages
         slide
@@ -139,16 +136,24 @@ ppt Davoli_Cosie17marzo2021
                     y 25%
                 p ${page.header.subtitle1}
                     style .forefront-subtitle
-                    y 45%
+                    y 52%
                 p ${page.header.subtitle2}
                     style .forefront-subtitle
-                    y 60%
+                    y 67%
                 p ${page.header.author}
                     style .forefront-author
-                    y 75%
+                    y 80%
                 p ${page.header.date}
                     style .forefront-date
-                    y 80%
+                    y 85%
+                $ var imgY = 0
+                $foreach image in page.header.images
+                    image ${imagesBaseUrl}/${image}
+                        x 6%
+                        y ${MAIN_y+imgY}%
+                        w 16%
+                        h 16%          
+                    $ imgY += 18      
             $elif page.thanks
                 p ${page.thanks.title}
                     style .thanks-title
@@ -159,7 +164,7 @@ ppt Davoli_Cosie17marzo2021
             $elif page.tags
                 $include tags
             $elif page.textsColumn
-                $ var y = 0
+                $ var y = 0, big = false
                 $foreach text in page.textsColumn
                     p ${text.title}
                         style .column-title
@@ -167,35 +172,56 @@ ppt Davoli_Cosie17marzo2021
                         y ${MAIN_y + y}%
                         w ${50 - MAIN_x}%
                         br
-                        $ y += 6
+                    $ y += 6
                     $if text.p
-                        p ${text.p}
+                        p ${_.replace(text.p, '\\n', '').trim()}
                             style .column-p
                             x ${MAIN_x}%
                             y ${MAIN_y + y}%
                             w ${50 - MAIN_x}%
                             br
-                            $ y += 8
+                        $ y += 8
                     $else
-                        p ${text.p_big}
+                        p ${_.replace(text.p_big, '\\n', '').trim()}
                             style .column-p-big
                             x ${MAIN_x}%
-                            y ${MAIN_y + y}%
+                            y ${MAIN_y + y + 2}%
                             w ${50 - MAIN_x}%
                             br
-                            $ y += 8
+                        $ y += 14; big = true
                 $ var y = 0
                 $foreach image in page.imagesColumn
-                    image ${imagesBaseUrl}/${image}
-                        y ${MAIN_y + y}%
-                        x 55%
-                        w 25%
-                        h 30%
-                    $ y += 35
+                    $if big
+                        image ${imagesBaseUrl}/${image}
+                            y ${MAIN_y + y + 10}%
+                            x 55%
+                            w 32%
+                            h 35%
+                        $ y += 30
+                    $else
+                        $if page.imagesColumn.length > 2
+                            image ${imagesBaseUrl}/${image}
+                                y ${MAIN_y + y - 4}%
+                                x 55%
+                                w 20%
+                                h 20%
+                            $ y += 25
+                        $else
+                            image ${imagesBaseUrl}/${image}
+                                y ${MAIN_y + y}%
+                                x 55%
+                                w 22%
+                                h 25%
+                            $ y += 30
 
             $else
-                image ${imagesBaseUrl}/${page.name}.png
+                image ${imagesBaseUrl}/iphone.png
                     x 20%
                     y ${MAIN_y}%
-                    w 25%
-                    h 65%
+                    w 29%
+                    h 74%
+                image ${imagesBaseUrl}/${page.name}.png
+                    x 23%
+                    y ${MAIN_y+7}%
+                    w 23%
+                    h 63%

@@ -199,21 +199,31 @@ html
                 $$ p ${page.name}
 
                 $if page.header
-                    . forefront
-                        p ${page.header.title}
-                            class forefront-title
-                        p ${page.header.subtitle1}
-                            class forefront-subtitle
-                        p ${page.header.subtitle2}
-                            class forefront-subtitle
-                        p ${page.header.author}
-                            class forefront-author
-                        p ${page.header.date}
-                            class forefront-date
-                        p 
-                            style margin-top: 150px
-                            a PDF
-                                href ./Cosie17marzo2021.pdf
+                    . flex-row
+                        div
+                            style margin-top: 150px;
+                            $foreach image in page.header.images
+                                div
+                                    style margin-top: 60px; margin-left: 130px; 
+                                    img
+                                        src ./images/${image}
+                                        width 150px
+                                        height 150px          
+                        . forefront
+                            p ${page.header.title}
+                                class forefront-title
+                            p ${page.header.subtitle1}
+                                class forefront-subtitle
+                            p ${page.header.subtitle2}
+                                class forefront-subtitle
+                            p ${page.header.author}
+                                class forefront-author
+                            p ${page.header.date}
+                                class forefront-date
+                            p 
+                                style margin-top: 150px
+                                a PDF
+                                    href ./Cosie17marzo2021.pdf
 
                 $elif page.thanks
                     p ${page.thanks.title}
