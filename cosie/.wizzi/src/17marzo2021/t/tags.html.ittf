@@ -4,6 +4,9 @@ $group
         $param tag
         $if tag.p
             p ${tag.p}
+        $elif tag.p_big
+            p ${tag.p_big}
+                class para1big
         $elif tag.li
             li ${tag.li}
         $elif tag.ul

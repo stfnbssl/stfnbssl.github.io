@@ -1,0 +1,68 @@
+$group
+
+    $function processTag
+        $param tag
+        $param pos
+        $if tag.p
+            p ${tag.p}
+                style para1
+                x ${MAIN_x}%
+                y ${MAIN_y + pos.y}%
+                w ${90 - MAIN_x}%
+                $ pos.y += 10
+        $elif tag.p_big
+            p ${tag.p_big}
+                style para1big
+                x ${MAIN_x}%
+                y ${MAIN_y + pos.y}%
+                w ${90 - MAIN_x}%
+                $ pos.y += 10
+        $elif tag.li
+            p ${tag.li}
+                style para1
+                x ${MAIN_x}%
+                y ${MAIN_y + pos.y}%
+                w ${90 - MAIN_x}%
+                $ pos.y += 10
+        $elif tag.ul
+            $foreach item in tag.items
+                p ${item.li}
+                    style para1
+                    bullet
+                        indent 6
+                        code 2B24
+                    x ${MAIN_x}%
+                    y ${MAIN_y + pos.y}%
+                    w ${90 - MAIN_x}%
+                    $ pos.y += 10
+        $elif tag.reviews
+            p
+                $foreach rev in tag.items
+                    $if rev.article
+                        p ${rev.article}
+                            style .cite-article
+                            x ${MAIN_x}%
+                            y ${MAIN_y + pos.y}%
+                            w ${90 - MAIN_x}%
+                            $ pos.y += 6
+                    $if rev.authors
+                        p ${rev.authors}
+                            style .cite-authors
+                            x ${MAIN_x}%
+                            y ${MAIN_y + pos.y}%
+                            w ${90 - MAIN_x}%
+                            $ pos.y += 6
+                    $if rev.review
+                        p ${rev.review}
+                            style .cite-review
+                            x ${MAIN_x}%
+                            y ${MAIN_y + pos.y}%
+                            w ${90 - MAIN_x}%
+                            $ pos.y += 6
+
+    $ var pos = { y: MAIN_y }
+    $foreach tag in page.tags
+        $_ processTag
+            $@ tag
+            $@ pos
+

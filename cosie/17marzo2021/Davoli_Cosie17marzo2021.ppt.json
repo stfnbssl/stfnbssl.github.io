@@ -1,0 +1,2804 @@
+{
+	"defaultStyle": {
+		"fontFace": "Tahoma",
+		"fontSize": 12,
+		"valign": "middle"
+	},
+	"styles": {
+		".forefront-title": {
+			"fontSize": 60,
+			"x": "25%",
+			"w": "65%",
+			"bold": true
+		},
+		".forefront-subtitle": {
+			"fontSize": 40,
+			"x": "25%",
+			"w": "65%",
+			"italic": true
+		},
+		".forefront-author": {
+			"fontSize": 15,
+			"x": "25%",
+			"w": "65%"
+		},
+		".forefront-date": {
+			"fontSize": 10,
+			"x": "25%",
+			"w": "65%",
+			"italic": true
+		},
+		"titolo1": {
+			"fontSize": 40,
+			"x": "20%",
+			"y": "8%",
+			"w": "70%",
+			"bold": true,
+			"color": "#e02424",
+			"align": "right"
+		},
+		"titolo2": {
+			"fontSize": 30,
+			"x": "8%",
+			"y": "12%",
+			"w": "50%",
+			"bold": true,
+			"italic": true,
+			"color": "#020202",
+			"align": "left"
+		},
+		"para1": {
+			"fontSize": 15,
+			"align": "left"
+		},
+		"para1big": {
+			"fontSize": 37.5,
+			"align": "left",
+			"x": "20%"
+		},
+		".cite-reviews": {},
+		".cite-article": {
+			"fontSize": 10,
+			"align": "left",
+			"x": "20%",
+			"bold": true
+		},
+		".cite-authors": {
+			"fontSize": 10,
+			"italic": true,
+			"align": "left",
+			"x": "20%"
+		},
+		".cite-review": {
+			"fontSize": 10,
+			"italic": true,
+			"align": "left"
+		},
+		".thanks-title": {
+			"fontSize": 60,
+			"align": "center",
+			"color": "#e02424",
+			"bold": true,
+			"x": "20%",
+			"w": "60%"
+		},
+		".thanks-subtitle": {
+			"fontSize": 48,
+			"align": "center",
+			"color": "#e02424",
+			"bold": true,
+			"x": "20%",
+			"w": "60%"
+		},
+		".column-title": {
+			"fontSize": 16,
+			"bold": true
+		},
+		".column-p": {
+			"fontSize": 14
+		},
+		".column-p-big": {
+			"fontSize": 28
+		}
+	},
+	"slides": [
+		{
+			"items": [
+				{
+					"text": "Le guide anticipatorie",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 60,
+						"valign": "middle",
+						"x": "25%",
+						"w": "65%",
+						"bold": true,
+						"y": "25%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "25%",
+						"w": "65%",
+						"italic": true,
+						"y": "45%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Nati per leggere",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "25%",
+						"w": "65%",
+						"italic": true,
+						"y": "60%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Anna Maria Davoli",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"x": "25%",
+						"w": "65%",
+						"y": "75%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "17 marzo 2021",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 10,
+						"valign": "middle",
+						"x": "25%",
+						"w": "65%",
+						"italic": true,
+						"y": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Le App a supporto di genitori e caregiver",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Contenuti basati sulle evidenze",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "48%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Informazioni coerenti con le linee guida",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "58%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Sviluppate con il supporto di professionisti sanitari",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "68%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Con finanziamento adeguato (del Servizio Sanitario)",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "78%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Garantiscono che ai genitori vengano fornite risorse credibili e affidabili.",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "88%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"pStack": [
+						{
+							"text": "Content and Quality of Infant Feeding Smartphone Apps: Five-Year Update on a Systematic Search and Evaluation",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"align": "left",
+								"x": "10%",
+								"bold": true,
+								"y": "98%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Heilok Cheng, et all",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "104%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "A Mobile App, KhunLook, to Support Thai Parents and Caregivers With Child Health Supervision: Development, Validation, and Acceptability Study",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"align": "left",
+								"x": "10%",
+								"bold": true,
+								"y": "110%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Rosawan Areemit",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "116%",
+								"w": "80%"
+							}
+						}
+					],
+					"options": []
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Una App aiuta i genitori?",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "I genitori apprezzano le mHealth Apps.",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "48%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Richiedono contatti brevi e ripetuti con informazioni pratiche.",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "58%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Un programma eHealth di prevenzione dell'obesità infantile incentrato sui genitori può fornire supporto per migliorare l'alimentazione del bambino e l'autoefficacia parentale.",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "68%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"pStack": [
+						{
+							"text": "A Mobile App, KhunLook, to Support Thai Parents and Caregivers With Child Health Supervision: Development, Validation, and Acceptability Study",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"align": "left",
+								"x": "10%",
+								"bold": true,
+								"y": "78%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Rosawan Areemit et all",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "84%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "An Internet-Based Childhood Obesity Prevention Program (Time2bHealthy) for Parents of Preschool-Aged Children.",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"align": "left",
+								"x": "10%",
+								"bold": true,
+								"y": "90%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Megan L Hammersley et all",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "96%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Randomized Controlled Trial J Med Internet Res, 2019 Feb 8;21(2):e11964. Doi: 10.2196/11964.",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "102%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "A systematic evaluation of digital nutrition promotion websites and apps for supporting parents to influence children’s nutrition",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"align": "left",
+								"x": "10%",
+								"bold": true,
+								"y": "108%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "Dorota Zarnowiecki, et all",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "114%",
+								"w": "80%"
+							}
+						},
+						{
+							"text": "International Journal of Behavioral Nutrition and Physical Activity volume 17, Article number: 17 (2020)",
+							"options": {
+								"fontFace": "Tahoma",
+								"fontSize": 10,
+								"valign": "middle",
+								"italic": true,
+								"align": "left",
+								"x": "10%",
+								"y": "120%",
+								"w": "80%"
+							}
+						}
+					],
+					"options": []
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "nascita",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/nascita.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "15 giorni",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/15 giorni.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "1 mese",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/1 mese.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "5 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5 mesi.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "6 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/6 mesi.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "9 mesi/1",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/9 mesi 1.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "9 mesi/2",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/9 mesi 2.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "1 anno",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/1 anno.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "14 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/14 mesi.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "17 mesi 1",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/17 m 1.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "17 mesi 2",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/17 m 2.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "18 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/18 mesi.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "19 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/19 mesi.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "20 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "24%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Gli inquinanti alimentari",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "30%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "21 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "38%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "I pericoli in cucina",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "44%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "22 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "52%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Il bisogno di fibre",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "58%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "2 anni",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "66%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Buone abitudini e strategie per invogliare il tuo bambino a mangiare cibi salutari",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "72%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "3 anni e 2 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "80%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "E se non vuole mangiare frutta e verdura?",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "86%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/l'orto dei piccoli.jpg",
+						"y": "24%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/mangia i piselli.jpg",
+						"y": "59%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "3 anni e 6 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "24%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Cerca di rendere più sani i tuoi piatti preferiti.\n\n Leggere un libro aiuta a mangiare cibi sani.",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "30%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "4 anni e 6 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "38%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Come fare per essere un modello sano?",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "44%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "5 anni e 3 mesi",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "52%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Fra i 5 e i 6 anni sarà molto utile un Bilancio di salute dal tuo pediatra",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "58%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/musi piatti.jpg",
+						"y": "24%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/è ora di mangiare sano.jpg",
+						"y": "59%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/bminforma.png",
+						"y": "94%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "5 anni e 9 mesi/1",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5a 9 m.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "5 anni e 9 mesi/2",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/5a 9m 2.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "6 anni",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "24%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "\n\n\n\n\n\n\n\nColtiva un piccolo orto domestico",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "30%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/l'orto dei bimbi.jpg",
+						"y": "24%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/bimbi orticoltori.jpg",
+						"y": "59%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Tutti a tavola",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "6 anni",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "24%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "\n\n\n\nDiventa un critico gastronomico...\n\n\n\n\n\n\n\n\n\n I momenti speciali a tavola uniscono la famiglia",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 14,
+						"valign": "middle",
+						"x": "10%",
+						"y": "30%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/3 cuochi.jpg",
+						"y": "24%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/momenti speciali a tavola.jpg",
+						"y": "59%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "NpL e NpM",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Proposte di libri e ascolti musicali per le varie età",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "48%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Consigli",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"x": "10%",
+						"y": "58%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Tanti libri di qualità per ogni età",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "68%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Le modalità di lettura",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "78%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Frequentare la biblioteca",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "88%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Frequentare le librerie",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 15,
+						"valign": "middle",
+						"align": "left",
+						"bullet": {
+							"indent": 6,
+							"code": "2B24"
+						},
+						"x": "10%",
+						"y": "98%",
+						"w": "80%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "NpL e NpM",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "3 anni e 6 mesi, Papà",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/NpL 2.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "NpL e NpM",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "4 anni, Dialogico",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/NpL 3.png",
+						"x": "20%",
+						"y": "24%",
+						"w": "25%",
+						"h": "65%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "La App BeBa, un lavoro da implementare",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 40,
+						"valign": "middle",
+						"x": "20%",
+						"y": "8%",
+						"w": "70%",
+						"bold": true,
+						"color": "#e02424",
+						"align": "right",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "right"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 30,
+						"valign": "middle",
+						"x": "8%",
+						"y": "12%",
+						"w": "50%",
+						"bold": true,
+						"italic": true,
+						"color": "#020202",
+						"align": "left",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "left"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "24%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Con i feedback dei genitori",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 28,
+						"valign": "middle",
+						"x": "10%",
+						"y": "30%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": " ",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 16,
+						"valign": "middle",
+						"bold": true,
+						"x": "10%",
+						"y": "38%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "Con i feedback dei pediatri",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 28,
+						"valign": "middle",
+						"x": "10%",
+						"y": "44%",
+						"w": "40%",
+						"breakLine": true,
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null
+						},
+						"color": "000000",
+						"lineSpacing": null
+					}
+				},
+				{
+					"image": {
+						"path": "C:/My/wizzi/stfnbssl/stfnbssl.github.io/cosie/.wizzi/src/17marzo2021/images/work in progress.png",
+						"y": "24%",
+						"x": "55%",
+						"w": "25%",
+						"h": "30%"
+					}
+				}
+			]
+		},
+		{
+			"items": [
+				{
+					"text": "Grazie",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 60,
+						"valign": "middle",
+						"align": "center",
+						"color": "#e02424",
+						"bold": true,
+						"x": "20%",
+						"w": "60%",
+						"y": "30%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "center"
+						},
+						"lineSpacing": null
+					}
+				},
+				{
+					"text": "per l'attenzione",
+					"options": {
+						"fontFace": "Tahoma",
+						"fontSize": 48,
+						"valign": "middle",
+						"align": "center",
+						"color": "#e02424",
+						"bold": true,
+						"x": "20%",
+						"w": "60%",
+						"y": "50%",
+						"isTextBox": true,
+						"line": {},
+						"_bodyProp": {
+							"autoFit": false,
+							"anchor": "ctr",
+							"vert": null,
+							"align": "center"
+						},
+						"lineSpacing": null
+					}
+				}
+			]
+		}
+	]
+}

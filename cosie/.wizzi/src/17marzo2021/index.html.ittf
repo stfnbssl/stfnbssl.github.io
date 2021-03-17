@@ -43,7 +43,7 @@ html
 
         . forefront
             text-align left
-            padding-left 100px
+            padding-left 300px
         
         . forefront-title
             font-size ${styles.titolo1.fontSize * 2.5}px
@@ -51,10 +51,16 @@ html
             margin 200px 0 0 0
             font-weight bold
     
+        . forefront-subtitle
+            font-size ${styles.titolo1.fontSize * 1.5}px
+            color ${styles.titolo2.color}
+            margin 20px 0 0 0
+            font-style italic
+
         . forefront-author
             font-size ${styles.para1.fontSize * 2.5}px
             color ${styles.titolo2.color}
-            margin 50px 0 0 0
+            margin 100px 0 0 0
     
         . forefront-date
             font-size ${styles.cite.fontSize * 2.5}px
@@ -91,11 +97,13 @@ html
         
         . title2
             margin-top 80px
+            padding-left 50px
             font-size 2em
             font-family Verdana
             font-weight 600
             color #000
             flex 1
+            text-align left
 
         . section1
             text-align left
@@ -114,6 +122,8 @@ html
                 padding-top 10px
                 margin-top 10px
                 border-top 1px solid #dedede
+            . para1big
+                font-size 4em
 
         . image-magnifier
             position absolute
@@ -166,6 +176,14 @@ html
             margin-right 10px
             margin-top 15px 
 
+        . text-images            
+
+        . column-title
+            font-weight 700
+            margin-top 10px
+        . column-p-big
+            font-size 4em
+
     div 
         id fullpage
         $foreach page in site.Marzo17.pages
@@ -184,12 +202,16 @@ html
                     . forefront
                         p ${page.header.title}
                             class forefront-title
+                        p ${page.header.subtitle1}
+                            class forefront-subtitle
+                        p ${page.header.subtitle2}
+                            class forefront-subtitle
                         p ${page.header.author}
                             class forefront-author
                         p ${page.header.date}
                             class forefront-date
                         p 
-                            style margin-top: 200px
+                            style margin-top: 150px
                             a PDF
                                 href ./Cosie17marzo2021.pdf
 
@@ -202,6 +224,33 @@ html
                 $elif page.tags
                     . tagged-texts
                         $include tags
+
+                $elif page.textsColumn
+                    . text-images flex-row
+                        . tagged-texts
+                            style width: 60%
+                            $foreach text in page.textsColumn
+                                p ${text.title}
+                                    class column-title
+                                    
+                                $if text.p
+                                    p ${_.replace(text.p, '\\n\\n', '<br />')}
+                                        class column-p
+                                        style padding-top: 2px;
+                                $else
+                                    p ${_.replace(text.p_big, '\\n\\n', '<br />')}
+                                        class column-p-big
+                                        style padding-top: 2px;
+                        div
+                            style text-align: center; width: 30%
+                            $foreach image in page.imagesColumn
+                                div
+                                    style margin: 30px
+                                    img
+                                        src images/${image}
+                                        $$ width 200
+                                        $$ height 300   
+                                        $$ margin 20 10 0 0                 
 
                 $else
                     . img-wrap
@@ -232,6 +281,7 @@ html
                 $if page.header
                 $elif page.thanks
                 $elif page.tags
+                $elif page.textsColumn
                 $else
                     var eldiv_${page.id} = document.querySelector("#magnifier_${page.id}");
                     var elimg_${page.id} = document.querySelector("#section_${page.id} .image-inside");

@@ -18,6 +18,8 @@
         npm ">=1.4.28"
     { scripts
         pdf "node 17marzo2021/17marzo2021.makepdf"
+        ppt "node 17marzo2021/17marzo2021.makeppt"
     { dependencies
         pdfmake "^0.1.70"
+        pptxgenjs "^3.4.0"
     { devDependencies

@@ -486,12 +486,13 @@
                 "header": {
                     "author": "Anna Maria Davoli",
                     "title": "Le guide anticipatorie",
+                    "subtitle1": "Tutti a tavola",
+                    "subtitle2": "Nati per leggere",
                     "date": "17 marzo 2021"
                 }
             },
             {
                 "name": "1",
-                "cat": "Tutti a tavola",
                 "title": "Le App a supporto di genitori e caregiver",
                 "tags": [
                     {
@@ -531,17 +532,16 @@
             },
             {
                 "name": "2",
-                "cat": "Tutti a tavola",
                 "title": "Una App aiuta i genitori?",
                 "tags": [
                     {
-                        "p": "Un programma eHealth (sanità digitale) di prevenzione dell'obesità infantile incentrato sui genitori può fornire supporto per migliorare l'alimentazione del bambino e l'autoefficacia parentale."
+                        "p": "I genitori apprezzano le mHealth Apps."
                     },
                     {
-                        "p": "Migliora l'alimentazione anche dei genitori."
+                        "p": "Richiedono contatti brevi e ripetuti con informazioni pratiche."
                     },
                     {
-                        "p": "Dal 91,2%  al 97,1% dei genitori che hanno utilizzato l'app può valutare più correttamente i parametri di crescita del proprio bambino."
+                        "p": "Un programma eHealth di prevenzione dell'obesità infantile incentrato sui genitori può fornire supporto per migliorare l'alimentazione del bambino e l'autoefficacia parentale."
                     },
                     {
                         "reviews": true,
@@ -561,25 +561,6 @@
                                 "review": "International Journal of Behavioral Nutrition and Physical Activity volume 17, Article number: 17 (2020)"
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "name": "3",
-                "title": "La App BeBa",
-                "cat": "Tutti a tavola",
-                "tags": [
-                    {
-                        "p": "La App si propone l'obiettivo di essere uno stimolo per le famiglie per contrastare l'obesità infantile."
-                    },
-                    {
-                        "p": "La guida Tutti a tavola ha la responsabilità di fornire indicazioni basate sulle evidenze disponibili, ma anche la necessità di essere condivisa dai pediatri in modo che i contenuti vengano supportati dall'invito a scaricarla e usarla quale accompagnamento alle parole del Pediatra."
-                    },
-                    {
-                        "p": "Sarebbe davvero sgradevole che quello che trovano scritto i genitori contrastasse con i suggerimenti del pediatra."
-                    },
-                    {
-                        "p": "Non vi è nulla di prescrittivo, ma quando parliamo di allattamento  e di alimentazione complementare i tempi e le modalità, se non condivise devono offrire al genitore una spiegazione soddisfacente che non si ponga in contrasto con i contenuti delle guide."
                     }
                 ]
             },
@@ -622,7 +603,13 @@
                 "cat": "Tutti a tavola"
             },
             {
-                "name": "17 mesi",
+                "name": "17 m 1",
+                "title": "17 mesi 1",
+                "cat": "Tutti a tavola"
+            },
+            {
+                "name": "17 m 2",
+                "title": "17 mesi 2",
                 "cat": "Tutti a tavola"
             },
             {
@@ -632,6 +619,61 @@
             {
                 "name": "19 mesi",
                 "cat": "Tutti a tavola"
+            },
+            {
+                "name": "2a 3a",
+                "title": "&nbsp;",
+                "cat": "Tutti a tavola",
+                "textsColumn": [
+                    {
+                        "title": "20 mesi",
+                        "p": "Gli inquinanti alimentari"
+                    },
+                    {
+                        "title": "21 mesi",
+                        "p": "I pericoli in cucina"
+                    },
+                    {
+                        "title": "22 mesi",
+                        "p": "Il bisogno di fibre"
+                    },
+                    {
+                        "title": "2 anni",
+                        "p": "Buone abitudini e strategie per invogliare il tuo bambino a mangiare cibi salutari"
+                    },
+                    {
+                        "title": "3 anni e 2 mesi",
+                        "p": "E se non vuole mangiare frutta e verdura?"
+                    }
+                ],
+                "imagesColumn": [
+                    "l'orto dei piccoli.jpg",
+                    "mangia i piselli.jpg"
+                ]
+            },
+            {
+                "name": "4a 5a",
+                "title": "&nbsp;",
+                "cat": "Tutti a tavola",
+                "textsColumn": [
+                    {
+                        "title": "3 anni e 6 mesi",
+                        "p": "Cerca di rendere più sani i tuoi piatti preferiti.\\n\\n Leggere un libro aiuta a mangiare cibi sani."
+                    },
+                    {
+                        "title": "4 anni e 6 mesi",
+                        "p": "Come fare per essere un modello sano?"
+                    },
+                    {
+                        "title": "5 anni e 3 mesi",
+                        "p": "Fra i 5 e i 6 anni sarà molto utile un Bilancio di salute dal tuo pediatra"
+                    }
+                ],
+                "imagesColumn": [
+                    "musi piatti.jpg",
+                    "è ora di mangiare sano.jpg",
+                    "bminforma.png"
+                ]
             },
             {
                 "name": "5a 9 m",
@@ -644,14 +686,92 @@
                 "cat": "Tutti a tavola"
             },
             {
-                "name": "NpL 3a 6m papa",
+                "name": "6a",
+                "title": "6 anni",
+                "cat": "Tutti a tavola",
+                "textsColumn": [
+                    {
+                        "title": "",
+                        "p": "\\n\\n\\n\\n\\n\\n\\n\\nColtiva un piccolo orto domestico"
+                    }
+                ],
+                "imagesColumn": [
+                    "l'orto dei bimbi.jpg",
+                    "bimbi orticoltori.jpg"
+                ]
+            },
+            {
+                "name": "6a 2",
+                "title": "&nbsp;",
+                "cat": "Tutti a tavola",
+                "textsColumn": [
+                    {
+                        "title": "6 anni",
+                        "p": "\\n\\n\\n\\nDiventa un critico gastronomico...\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n I momenti speciali a tavola uniscono la famiglia"
+                    }
+                ],
+                "imagesColumn": [
+                    "3 cuochi.jpg",
+                    "momenti speciali a tavola.jpg"
+                ]
+            },
+            {
+                "name": "Npl 1",
+                "title": "&nbsp;",
+                "cat": "NpL e NpM",
+                "tags": [
+                    {
+                        "p": "Proposte di libri e ascolti musicali per le varie età"
+                    },
+                    {
+                        "p": "Consigli"
+                    },
+                    {
+                        "ul": true,
+                        "items": [
+                            {
+                                "li": "Tanti libri di qualità per ogni età"
+                            },
+                            {
+                                "li": "Le modalità di lettura"
+                            },
+                            {
+                                "li": "Frequentare la biblioteca"
+                            },
+                            {
+                                "li": "Frequentare le librerie"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "NpL 2",
                 "title": "3 anni e 6 mesi, Papà",
                 "cat": "NpL e NpM"
             },
             {
-                "name": "NpL dialogico",
+                "name": "NpL 3",
                 "title": "4 anni, Dialogico",
                 "cat": "NpL e NpM"
+            },
+            {
+                "name": "ToDo",
+                "title": "&nbsp;",
+                "cat": "La App BeBa, un lavoro da implementare",
+                "textsColumn": [
+                    {
+                        "title": "&nbsp;",
+                        "p_big": "Con i feedback dei genitori"
+                    },
+                    {
+                        "title": "&nbsp;",
+                        "p_big": "Con i feedback dei pediatri"
+                    }
+                ],
+                "imagesColumn": [
+                    "work in progress.png"
+                ]
             },
             {
                 "name": "Fine",

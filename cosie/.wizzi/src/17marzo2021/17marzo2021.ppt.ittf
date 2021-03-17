@@ -1,0 +1,201 @@
+ppt Davoli_Cosie17marzo2021
+    $
+        var imagesBaseUrl = _.replace(path.join(__dirname, "images"), '\\', '/');
+        var styles = site.Marzo17.styles;
+        var T1_x = 30;
+        var T1_y = 8;
+        var T1_w = 70;
+        var T1_h = 20;
+        var T2_x = 10;
+        var T2_y = 12;
+        var T2_w = 50;
+        var T2_h = 8;
+        var MAIN_x = 10;
+        var MAIN_y = 24;
+        var FORE_x = 25;
+        var P_x = 30;
+        var fsize_Normal = 12;
+    
+    default-style-def
+        font Tahoma
+        font-size ${fsize_Normal}
+        valign middle
+
+    style-def .forefront-title
+        font-size ${styles.titolo1.fontSize * 1.5}
+        x ${FORE_x}%
+        w ${100 - (FORE_x + 10)}%
+        bold
+    
+    style-def .forefront-subtitle
+        font-size ${styles.titolo1.fontSize}
+        x ${FORE_x}%
+        w ${100 - (FORE_x + 10)}%
+        italic
+
+    style-def .forefront-author
+        font-size ${styles.para1.fontSize}
+        x ${FORE_x}%
+        w ${100 - (FORE_x + 10)}%
+    
+    style-def .forefront-date
+        font-size ${styles.cite.fontSize}
+        x ${FORE_x}%
+        w ${100 - (FORE_x + 10)}%
+        italic
+
+    style-def titolo1
+        font-size ${styles.titolo1.fontSize}
+        x ${T1_x}%
+        y ${T1_y}%
+        w ${T1_w}%
+        x ${T1_h}%
+        bold
+        color ${styles.titolo1.color}
+        align right
+
+    style-def titolo2
+        font-size ${styles.titolo2.fontSize}
+        x ${T2_x}%
+        y ${T2_y}%
+        w ${T2_w}%
+        x ${T2_h}%
+        bold
+        italic
+        color ${styles.titolo2.color}
+        align left
+
+    style-def para1
+        font-size ${styles.para1.fontSize}
+        align left
+
+    style-def para1big
+        font-size ${styles.para1.fontSize * 2.5}
+        align left
+        x 20%
+
+    style-def .cite-reviews
+        $$ margin 0,10,0,0
+    
+    style-def .cite-article
+        font-size ${styles.cite.fontSize}
+        alignment left
+        x 20%
+        bold
+        $$ margin 0,10,0,0
+
+    style-def .cite-authors
+        font-size ${styles.cite.fontSize}
+        italic
+        alignment left
+        x 20%
+
+    style-def .cite-review
+        font-size ${styles.cite.fontSize}
+        italic
+        alignment left
+
+    style-def .thanks-title
+        font-size ${styles.titolo1.fontSize * 1.5}
+        $$ margin 0 200 0 0
+        alignment center
+        color ${styles.titolo1.color}
+        bold
+        x 20%
+        w 60%
+
+    style-def .thanks-subtitle        
+        font-size ${styles.titolo1.fontSize * 1.2}
+        $$ margin 0 20 0 0
+        alignment center
+        color ${styles.titolo1.color}
+        bold
+        x 20%
+        w 60%
+    
+    style-def .column-title
+        font-size ${styles.cite.fontSize * 1.6}
+        $$ margin 0 20 0 0
+        bold
+
+    style-def .column-p
+        font-size ${styles.cite.fontSize * 1.4}
+        $$ margin 0 10 0 0
+
+    style-def .column-p-big
+        font-size ${styles.cite.fontSize * 2.8}
+        $$ margin 0 10 0 0
+
+    $foreach page in site.Marzo17.pages
+        slide
+            $if !(page.header || page.thanks)
+                p ${page.cat}
+                    style titolo1
+                p ${page.title ? page.title : page.name}
+                    style titolo2
+            $if page.header
+                p ${page.header.title}
+                    style .forefront-title
+                    y 25%
+                p ${page.header.subtitle1}
+                    style .forefront-subtitle
+                    y 45%
+                p ${page.header.subtitle2}
+                    style .forefront-subtitle
+                    y 60%
+                p ${page.header.author}
+                    style .forefront-author
+                    y 75%
+                p ${page.header.date}
+                    style .forefront-date
+                    y 80%
+            $elif page.thanks
+                p ${page.thanks.title}
+                    style .thanks-title
+                    y 30%
+                p ${page.thanks.subtitle}
+                    style .thanks-subtitle
+                    y 50%
+            $elif page.tags
+                $include tags
+            $elif page.textsColumn
+                $ var y = 0
+                $foreach text in page.textsColumn
+                    p ${text.title}
+                        style .column-title
+                        x ${MAIN_x}%
+                        y ${MAIN_y + y}%
+                        w ${50 - MAIN_x}%
+                        br
+                        $ y += 6
+                    $if text.p
+                        p ${text.p}
+                            style .column-p
+                            x ${MAIN_x}%
+                            y ${MAIN_y + y}%
+                            w ${50 - MAIN_x}%
+                            br
+                            $ y += 8
+                    $else
+                        p ${text.p_big}
+                            style .column-p-big
+                            x ${MAIN_x}%
+                            y ${MAIN_y + y}%
+                            w ${50 - MAIN_x}%
+                            br
+                            $ y += 8
+                $ var y = 0
+                $foreach image in page.imagesColumn
+                    image ${imagesBaseUrl}/${image}
+                        y ${MAIN_y + y}%
+                        x 55%
+                        w 25%
+                        h 30%
+                    $ y += 35
+
+            $else
+                image ${imagesBaseUrl}/${page.name}.png
+                    x 20%
+                    y ${MAIN_y}%
+                    w 25%
+                    h 65%

@@ -8,6 +8,7 @@ module.exports = {
         './wizzi/packages/wizzi-js/dist/index.js', 
         './wizzi/packages/wizzi-web/dist/index.js', 
         './wizzi/packages/wizzi.plugin.pdf/dist/index.js', 
+        './wizzi/packages/wizzi.plugin.ppt/dist/index.js', 
     ], 
     pluginsBaseFolder: path.join(__dirname, '..', '..'),
     schemas: [

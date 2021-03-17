@@ -5,6 +5,9 @@ $group
         $if tag.p
             p ${tag.p}
                 style para1
+        $elif tag.p_big
+            p ${tag.p_big}
+                style para1big
         $elif tag.li
             p ${tag.li}
                 style para1

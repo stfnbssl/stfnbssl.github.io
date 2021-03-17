@@ -55,6 +55,14 @@ wfjob content-server
             model-ref site
                 export-name site
 
+		artifact ppt documents
+			src ./**/*.ppt.ittf
+			schema ppt
+			generator ppt/document
+			extension makeppt.js
+            model-ref site
+                export-name site
+
     line root
 		cwd-folder ${ittf_root_folder}
 

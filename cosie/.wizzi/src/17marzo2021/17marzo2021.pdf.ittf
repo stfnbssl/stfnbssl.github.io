@@ -1,4 +1,4 @@
-pdf Cosie17marzo2021
+pdf Davoli_Cosie17marzo2021
     $
         var imagesBaseUrl = _.replace(path.join(__dirname, "images"), '\\', '/');
         var styles = site.Marzo17.styles;
@@ -8,19 +8,24 @@ pdf Cosie17marzo2021
         margin 0 150 0 0
         bold
     
+    style-def .forefront-subtitle
+        font-size ${styles.titolo1.fontSize}
+        margin 0 10 0 0
+        italics
+
     style-def .forefront-author
         font-size ${styles.para1.fontSize}
-        margin 0 50 0 0
+        margin 0 80 0 0
     
     style-def .forefront-date
         font-size ${styles.cite.fontSize}
         margin 0 20 0 0
-        italic
+        italics
 
     style-def titolo1
         font-size ${styles.titolo1.fontSize}
         bold
-        italic
+        italics
         color ${styles.titolo1.color}
         alignment right
         margin 0 20
@@ -28,13 +33,18 @@ pdf Cosie17marzo2021
     style-def titolo2
         font-size ${styles.titolo2.fontSize}
         bold
-        italic
+        italics
         color ${styles.titolo2.color}
         alignment left
         margin 0 10
 
     style-def para1
         font-size ${styles.para1.fontSize}
+        alignment left
+        margin 0,20,0,0
+
+    style-def para1big
+        font-size ${styles.para1.fontSize * 2.5}
         alignment left
         margin 0,20,0,0
 
@@ -49,30 +59,44 @@ pdf Cosie17marzo2021
 
     style-def .cite-authors
         font-size ${styles.cite.fontSize}
-        italic
+        italics
         alignment left
 
     style-def .cite-review
         font-size ${styles.cite.fontSize}
-        italic
+        italics
         alignment left
 
-    style-def .thank-title
+    style-def .thanks-title
         font-size ${styles.titolo1.fontSize * 1.5}
-        margin 0 100 0 0
+        margin 0 200 0 0
+        alignment center
+        color ${styles.titolo1.color}
+        bold
+
+    style-def .thanks-subtitle        
+        font-size ${styles.titolo1.fontSize * 1.2}
+        margin 0 20 0 0
         alignment center
         color ${styles.titolo1.color}
         bold
     
-    style-def .thank-subtitle
-        font-size ${styles.titolo2.fontSize * 1.5}
+    style-def .column-title
+        font-size ${styles.cite.fontSize * 1.6}
         margin 0 20 0 0
-        alignment center
-        color ${styles.titolo1.color}
+        bold
+
+    style-def .column-p
+        font-size ${styles.cite.fontSize * 1.4}
+        margin 0 10 0 0
+
+    style-def .column-p-big
+        font-size ${styles.cite.fontSize * 2.8}
+        margin 0 10 0 0
 
     $foreach page in site.Marzo17.pages
         section
-            $if !(page.header || page.thank)
+            $if !(page.header || page.thanks)
                 p ${page.cat}
                     style titolo1
                 p ${page.title ? page.title : page.name}
@@ -80,17 +104,39 @@ pdf Cosie17marzo2021
             $if page.header
                 p ${page.header.title}
                     style .forefront-title
+                p ${page.header.subtitle1}
+                    style .forefront-subtitle
+                p ${page.header.subtitle2}
+                    style .forefront-subtitle
                 p ${page.header.author}
                     style .forefront-author
                 p ${page.header.date}
                     style .forefront-date
-            $elif page.thank
-                p ${page.thank.title}
-                    style .thank-title
-                p ${page.thank.subtitle}
-                    style .thank-subtitle
+            $elif page.thanks
+                p ${page.thanks.title}
+                    style .thanks-title
+                p ${page.thanks.subtitle}
+                    style .thanks-subtitle
             $elif page.tags
                 $include tags
+            $elif page.textsColumn
+                columns
+                    stack
+                        $foreach text in page.textsColumn
+                            p ${text.title}
+                                style .column-title
+                            $if text.p
+                                p ${text.p}
+                                    style .column-p
+                            $else
+                                p ${text.p_big}
+                                    style .column-p-big
+                    stack
+                        $foreach image in page.imagesColumn
+                            image ${imagesBaseUrl}/${image}
+                                width 150
+                                height 180   
+                                margin 20 10 0 0                 
             $else
                 image ${imagesBaseUrl}/${page.name}.png
                     width 300
