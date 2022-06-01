@@ -94,3 +94,4 @@ html
                     menu-item(01, wizzi, https://stfnbssl.github.io/wizzi/)
                     menu-item(02, cosie, ./cosie/17marzo2021/index.html)
                     menu-item(03, philos, https://stfnbssl.github.io/philos/)
+                    menu-item(04, geop, https://stfnbssl.github.io/geop/)
